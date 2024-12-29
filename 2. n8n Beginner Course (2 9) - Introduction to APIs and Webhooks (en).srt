@@ -1,0 +1,1016 @@
+﻿1
+00:00:01,080 --> 00:00:05,400
+Hello and welcome to the second video of
+the NLN beginner course.
+
+2
+00:00:05,680 --> 00:00:10,900
+Today we will be talking about APIs and
+webhooks, two very important notions that
+
+3
+00:00:10,901 --> 00:00:14,500
+you need to understand before building
+your first NLN workflows.
+
+4
+00:00:15,100 --> 00:00:23,340
+In this video we will be covering what an
+API is as well as a definition and an
+
+5
+00:00:23,341 --> 00:00:26,448
+explanation of its main
+components and we will be
+
+6
+00:00:26,449 --> 00:00:30,060
+talking about webhooks
+sometimes called reverse APIs.
+
+7
+00:00:31,560 --> 00:00:34,000
+So, first of all what is an API?
+
+8
+00:00:34,280 --> 00:00:39,780
+I'd like to start by explaining an analogy
+that is going to be very useful for
+
+9
+00:00:39,781 --> 00:00:43,366
+understanding not only
+what an API is, but also
+
+10
+00:00:43,367 --> 00:00:46,820
+the different parts and
+names associated to them.
+
+11
+00:00:47,500 --> 00:00:52,480
+So, imagine you're sitting at a restaurant,
+and you go and you sit at a table.
+
+12
+00:00:52,980 --> 00:00:54,860
+How do you get food?
+
+13
+00:00:55,060 --> 00:00:57,780
+Well, you ask a waiter.
+
+14
+00:00:58,020 --> 00:00:59,680
+And the waiter is going to tell you what
+you have, and you are going to ask him a
+
+15
+00:00:59,681 --> 00:01:02,760
+question that he on the困 We are going to
+take your order and bring it to the kitchen.
+
+16
+00:01:03,040 --> 00:01:06,170
+Once the kitchen is done
+preparing your food, the
+
+17
+00:01:06,171 --> 00:01:09,301
+waiter will bring back
+your food to the table.
+
+18
+00:01:09,960 --> 00:01:14,260
+This is very, very similar to how an API
+works.
+
+19
+00:01:15,560 --> 00:01:22,280
+We're going to be using this analogy to
+explain the different parts of an API.
+
+20
+00:01:22,840 --> 00:01:26,060
+So keep this in mind while we go through
+this video.
+
+21
+00:01:27,420 --> 00:01:30,320
+A technical definition of an API.
+
+22
+00:01:30,580 --> 00:01:34,620
+So an API is an application programming
+interface.
+
+23
+00:01:35,780 --> 00:01:41,960
+It exposes a service and developers write
+programs to consume it.
+
+24
+00:01:42,280 --> 00:01:47,240
+So if we go back and we think of the
+actions or the apps in the past video,
+
+25
+00:01:47,480 --> 00:01:50,420
+we might take the example of Google
+Sheets.
+
+26
+00:01:50,700 --> 00:01:53,120
+So Google Sheets has an API.
+
+27
+00:01:53,740 --> 00:01:56,040
+And in the API, we have an API.
+
+28
+00:01:56,060 --> 00:01:57,140
+We have different services.
+
+29
+00:01:57,240 --> 00:02:02,700
+So one of these services might be get all
+of the data in a specific sheet.
+
+30
+00:02:02,880 --> 00:02:06,693
+And so the Google Sheets
+API exposes the service
+
+31
+00:02:06,694 --> 00:02:10,261
+that allows you to
+read data in the sheet.
+
+32
+00:02:10,700 --> 00:02:13,880
+Developers write programs to consume it.
+
+33
+00:02:13,980 --> 00:02:18,420
+So using NNN, we're
+going to be able to consume
+
+34
+00:02:18,421 --> 00:02:21,981
+the Google Sheets API
+using the different services.
+
+35
+00:02:22,020 --> 00:02:25,960
+For example, updating rows or getting data
+in a sheet.
+
+36
+00:02:27,920 --> 00:02:31,401
+Using this metaphor,
+we can see that the waiter
+
+37
+00:02:31,402 --> 00:02:34,220
+is what's going to
+be called the interface.
+
+38
+00:02:34,520 --> 00:02:37,940
+And the application is going to be the
+kitchen.
+
+39
+00:02:38,160 --> 00:02:44,360
+So in this case, the application might be
+the Google Sheets.
+
+40
+00:02:44,540 --> 00:02:51,241
+And then we're going to be using the
+interface to interact with the application.
+
+41
+00:02:52,400 --> 00:02:55,940
+Why do we need this interface to interact
+with the application?
+
+42
+00:02:55,941 --> 00:02:59,340
+Well, it allows us to abstract the
+complexity.
+
+43
+00:03:00,260 --> 00:03:05,080
+Imagine if every time you went to a
+restaurant, instead of just sitting down
+
+44
+00:03:05,081 --> 00:03:10,820
+and ordering food, you had to go to the
+kitchen and explain your order,
+
+45
+00:03:11,040 --> 00:03:14,720
+wait for it to be done, and then take your
+food back to your table.
+
+46
+00:03:14,900 --> 00:03:19,220
+This would be much more complicated than
+just asking the waiter for your food.
+
+47
+00:03:19,780 --> 00:03:22,540
+The same thing goes for applications.
+
+48
+00:03:22,541 --> 00:03:29,800
+If every time you wanted to read data in a
+Google Sheet, you had to go to Google
+
+49
+00:03:29,801 --> 00:03:35,400
+servers, find your specific sheet,
+and then read the data from it,
+
+50
+00:03:35,500 --> 00:03:40,580
+that would be much more complicated than
+just using the API, which gives you a very
+
+51
+00:03:40,581 --> 00:03:45,960
+abstract but easy way to access the data
+from the application.
+
+52
+00:03:47,280 --> 00:03:49,020
+So how does an API work?
+
+53
+00:03:49,380 --> 00:03:51,680
+It uses what's called documentation.
+
+54
+00:03:51,740 --> 00:03:52,520
+So documentation.
+
+55
+00:03:52,540 --> 00:03:59,240
+Documentation explains how the application
+programming interface or API works.
+
+56
+00:03:59,620 --> 00:04:06,280
+And using the restaurant analogy in this
+case would be the menu.
+
+57
+00:04:08,140 --> 00:04:09,640
+So a little bit of terminology.
+
+58
+00:04:10,220 --> 00:04:15,630
+We send a request through
+the interface to the application,
+
+59
+00:04:15,631 --> 00:04:19,980
+and the application uses the
+interface to send a response.
+
+60
+00:04:21,020 --> 00:04:24,480
+We also have the client-server notions.
+
+61
+00:04:24,860 --> 00:04:27,813
+In this case, you would
+be the client, and the
+
+62
+00:04:27,814 --> 00:04:30,700
+application and the
+interface would be the server.
+
+63
+00:04:30,940 --> 00:04:32,900
+So keep these in mind when you see these
+terms.
+
+64
+00:04:34,840 --> 00:04:40,860
+When using APIs, we have, as mentioned
+earlier, requests and response.
+
+65
+00:04:41,180 --> 00:04:43,621
+So we're going to break down
+the different components of
+
+66
+00:04:43,622 --> 00:04:46,260
+the request and the different
+components of a response.
+
+67
+00:04:47,020 --> 00:04:48,640
+Starting with a request.
+
+68
+00:04:48,641 --> 00:04:52,520
+There are four main components to an HTTP
+request.
+
+69
+00:04:52,960 --> 00:04:56,790
+In these videos, we're only going to be
+talking about HTTP requests.
+
+70
+00:04:57,400 --> 00:05:02,080
+There are different frameworks to make API
+requests, such as GraphQL.
+
+71
+00:05:02,380 --> 00:05:07,940
+But most of the APIs that you're going to
+use are going to use the HTTP framework.
+
+72
+00:05:09,240 --> 00:05:14,680
+Everything that we're going to talk about
+today is mirrored in the HTTP request node.
+
+73
+00:05:14,920 --> 00:05:18,620
+The HTTP request node allows you to make
+HTTP requests.
+
+74
+00:05:18,621 --> 00:05:22,720
+You can make HTTP requests in NNN and
+receive the responses.
+
+75
+00:05:23,140 --> 00:05:26,228
+This is going to be
+very useful when building
+
+76
+00:05:26,229 --> 00:05:29,260
+automations that need
+to use specific APIs.
+
+77
+00:05:30,280 --> 00:05:33,140
+There are four components to an HTTP
+request.
+
+78
+00:05:33,440 --> 00:05:36,960
+There is the URL, the method, the header,
+and the body.
+
+79
+00:05:37,140 --> 00:05:38,500
+Let's look at each one of them.
+
+80
+00:05:39,380 --> 00:05:44,040
+The URL is the unique location for a
+resource on the web.
+
+81
+00:05:44,180 --> 00:05:47,720
+This can be a page, an image, a PDF,
+or some data.
+
+82
+00:05:48,620 --> 00:05:50,260
+Here we have an example of a URL.
+
+83
+00:05:50,640 --> 00:05:56,920
+You can see a scheme, a host, a port,
+a path, and some query parameters.
+
+84
+00:05:57,880 --> 00:06:01,920
+The scheme, the host, and the path are
+going to be mandatory.
+
+85
+00:06:02,500 --> 00:06:05,860
+And the port and query parameters are
+going to be optional.
+
+86
+00:06:06,860 --> 00:06:09,266
+Something that is
+important to note, query
+
+87
+00:06:09,267 --> 00:06:12,381
+parameters are always
+preceded by a question Mark.
+
+88
+00:06:13,960 --> 00:06:15,560
+Then we have the method.
+
+89
+00:06:15,680 --> 00:06:18,600
+The method describes the action that we
+want to perform.
+
+90
+00:06:18,620 --> 00:06:20,380
+We want to perform at the given URL.
+
+91
+00:06:20,980 --> 00:06:26,520
+There are two main methods that we are
+going to be using for HTTP requests.
+
+92
+00:06:26,880 --> 00:06:29,620
+There is the GET and the POST methods.
+
+93
+00:06:30,220 --> 00:06:34,560
+GET, most of the time, allows us to
+receive information.
+
+94
+00:06:34,980 --> 00:06:40,480
+So if you are reading data in a Google
+Sheet, you are using the GET method.
+
+95
+00:06:40,640 --> 00:06:43,940
+And POST is going to allow us to send
+information.
+
+96
+00:06:44,340 --> 00:06:47,947
+So if we want to send
+information from a form submission,
+
+97
+00:06:47,948 --> 00:06:52,040
+we are going to be using
+the POST HTTP method.
+
+98
+00:06:53,200 --> 00:06:57,080
+The other methods are a little bit more
+rare.
+
+99
+00:06:57,240 --> 00:07:03,441
+We have, for example, DELETE, PUT, and
+PATCH, that are less common but can be used.
+
+100
+00:07:04,220 --> 00:07:09,840
+What's very interesting with the method is
+there are all the time verbs, which means
+
+101
+00:07:09,841 --> 00:07:12,720
+that they describe very clearly what we
+are trying to do.
+
+102
+00:07:12,940 --> 00:07:18,760
+So when wondering which method you need to
+use, think of which verb would be most
+
+103
+00:07:18,761 --> 00:07:21,280
+appropriate to the action you are trying
+to accomplish.
+
+104
+00:07:22,520 --> 00:07:24,120
+Then we have the HEADER.
+
+105
+00:07:24,200 --> 00:07:29,100
+The header gives us a little bit more
+detail or context for a given request.
+
+106
+00:07:29,960 --> 00:07:35,700
+So, for example, common information that
+you will find in a header is going to be
+
+107
+00:07:35,701 --> 00:07:40,020
+your location, or your language
+preference, or your device type.
+
+108
+00:07:41,840 --> 00:07:48,060
+Every time you open a page on the
+Internet, you are making an API request to
+
+109
+00:07:48,061 --> 00:07:52,320
+a server, and the server is responding
+with the web page.
+
+110
+00:07:52,660 --> 00:07:59,360
+So if you are browsing the Internet on
+your computer or on your laptop,
+
+111
+00:07:59,740 --> 00:08:06,061
+you are going to have different information
+or context in the header of your request.
+
+112
+00:08:06,560 --> 00:08:11,281
+An example of a header would
+be ACCEPT APPLICATION JSON,
+
+113
+00:08:11,282 --> 00:08:15,320
+which tells the server that
+it would like the request.
+
+114
+00:08:15,340 --> 00:08:19,400
+And the response of the HTTP request in
+the JSON format.
+
+115
+00:08:21,160 --> 00:08:22,880
+Then we have the BODY.
+
+116
+00:08:22,960 --> 00:08:26,820
+The BODY is optional and only exists for
+POST requests.
+
+117
+00:08:27,240 --> 00:08:32,120
+It contains the information we would like
+to send to the server or application.
+
+118
+00:08:33,100 --> 00:08:39,160
+So if we take the example of FORM
+SUBMISSION, then the BODY might contain
+
+119
+00:08:39,161 --> 00:08:45,620
+first name Maxim, last name POLSON,
+and then the associated email.
+
+120
+00:08:45,820 --> 00:08:49,560
+So this is the information that we are
+sending to the server.
+
+121
+00:08:51,440 --> 00:08:53,840
+Finally, we have CREDENTIALS.
+
+122
+00:08:53,920 --> 00:08:57,729
+So the credential wasn't
+listed as a main part of
+
+123
+00:08:57,730 --> 00:09:02,740
+the HTTP request because
+it isn't a part on its own.
+
+124
+00:09:02,960 --> 00:09:06,900
+There are many different ways to use
+credentials.
+
+125
+00:09:07,240 --> 00:09:10,726
+A credential is how we
+let the application know
+
+126
+00:09:10,727 --> 00:09:13,580
+that we are allowed to
+make a given request.
+
+127
+00:09:13,680 --> 00:09:19,340
+As you can imagine, if anyone could read
+your Google Sheets or update your Google
+
+128
+00:09:19,341 --> 00:09:23,020
+Sheets or send messages on Slack,
+that would be very dangerous.
+
+129
+00:09:23,340 --> 00:09:29,184
+So we include credentials in
+our HTTP requests to indicate
+
+130
+00:09:29,185 --> 00:09:33,600
+to the server I am authorized
+to make this request.
+
+131
+00:09:34,560 --> 00:09:38,380
+Most APIs require authentication through
+credentials.
+
+132
+00:09:38,480 --> 00:09:42,600
+However, there are some APIs that do not
+require authentication.
+
+133
+00:09:43,680 --> 00:09:48,440
+The two most common ways to authenticate
+to a service are going to be through query
+
+134
+00:09:48,441 --> 00:09:53,671
+parameters question Mark
+API key equals followed
+
+135
+00:09:53,672 --> 00:09:56,540
+by the API key or
+header authentication.
+
+136
+00:09:56,860 --> 00:10:02,800
+For example, authorization colon bearer
+followed by the API key.
+
+137
+00:10:03,040 --> 00:10:07,520
+Another very common way to authenticate to
+a service is through OAuth.
+
+138
+00:10:07,700 --> 00:10:13,720
+Every time you click sign in with Google
+and the little window opens and you sign
+
+139
+00:10:13,721 --> 00:10:19,260
+in with your Google account, this is an
+OAuth authentication method.
+
+140
+00:10:21,460 --> 00:10:25,460
+Now we've seen everything that we need to
+send a request.
+
+141
+00:10:25,780 --> 00:10:30,561
+Now we're going to look at how the application
+is going to answer with a response.
+
+142
+00:10:31,020 --> 00:10:34,620
+There are three main components to an HTTP
+response.
+
+143
+00:10:35,200 --> 00:10:38,640
+The status code, the header and the body.
+
+144
+00:10:40,060 --> 00:10:46,200
+The status code is a three digit number
+which will give you information on whether
+
+145
+00:10:46,201 --> 00:10:49,160
+the request was successful or
+unsuccessful.
+
+146
+00:10:49,700 --> 00:10:55,680
+The most common status codes are going to
+be 200, which means OK.
+
+147
+00:10:56,040 --> 00:10:58,620
+This is the standard successful response.
+
+148
+00:10:59,000 --> 00:11:03,960
+It means your API request was executed
+well and the application is telling you
+
+149
+00:11:04,520 --> 00:11:08,620
+congrats, you did a good request.
+
+150
+00:11:09,800 --> 00:11:12,660
+401, which means unauthorized.
+
+151
+00:11:12,880 --> 00:11:14,980
+This is usually an authentication problem.
+
+152
+00:11:15,240 --> 00:11:20,680
+This is the application telling you the
+request that you sent me does not contain
+
+153
+00:11:20,681 --> 00:11:25,080
+the authentication information necessary
+to make this request.
+
+154
+00:11:25,340 --> 00:11:29,990
+This means you need to go back
+and check your credentials and
+
+155
+00:11:29,991 --> 00:11:34,460
+how you sent them or the
+access that your credentials have.
+
+156
+00:11:36,020 --> 00:11:37,700
+Another one is 404.
+
+157
+00:11:37,840 --> 00:11:40,040
+You might remember this from the web.
+
+158
+00:11:40,240 --> 00:11:41,280
+Not found.
+
+159
+00:11:41,281 --> 00:11:49,000
+Usually this is a problem with the URL and
+means that the page or data you are
+
+160
+00:11:49,001 --> 00:11:52,500
+looking for is not on the URL that you
+indicated.
+
+161
+00:11:53,080 --> 00:11:55,958
+Finally, we have 500,
+which is internal server
+
+162
+00:11:55,959 --> 00:12:00,400
+error, which indicates
+that the server had an error.
+
+163
+00:12:00,920 --> 00:12:03,780
+This means it was not your fault,
+but the server's fault.
+
+164
+00:12:04,180 --> 00:12:11,340
+In general, the very easy way to remember
+and understand these codes, if the status
+
+165
+00:12:11,341 --> 00:12:16,200
+code starts with a 2, congrats,
+it was a successful HTTP request.
+
+166
+00:12:16,440 --> 00:12:19,281
+If it starts with a 4,
+you made some kind of
+
+167
+00:12:19,282 --> 00:12:22,701
+error and you need
+to modify your request.
+
+168
+00:12:22,760 --> 00:12:25,700
+500 means it was the server's error.
+
+169
+00:12:26,080 --> 00:12:29,060
+Most of the time it just means try again
+later.
+
+170
+00:12:31,180 --> 00:12:38,380
+Then, the same way we included a header in
+the request, the application is going to
+
+171
+00:12:38,381 --> 00:12:42,600
+send a header in the response,
+giving more context or detail.
+
+172
+00:12:43,240 --> 00:12:50,340
+Some common response headers are going to
+be how long is the content, how much
+
+173
+00:12:50,341 --> 00:12:52,520
+content is in the
+response, what type of
+
+174
+00:12:52,521 --> 00:12:56,181
+content is it, or when
+does this content expire.
+
+175
+00:12:56,400 --> 00:13:00,060
+How long am I going to have access to it
+for?
+
+176
+00:13:02,160 --> 00:13:04,780
+Finally, sometimes we're going to have a
+body.
+
+177
+00:13:04,920 --> 00:13:07,540
+The body is the actual data being
+returned.
+
+178
+00:13:07,541 --> 00:13:10,220
+It can be in many different formats.
+
+179
+00:13:10,480 --> 00:13:13,740
+It can be HTML if we're browsing the web.
+
+180
+00:13:13,880 --> 00:13:17,700
+It can be JSON or it can be any other
+forms of data.
+
+181
+00:13:17,800 --> 00:13:19,280
+For example, binary data.
+
+182
+00:13:22,100 --> 00:13:26,460
+Then, let's quickly talk about webhooks or
+reverse APIs.
+
+183
+00:13:28,220 --> 00:13:31,220
+Imagine you're at home waiting for some
+friends.
+
+184
+00:13:32,020 --> 00:13:35,280
+You can either go and check
+the door every few minutes to see
+
+185
+00:13:35,281 --> 00:13:39,960
+if they've arrived, or you can
+wait for the doorbell to ring.
+
+186
+00:13:40,560 --> 00:13:43,800
+The doorbell in this analogy is a webhook.
+
+187
+00:13:43,940 --> 00:13:48,460
+It is what indicates that something that
+you are waiting for happened.
+
+188
+00:13:49,560 --> 00:13:51,960
+So, let's say you're using Stripe.
+
+189
+00:13:52,180 --> 00:13:55,180
+Stripe is a developer platform to manage
+payments.
+
+190
+00:13:55,540 --> 00:14:00,200
+And you need to know every time a new
+payment is made in your Stripe account.
+
+191
+00:14:00,540 --> 00:14:02,500
+Well, there are two options.
+
+192
+00:14:02,920 --> 00:14:05,100
+Either we can do what is called polling.
+
+193
+00:14:05,101 --> 00:14:10,640
+So, every few minutes, for example,
+we can make a new request to Stripe.
+
+194
+00:14:11,080 --> 00:14:15,060
+A new API request saying, is there a new
+payment?
+
+195
+00:14:16,940 --> 00:14:19,040
+If yes, do some actions.
+
+196
+00:14:19,260 --> 00:14:20,720
+If no, wait.
+
+197
+00:14:21,340 --> 00:14:24,774
+And every few minutes,
+keep asking and keep polling
+
+198
+00:14:24,775 --> 00:14:27,481
+the Stripe application to see
+if we have a new payment.
+
+199
+00:14:27,940 --> 00:14:29,920
+Or we can set up a webhook.
+
+200
+00:14:30,080 --> 00:14:35,200
+And every time that a new payment is made
+in Stripe, a webhook is going to be sent
+
+201
+00:14:35,201 --> 00:14:41,040
+to us synchronously, giving us the
+information on the payment.
+
+202
+00:14:41,800 --> 00:14:47,140
+So, every time we're waiting for something
+to happen, or we're waiting for
+
+203
+00:14:47,141 --> 00:14:51,052
+information from a specific
+application or service, sometimes
+
+204
+00:14:51,053 --> 00:14:54,780
+these applications are going
+to allow us to create webhooks.
+
+205
+00:14:55,260 --> 00:14:58,280
+What we need to set up a webhook is a URL.
+
+206
+00:14:58,340 --> 00:15:02,460
+What is the location we are sending the
+information to?
+
+207
+00:15:03,360 --> 00:15:09,800
+And then we can use a tool like n8n and
+the webhook node to receive and manage and
+
+208
+00:15:09,801 --> 00:15:13,300
+deal with this information, triggering a
+workflow.
+
+209
+00:15:14,040 --> 00:15:20,120
+That was it for the second video of this
+beginner course on APIs and webhooks.
+
+210
+00:15:20,121 --> 00:15:24,046
+In the next video, we will be
+covering n8n nodes and everything
+
+211
+00:15:24,047 --> 00:15:26,680
+you need to know to start
+building your first workflows.
+
+212
+00:15:27,100 --> 00:15:28,300
+See you in the next video.
+
