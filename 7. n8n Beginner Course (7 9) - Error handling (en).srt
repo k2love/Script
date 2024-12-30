@@ -1,0 +1,837 @@
+﻿1
+00:00:01,150 --> 00:00:06,000
+Hello and welcome to video number
+seven of the beginner course for n8n.
+
+2
+00:00:06,730 --> 00:00:13,060
+In this video we'll be covering how past
+executions are stored for your workflows
+
+3
+00:00:13,810 --> 00:00:20,060
+and specifically how to handle workflow
+errors, which is a very important skill.
+
+4
+00:00:21,460 --> 00:00:27,520
+Let's start a little bit by talking about
+how executions are stored in n8n.
+
+5
+00:00:27,521 --> 00:00:31,884
+So for now, most of
+the executions that we've
+
+6
+00:00:31,885 --> 00:00:36,121
+been working with have
+been manual executions.
+
+7
+00:00:36,420 --> 00:00:42,520
+In these past videos, we've been
+clicking on execute workflow or test step.
+
+8
+00:00:42,800 --> 00:00:49,060
+But as mentioned previously, when we
+activate a workflow, we're going to be
+
+9
+00:00:49,061 --> 00:00:54,680
+turning on the automation and so the
+workflow is going to execute behind the
+
+10
+00:00:54,681 --> 00:00:59,580
+scenes without us necessarily
+seeing the execution of the workflow.
+
+11
+00:01:00,720 --> 00:01:10,360
+We can access the history of all of our
+workflows executions in what we call the
+
+12
+00:01:10,361 --> 00:01:15,420
+execution log, which you can
+access by clicking on all executions.
+
+13
+00:01:16,270 --> 00:01:21,915
+By default, successful and
+failed production executions,
+
+14
+00:01:21,916 --> 00:01:27,240
+so when workflows are
+activated, those are saved.
+
+15
+00:01:27,520 --> 00:01:30,420
+And manual executions
+are not saved.
+
+16
+00:01:31,080 --> 00:01:40,641
+However, on a per workflow basis, you can
+activate the logging of manual executions.
+
+17
+00:01:41,520 --> 00:01:45,220
+You can sort the
+execution log by workflow
+
+18
+00:01:45,221 --> 00:01:49,961
+status, date ranges,
+or even execution data.
+
+19
+00:01:50,020 --> 00:01:56,060
+We'll cover how to store execution
+data in the logs in the advanced course.
+
+20
+00:01:58,060 --> 00:02:05,800
+For the execution log, you can
+access the individual execution histories.
+
+21
+00:02:06,140 --> 00:02:09,780
+So here you can see an
+example of an execution history.
+
+22
+00:02:10,080 --> 00:02:13,940
+We can see the schedule
+trigger that activated.
+
+23
+00:02:14,180 --> 00:02:17,576
+We read the data in the
+sheets and depending on if the
+
+24
+00:02:17,676 --> 00:02:21,040
+email existed or not, we
+messaged sales or marketing.
+
+25
+00:02:21,980 --> 00:02:28,200
+These are static because they are past
+executions and so they cannot be changed.
+
+26
+00:02:28,760 --> 00:02:32,593
+This is really a snapshot
+of the final state
+
+27
+00:02:32,594 --> 00:02:36,701
+of all of the nodes from
+that given execution.
+
+28
+00:02:37,280 --> 00:02:43,500
+This is very useful when debugging,
+fixing, or inspecting workflows.
+
+29
+00:02:43,760 --> 00:02:50,520
+You can look through past executions
+to understand how the workflow works.
+
+30
+00:02:52,300 --> 00:02:58,340
+You can open each node by double clicking
+on it to see what the input and output
+
+31
+00:02:58,341 --> 00:03:01,180
+data was as well as
+all of the node settings.
+
+32
+00:03:01,640 --> 00:03:05,475
+And if the node has an
+error, you will also get the
+
+33
+00:03:05,476 --> 00:03:12,240
+details about that error from
+double clicking on the node.
+
+34
+00:03:13,960 --> 00:03:18,640
+So as we mentioned earlier,
+sometimes executions can fail.
+
+35
+00:03:18,800 --> 00:03:23,060
+You're going to activate a
+workflow or push it to production.
+
+36
+00:03:23,460 --> 00:03:28,118
+And sometimes, your settings
+aren't going to be optimal
+
+37
+00:03:28,119 --> 00:03:31,160
+or your input data is going
+to be in the wrong format.
+
+38
+00:03:31,360 --> 00:03:34,100
+And this is going to
+cause your workflow to fail.
+
+39
+00:03:34,380 --> 00:03:38,260
+So there can be multiple
+reasons that workflows fail.
+
+40
+00:03:38,500 --> 00:03:41,474
+And it's important to
+understand what kinds of
+
+41
+00:03:41,475 --> 00:03:44,760
+errors there are and
+especially how to fix them.
+
+42
+00:03:46,200 --> 00:03:49,763
+The first method of
+handling errors, and this is a
+
+43
+00:03:49,863 --> 00:03:53,660
+very important one, is
+to use the error workflow.
+
+44
+00:03:55,600 --> 00:04:01,680
+This workflow is a workflow that is
+executed as soon as a node has an error.
+
+45
+00:04:02,410 --> 00:04:09,000
+And this workflow allows you to
+report on any workflows that have errors.
+
+46
+00:04:09,670 --> 00:04:14,255
+Pretty much informing
+you when your workflow
+
+47
+00:04:14,256 --> 00:04:18,900
+needs to be debugged
+or fixed because it failed.
+
+48
+00:04:19,440 --> 00:04:23,640
+This workflow needs to be
+configured for every new workflow.
+
+49
+00:04:25,600 --> 00:04:28,480
+So if you're building workflows,
+make sure to set your error workflow.
+
+50
+00:04:29,180 --> 00:04:33,780
+You can have one or multiple
+error workflows in your N8N instance.
+
+51
+00:04:35,800 --> 00:04:37,720
+Here we have an example.
+
+52
+00:04:38,140 --> 00:04:41,580
+This workflow is
+launched every day at 8am.
+
+53
+00:04:41,860 --> 00:04:48,020
+It reads contacts in a Google Sheets and
+updates the CRM, in this case Salesforce,
+
+54
+00:04:48,420 --> 00:04:49,860
+with those contacts.
+
+55
+00:04:50,980 --> 00:04:54,480
+The email field is
+mandatory in Salesforce.
+
+56
+00:04:55,600 --> 00:04:59,693
+So it will cause an error
+when trying to create
+
+57
+00:04:59,694 --> 00:05:03,281
+a contact for items that
+do not have an email.
+
+58
+00:05:03,660 --> 00:05:10,060
+This triggers the error workflow with
+information on the node that had an error,
+
+59
+00:05:10,200 --> 00:05:12,440
+in this case the
+Salesforce node.
+
+60
+00:05:13,180 --> 00:05:19,280
+So here of the 10 items that we read in
+the sheet, some of them didn't have an
+
+61
+00:05:19,281 --> 00:05:24,840
+email and this caused the
+Salesforce node to have an error.
+
+62
+00:05:26,380 --> 00:05:32,180
+Another way to trigger the error
+workflow is with the stop and error node.
+
+63
+00:05:32,580 --> 00:05:41,220
+This node will raise an error
+message every time that it is triggered,
+
+64
+00:05:41,460 --> 00:05:42,880
+every time that it is executed.
+
+65
+00:05:43,180 --> 00:05:46,580
+And you can configure
+that specific error message.
+
+66
+00:05:47,400 --> 00:05:50,740
+Once triggered, you
+have multiple options.
+
+67
+00:05:50,880 --> 00:05:57,361
+By default, the whole workflow will be
+stopped and its status, will be set to failed.
+
+68
+00:05:57,560 --> 00:05:59,620
+However, we'll look at this.
+
+69
+00:06:00,260 --> 00:06:04,900
+In Enid N you can choose the
+behavior of the stop and error node.
+
+70
+00:06:06,040 --> 00:06:11,460
+You can use this to manage edge cases
+in your workflows by raising errors when
+
+71
+00:06:11,461 --> 00:06:14,540
+certain conditions are
+met that should not be met.
+
+72
+00:06:15,260 --> 00:06:24,040
+This workflow raises an error when the
+email data from the webhook is not valid.
+
+73
+00:06:24,240 --> 00:06:30,880
+So here we check, If the webhook
+contains a valid email, and if not valid,
+
+74
+00:06:31,000 --> 00:06:32,360
+we stop and error.
+
+75
+00:06:36,540 --> 00:06:40,132
+The error workflow is
+created using the error
+
+76
+00:06:40,133 --> 00:06:43,260
+trigger node that we'll
+take a look at in a second.
+
+77
+00:06:43,480 --> 00:06:50,040
+This node will output any and all
+information related to the workflow.
+
+78
+00:06:50,180 --> 00:06:56,500
+So it will contain the name and workflow
+ID, the execution ID, as well as the links
+
+79
+00:06:56,501 --> 00:07:00,631
+to find that specific
+execution that has an error, as
+
+80
+00:07:00,632 --> 00:07:04,960
+well as information about
+the node that had an error.
+
+81
+00:07:05,100 --> 00:07:08,660
+So either a specific node
+or the stop and error node.
+
+82
+00:07:10,320 --> 00:07:16,720
+We always recommend having a place,
+usually a channel, this can be Slack,
+
+83
+00:07:16,940 --> 00:07:22,360
+WhatsApp, Teams, or any communication
+tool, where you can report on errors.
+
+84
+00:07:22,620 --> 00:07:30,060
+So people in your team with NNN access
+can see that the workflow had an error and
+
+85
+00:07:30,061 --> 00:07:33,320
+quickly jump in to debug
+and fix the workflow.
+
+86
+00:07:33,580 --> 00:07:40,660
+So here you have an example error
+workflow, an error trigger that sends a
+
+87
+00:07:40,661 --> 00:07:45,080
+Slack message, an email or a telegram,
+you probably don't need all three.
+
+88
+00:07:45,180 --> 00:07:51,500
+But you probably need somewhere where
+you can report on errors in your work.
+
+89
+00:07:51,600 --> 00:08:02,740
+so let's go back.
+
+90
+00:08:03,180 --> 00:08:20,960
+so let's go back to any button's
+Open Actions, let's go back to.
+
+91
+00:08:28,060 --> 00:08:35,240
+So in this example, we're just going to
+build a very simple error workflow with a
+
+92
+00:08:35,241 --> 00:08:39,408
+Slack message containing
+information about the error so
+
+93
+00:08:39,409 --> 00:08:43,540
+that someone can go and
+quickly take care of it and debug.
+
+94
+00:08:44,240 --> 00:08:47,400
+So here we have our error
+trigger in our test event.
+
+95
+00:08:47,401 --> 00:08:52,547
+I can just come in here
+and, as usual, add a Slack
+
+96
+00:08:52,548 --> 00:09:00,060
+node to send a message
+to myself, user Maxim.
+
+97
+00:09:03,580 --> 00:09:10,640
+And here, just to test,
+we're going to say an error.
+
+98
+00:09:11,700 --> 00:09:13,800
+And then we're going to
+include some information.
+
+99
+00:09:14,480 --> 00:09:21,380
+So workflow, comma...
+sorry, colon, the name.
+
+100
+00:09:22,120 --> 00:09:30,380
+We're also going to include
+the execution URL here.
+
+101
+00:09:34,080 --> 00:09:37,060
+And then we're going to
+include the error message.
+
+102
+00:09:39,220 --> 00:09:40,220
+Error message.
+
+103
+00:09:41,820 --> 00:09:46,260
+This way, every time that we have an
+error and the error workflow is executed,
+
+104
+00:09:46,261 --> 00:09:50,260
+we instantly know which
+workflow has an error.
+
+105
+00:09:51,300 --> 00:09:56,160
+Then we have a very quick link
+to access the specific execution.
+
+106
+00:09:56,360 --> 00:09:59,880
+So we can go into N8n
+and see what the error was.
+
+107
+00:10:00,200 --> 00:10:05,840
+And we also have an error message so we
+can better understand what that issue was.
+
+108
+00:10:06,100 --> 00:10:09,520
+So here I can test the
+step, receive the message.
+
+109
+00:10:09,820 --> 00:10:13,899
+And once we've tested, I
+can change and here not
+
+110
+00:10:13,900 --> 00:10:17,561
+send to a user, but
+send instead to a channel.
+
+111
+00:10:17,720 --> 00:10:22,800
+And here I have
+a N8n errors and.
+
+112
+00:10:26,670 --> 00:10:29,590
+N8n errors channel.
+
+113
+00:10:29,850 --> 00:10:31,490
+Again, I can test that step.
+
+114
+00:10:31,690 --> 00:10:36,570
+And every time from now on, one of
+my workflows has an error and the error
+
+115
+00:10:36,571 --> 00:10:40,878
+workflow is cold, I will get
+that message in N8n errors
+
+116
+00:10:40,879 --> 00:10:44,070
+channel with the information
+about that execution.
+
+117
+00:10:44,770 --> 00:10:49,910
+In the advanced course, we'll cover a
+bit more of a complex error workflow,
+
+118
+00:10:50,070 --> 00:10:55,150
+specifically with tagging
+people, tagging the owners.
+
+119
+00:10:55,670 --> 00:10:59,910
+So we can get the right people to
+take a look at the error execution.
+
+120
+00:11:03,570 --> 00:11:09,730
+Now jumping into the workflow from the
+previous video, just cleaned up a little bit.
+
+121
+00:11:09,830 --> 00:11:15,710
+Instead of having those two ifs, I put a
+switch in place and I renamed the nodes.
+
+122
+00:11:15,830 --> 00:11:16,990
+So it's a little bit clearer.
+
+123
+00:11:17,910 --> 00:11:21,354
+Again, we have our
+webhook input data with the
+
+124
+00:11:21,355 --> 00:11:25,291
+event type and information
+about the contact.
+
+125
+00:11:25,590 --> 00:11:30,950
+And depending on if the event is equal to
+account created or team member invited,
+
+126
+00:11:31,290 --> 00:11:33,650
+we're going to be
+sending different messages.
+
+127
+00:11:34,650 --> 00:11:38,790
+Here we might want to
+handle some potential errors.
+
+128
+00:11:39,070 --> 00:11:43,390
+So there are two main potential
+errors that I could imagine.
+
+129
+00:11:44,210 --> 00:11:46,390
+First, we're
+looking at the email.
+
+130
+00:11:46,391 --> 00:11:51,650
+And second of all, we're checking
+what kind of event we're handling.
+
+131
+00:11:51,930 --> 00:11:56,470
+So there are two kinds of error
+handling methods we could use here.
+
+132
+00:11:56,690 --> 00:12:00,830
+The first one is to
+check if the email is valid.
+
+133
+00:12:01,010 --> 00:12:06,437
+So here we could do a
+pretty basic check and
+
+134
+00:12:06,438 --> 00:12:10,410
+say, does the email
+contain an at symbol?
+
+135
+00:12:10,550 --> 00:12:15,210
+That could be the maybe simplest
+way of making sure we have a valid email.
+
+136
+00:12:16,390 --> 00:12:21,974
+More complex ways could
+be to use reg x's to make sure
+
+137
+00:12:21,975 --> 00:12:25,810
+that the email matches a
+very specific email format.
+
+138
+00:12:26,110 --> 00:12:33,430
+For now, let's just check if
+the email contains an at symbol.
+
+139
+00:12:33,970 --> 00:12:36,950
+So for example, this
+would be email valid.
+
+140
+00:12:37,550 --> 00:12:41,070
+If the email is valid, we can
+just continue the workflow.
+
+141
+00:12:41,330 --> 00:12:45,950
+And if the email is not valid,
+then we can add a stop and error.
+
+142
+00:12:46,390 --> 00:12:50,662
+And here we can throw
+an error message or an
+
+143
+00:12:50,663 --> 00:12:56,210
+error object simply
+mentioning invalid email.
+
+144
+00:12:59,470 --> 00:13:06,430
+Then here we have a
+switch on the event type.
+
+145
+00:13:06,610 --> 00:13:10,510
+We could also imagine that
+we might not have a valid event.
+
+146
+00:13:10,670 --> 00:13:15,010
+So here in the switch, I
+could add a new crowding rule.
+
+147
+00:13:15,011 --> 00:13:25,750
+And this could be if
+the event does not exist.
+
+148
+00:13:26,230 --> 00:13:32,504
+Or as we saw earlier,
+if the event as an
+
+149
+00:13:32,505 --> 00:13:38,550
+expression obviously is
+equal to an empty string.
+
+150
+00:13:38,990 --> 00:13:47,010
+And both of these outputs, we
+could then drag to a stop and error.
+
+151
+00:13:47,810 --> 00:13:57,270
+And this time, instead of having
+invalid email, we could say invalid event.
+
+152
+00:13:58,610 --> 00:14:04,570
+Now we know that when this workflow
+activates, it'll handle both the case of
+
+153
+00:14:04,571 --> 00:14:07,990
+an invalid email and the
+case of an invalid event.
+
+154
+00:14:08,290 --> 00:14:14,770
+So if we do have any errors in our webhook,
+system that will trigger error workflows.
+
+155
+00:14:14,970 --> 00:14:16,410
+And then we can go in and check.
+
+156
+00:14:16,690 --> 00:14:18,150
+Why did we not have an email?
+
+157
+00:14:18,370 --> 00:14:20,310
+Or why did we have
+an invalid event?
+
+158
+00:14:21,710 --> 00:14:25,950
+One more thing to mention here
+in the stop and error workflows.
+
+159
+00:14:26,130 --> 00:14:29,461
+If we head over to the
+settings, we're going to be
+
+160
+00:14:29,462 --> 00:14:32,870
+able to select what kind of
+behavior we want on error.
+
+161
+00:14:33,490 --> 00:14:37,770
+As mentioned in the slides by
+default, this will stop the workflow.
+
+162
+00:14:38,050 --> 00:14:43,890
+But if you are handling with an edge case,
+that doesn't prevent the workflow from
+
+163
+00:14:43,891 --> 00:14:48,310
+continuing, you might want to continue
+or continue using an error output.
+
+164
+00:14:48,850 --> 00:14:53,036
+So this can be configured
+on a node per node basis, both
+
+165
+00:14:53,037 --> 00:14:58,950
+for stop and error workflows,
+as well as just usual nodes.
+
+166
+00:14:59,570 --> 00:15:04,690
+Thanks for listening to the seventh video
+of the NLN beginner course, where we
+
+167
+00:15:04,691 --> 00:15:10,410
+looked into execution histories, error
+handling and a very basic error workflow.
+
+168
+00:15:10,411 --> 00:15:15,188
+In the next video, we'll be
+covering how to debug a workflow
+
+169
+00:15:15,189 --> 00:15:20,310
+to avoid it from having errors
+again, as well as retrying.
+
+170
+00:15:20,450 --> 00:15:21,630
+See you in the next video.
+

@@ -1,0 +1,929 @@
+﻿1
+00:00:01,290 --> 00:00:07,351
+Welcome to video number eight and our
+final video of the beginner course for n8n.
+
+2
+00:00:07,550 --> 00:00:11,130
+In this video, we'll be covering
+how to debug workflows.
+
+3
+00:00:12,030 --> 00:00:17,770
+So in the previous video, we talked about
+error handling, how sometimes workflows,
+
+4
+00:00:17,970 --> 00:00:22,890
+when they are pushed to production, when
+they are activated, can encounter errors.
+
+5
+00:00:23,110 --> 00:00:26,968
+And debugging is the
+process of fixing those errors
+
+6
+00:00:26,969 --> 00:00:30,430
+and making sure that
+they don't happen again.
+
+7
+00:00:31,550 --> 00:00:34,948
+So let's start by talking
+a little bit about what
+
+8
+00:00:34,949 --> 00:00:38,870
+debugging is and why it's
+an important skill to master.
+
+9
+00:00:40,230 --> 00:00:45,425
+So when workflows or rather
+when specific nodes within
+
+10
+00:00:45,426 --> 00:00:49,050
+a workflow fail, it can be
+for many different reasons.
+
+11
+00:00:49,310 --> 00:00:51,530
+They can be configured wrong.
+
+12
+00:00:51,750 --> 00:00:55,470
+The underlying service
+can be unavailable.
+
+13
+00:00:55,610 --> 00:01:02,530
+For example, if you are using Google
+Sheets or Slack, you might get a 500
+
+14
+00:01:02,531 --> 00:01:07,770
+error, meaning that the service is
+simply unavailable at the moment.
+
+15
+00:01:08,530 --> 00:01:11,690
+Or problems can be
+related to input data.
+
+16
+00:01:11,890 --> 00:01:13,810
+So let's say you're
+receiving a webhook.
+
+17
+00:01:13,990 --> 00:01:17,567
+The webhook can be
+missing information, causing
+
+18
+00:01:17,568 --> 00:01:21,190
+the workflow or one of
+the specific nodes to fail.
+
+19
+00:01:22,470 --> 00:01:26,489
+By default, this stops
+the workflow from finishing
+
+20
+00:01:26,490 --> 00:01:30,130
+its execution and it
+sets its status to failed.
+
+21
+00:01:31,150 --> 00:01:37,650
+From the execution history or execution
+log, we can find the list of all of the
+
+22
+00:01:37,651 --> 00:01:41,368
+workflow executions that
+failed and then debug them
+
+23
+00:01:41,369 --> 00:01:44,690
+one by one to make sure
+the errors don't happen again.
+
+24
+00:01:46,630 --> 00:01:53,450
+It is important to note that sometimes
+a workflow can fail from an automation
+
+25
+00:01:53,451 --> 00:02:01,190
+standpoint without necessarily being
+tagged as failed in the sense that if you
+
+26
+00:02:01,191 --> 00:02:07,630
+are trying to automate a certain task but
+no node had an error, then sometimes the
+
+27
+00:02:07,631 --> 00:02:12,210
+task will not be automated and the
+workflow won't be tagged as an error.
+
+28
+00:02:12,450 --> 00:02:15,930
+So this is why error handling
+is extremely important
+
+29
+00:02:15,931 --> 00:02:19,070
+to make sure that your
+workflows execute correctly.
+
+30
+00:02:20,090 --> 00:02:24,850
+And we'll be covering an
+example of this in just a minute.
+
+31
+00:02:27,370 --> 00:02:30,187
+The easiest way to debug
+your workflow is to use the What
+
+32
+00:02:30,188 --> 00:02:34,750
+we propose is by using the
+debug in editor feature in NNN.
+
+33
+00:02:34,910 --> 00:02:39,839
+This is a super powerful
+feature that lets you pin data from
+
+34
+00:02:39,840 --> 00:02:45,750
+an execution history into the
+current canvas of the workflow.
+
+35
+00:02:46,410 --> 00:02:54,190
+What this does is it effectively copies
+over whatever data was in or whatever
+
+36
+00:02:54,191 --> 00:03:02,510
+items were in the failed execution and
+pins them into your current workflow's
+
+37
+00:03:02,511 --> 00:03:06,150
+editor so that then you
+can use this data to debug.
+
+38
+00:03:07,010 --> 00:03:13,655
+The same way that when
+we used the pin feature in the
+
+39
+00:03:13,656 --> 00:03:18,730
+webhook node a few videos
+ago, this is the same thing.
+
+40
+00:03:18,830 --> 00:03:23,610
+It allows you to pin error
+data to your workflow canvas.
+
+41
+00:03:25,670 --> 00:03:31,090
+Pinned data will have a blue or
+purple symbol in the bottom right corner.
+
+42
+00:03:31,330 --> 00:03:35,410
+And workflows can only have
+one set of pinned data at a time.
+
+43
+00:03:35,510 --> 00:03:42,470
+So you have to work through different
+types of bugs one by one, making sure that
+
+44
+00:03:42,471 --> 00:03:49,831
+you are fixing them all and that by repairing
+some you aren't creating other bugs.
+
+45
+00:03:51,510 --> 00:03:58,197
+Once the error is fixed, or
+handled, we can use the retry
+
+46
+00:03:58,198 --> 00:04:02,770
+feature to trigger again
+all of the failed executions.
+
+47
+00:04:03,670 --> 00:04:10,047
+This is a super useful feature
+because when a workflow fails,
+
+48
+00:04:10,048 --> 00:04:14,710
+we might have 5 or 10
+executions that were unsuccessful.
+
+49
+00:04:15,190 --> 00:04:21,910
+And from the execution log, you can decide
+whether you want to retry with currently
+
+50
+00:04:21,911 --> 00:04:27,310
+saved workflow, or with the original
+workflow from the time of execution.
+
+51
+00:04:28,270 --> 00:04:32,750
+The retry is executed
+from the node with an error.
+
+52
+00:04:33,310 --> 00:04:39,110
+This means that if the error in your
+workflow comes from a wrongly configured
+
+53
+00:04:39,111 --> 00:04:46,270
+node previous to the one with an error,
+you will have to use the copy to editor
+
+54
+00:04:46,271 --> 00:04:52,730
+node to re-execute these, because it
+only executes from the errored node.
+
+55
+00:04:55,090 --> 00:05:00,410
+Another useful feature when
+debugging is the edit output feature.
+
+56
+00:05:01,270 --> 00:05:06,910
+The edit output feature lets you manually
+edit the output for a specific node,
+
+57
+00:05:07,150 --> 00:05:15,570
+while it can come in handy when testing
+or debugging workflows, specifically if
+
+58
+00:05:15,571 --> 00:05:18,810
+you're using webhooks
+and you don't want to have
+
+59
+00:05:18,811 --> 00:05:21,450
+to send many different
+kinds of tests events.
+
+60
+00:05:21,451 --> 00:05:29,770
+Without requiring you to execute
+all of the past nodes, and do all your
+
+61
+00:05:29,771 --> 00:05:33,237
+transformations on the
+data, it should be used
+
+62
+00:05:33,238 --> 00:05:36,331
+sparingly as it is not a
+very scalable method.
+
+63
+00:05:37,030 --> 00:05:41,042
+However, in cases where
+retrying is not possible, it
+
+64
+00:05:41,043 --> 00:05:45,390
+can be a quick way to fix a
+backlog of a few executions.
+
+65
+00:05:49,220 --> 00:05:54,580
+Another very, very useful feature when
+debugging is the workflow version history.
+
+66
+00:05:55,120 --> 00:06:01,320
+When making updates to workflows,
+error handling, or debugging, sometimes it
+
+67
+00:06:01,321 --> 00:06:05,920
+happens we make mistakes, and we
+can lose sight of where we started from.
+
+68
+00:06:06,560 --> 00:06:10,140
+Luckily, we have the
+workflow version history.
+
+69
+00:06:11,560 --> 00:06:14,257
+From here, you can
+see all of the previous
+
+70
+00:06:14,258 --> 00:06:18,141
+versions of a given
+workflow that were saved.
+
+71
+00:06:18,260 --> 00:06:23,180
+This can be useful if you need to revert
+some changes that were made to a workflow,
+
+72
+00:06:23,400 --> 00:06:26,998
+that might be causing
+bugs, or to inspect the
+
+73
+00:06:26,999 --> 00:06:31,201
+structure of a previous
+version of the workflow.
+
+74
+00:06:31,400 --> 00:06:36,960
+This can be combined nicely with the
+retry feature if you need to revert to a
+
+75
+00:06:36,961 --> 00:06:39,536
+previous version,
+and then retry multiple
+
+76
+00:06:39,537 --> 00:06:43,061
+executions with the
+currently saved version.
+
+77
+00:06:44,800 --> 00:06:50,160
+Let's jump into n8n and do two different
+examples of debugging a workflow.
+
+78
+00:06:52,520 --> 00:06:58,920
+So here we are in n8n, and we have
+this workflow that we're going to debug.
+
+79
+00:06:59,300 --> 00:07:04,720
+The first step of debugging any workflow
+is, well, first of all, understanding what
+
+80
+00:07:04,721 --> 00:07:08,160
+the workflow is supposed to
+do when it executes properly.
+
+81
+00:07:08,900 --> 00:07:14,740
+So here we can see we have our execution
+logs, we have a successful execution,
+
+82
+00:07:15,060 --> 00:07:16,060
+a failed execution.
+
+83
+00:07:16,320 --> 00:07:19,254
+But let's first look at
+the successful execution
+
+84
+00:07:19,255 --> 00:07:22,161
+to sort of figure out
+what the workflow does.
+
+85
+00:07:22,880 --> 00:07:25,560
+So here we can see
+we receive a webhook.
+
+86
+00:07:25,960 --> 00:07:32,000
+In the webhook, we have an
+ID key with a specific identifier.
+
+87
+00:07:33,060 --> 00:07:35,560
+Then we get the user.
+
+88
+00:07:35,700 --> 00:07:38,800
+So this is another function
+of the Google Sheets.
+
+89
+00:07:38,940 --> 00:07:44,920
+We're going to be getting rows, but
+specifically filtering on the ID column.
+
+90
+00:07:45,100 --> 00:07:51,220
+And we're going to be looking pretty
+much for the row with the specific ID.
+
+91
+00:07:52,020 --> 00:07:56,176
+This returns all of the
+row information, all of the
+
+92
+00:07:56,177 --> 00:07:59,620
+information from the
+different columns in the sheet.
+
+93
+00:07:59,740 --> 00:08:03,433
+So we get email, first name,
+last name, and company, as
+
+94
+00:08:03,434 --> 00:08:07,520
+well as the ID that was the
+same one as we filtered on.
+
+95
+00:08:08,120 --> 00:08:12,434
+And then we send a Slack
+message with info for the
+
+96
+00:08:12,435 --> 00:08:16,540
+specific email, their first
+name, last name, and company.
+
+97
+00:08:18,220 --> 00:08:21,060
+Now we can look into
+the failed execution.
+
+98
+00:08:22,300 --> 00:08:27,120
+Here we can see quickly
+by looking, we have an error.
+
+99
+00:08:28,000 --> 00:08:32,560
+Error cannot read properties
+of undefined reading to string.
+
+100
+00:08:32,720 --> 00:08:36,820
+So clearly here, it tried
+to read the body .id.
+
+101
+00:08:37,480 --> 00:08:43,500
+And in the webhook, we can see
+that this webhook did not have an ID.
+
+102
+00:08:44,340 --> 00:08:46,509
+So what we're going
+to do is we're going to
+
+103
+00:08:46,510 --> 00:08:49,981
+click Debug in Editor
+to copy the data over.
+
+104
+00:08:50,060 --> 00:08:53,100
+And we're going to deal
+with the different cases.
+
+105
+00:08:53,960 --> 00:08:56,828
+So first of all, we
+could say, we could add
+
+106
+00:08:56,829 --> 00:09:03,280
+an if and make sure
+that we have a valid ID.
+
+107
+00:09:03,860 --> 00:09:15,440
+So here, we want the
+json.body.id this time to be, to exist.
+
+108
+00:09:16,200 --> 00:09:20,253
+And if this is the case,
+then we can go up this
+
+109
+00:09:20,254 --> 00:09:24,061
+path and get the user and
+send the Slack message.
+
+110
+00:09:25,100 --> 00:09:29,320
+Here, there are multiple ways
+we could continue debugging this.
+
+111
+00:09:29,660 --> 00:09:34,740
+Either we could say,
+if we don't have an ID.
+
+112
+00:09:35,020 --> 00:09:37,480
+So here, let me rename ID.
+
+113
+00:09:38,160 --> 00:09:43,480
+If we don't have an ID, we could, for
+example, send a Slack message saying,
+
+114
+00:09:46,600 --> 00:09:49,960
+webhook received
+did not have ID.
+
+115
+00:09:50,900 --> 00:09:52,440
+And that way we
+can look into it.
+
+116
+00:09:53,160 --> 00:09:57,845
+But we could also be a bit
+smarter here and see the goal of
+
+117
+00:09:57,846 --> 00:10:04,020
+this workflow is to look up a
+user in the specific database.
+
+118
+00:10:04,340 --> 00:10:06,760
+And here it's with the ID.
+
+119
+00:10:07,140 --> 00:10:12,245
+But we also saw by
+looking at the past
+
+120
+00:10:12,246 --> 00:10:17,480
+execution that in the
+database we have an email.
+
+121
+00:10:17,481 --> 00:10:23,200
+So instead of looking up the ID, if
+we don't have an ID, but we have an
+
+122
+00:10:23,201 --> 00:10:26,400
+email, we could try
+looking up using the email.
+
+123
+00:10:27,340 --> 00:10:31,180
+So going back to the editor,
+we have the case with a valid ID.
+
+124
+00:10:32,260 --> 00:10:36,560
+Then we could say we have
+the case where we have an email.
+
+125
+00:10:38,420 --> 00:10:43,600
+And this would be
+json.body.email exists.
+
+126
+00:10:44,960 --> 00:10:48,860
+And then all we would have
+to do is do the same actions.
+
+127
+00:10:50,820 --> 00:10:57,400
+Instead of looking up the ID,
+we would be looking up the email.
+
+128
+00:11:00,120 --> 00:11:01,720
+json.body.email.
+
+129
+00:11:02,020 --> 00:11:08,540
+And then we would send the same Slack message
+with the information from the contact.
+
+130
+00:11:09,920 --> 00:11:15,240
+What we can do from here is then deal
+with the case where we have none of them.
+
+131
+00:11:15,360 --> 00:11:20,940
+This would be a great place to use
+the stop and throw error node here.
+
+132
+00:11:23,300 --> 00:11:27,200
+And the little message
+no ID or email.
+
+133
+00:11:29,100 --> 00:11:33,240
+From here we have
+a fixed workflow.
+
+134
+00:11:33,600 --> 00:11:39,280
+So first of all, we can verify that
+with this error data, it still works.
+
+135
+00:11:39,420 --> 00:11:41,500
+So I can test the workflow.
+
+136
+00:11:41,960 --> 00:11:44,680
+And as we can see
+here, it didn't have an ID.
+
+137
+00:11:45,020 --> 00:11:46,940
+So it went down
+to the email field.
+
+138
+00:11:47,100 --> 00:11:50,260
+It had a valid email.
+
+139
+00:11:50,480 --> 00:11:52,380
+So it got the user and
+it sent the message.
+
+140
+00:11:53,420 --> 00:12:01,420
+In this specific case, we wouldn't be able
+to retry this workflow because we had to
+
+141
+00:12:01,421 --> 00:12:07,820
+make the modifications
+before this specific node.
+
+142
+00:12:09,080 --> 00:12:12,220
+Another case I'd like to
+cover is this execution.
+
+143
+00:12:12,940 --> 00:12:16,480
+What we can see here is
+we received the webhook.
+
+144
+00:12:16,481 --> 00:12:22,040
+We tried to read the user
+and nothing happened here.
+
+145
+00:12:22,140 --> 00:12:23,340
+No message was executed.
+
+146
+00:12:23,800 --> 00:12:29,760
+And this is what I was mentioning earlier
+where sometimes a workflow can not fail
+
+147
+00:12:30,480 --> 00:12:32,700
+but can also not be successful.
+
+148
+00:12:33,000 --> 00:12:34,720
+And this is a very
+good example of this.
+
+149
+00:12:35,120 --> 00:12:36,640
+So what happened here?
+
+150
+00:12:37,420 --> 00:12:41,609
+Well, clearly we tried
+to look up someone with
+
+151
+00:12:41,610 --> 00:12:45,000
+an ID that we can see
+here in the input data.
+
+152
+00:12:45,001 --> 00:12:47,660
+But no data was returned.
+
+153
+00:12:48,100 --> 00:12:53,718
+So something that we can do
+here is again, this time it won't
+
+154
+00:12:53,719 --> 00:13:03,240
+be debug in editor but copy to
+editor because it wasn't errored.
+
+155
+00:13:04,040 --> 00:13:07,620
+And what we can do this time is
+now deal with the case, with this case.
+
+156
+00:13:07,800 --> 00:13:14,900
+So if we test the workflow, we can see
+that the updates we made still work with
+
+157
+00:13:14,901 --> 00:13:19,800
+this execution, except we're still
+not getting the output we wanted.
+
+158
+00:13:20,360 --> 00:13:24,437
+So here, something we
+can do is in this get user
+
+159
+00:13:24,438 --> 00:13:30,520
+sheet, by heading over to
+the parameters, we can set...
+
+160
+00:13:30,521 --> 00:13:35,000
+Sorry, by heading over to the settings,
+we can ask it to always output data.
+
+161
+00:13:35,960 --> 00:13:45,200
+And this means that even if it doesn't
+find a contact, here we'll have a here
+
+162
+00:13:45,201 --> 00:13:48,220
+we'll have the information
+of an empty item.
+
+163
+00:13:49,120 --> 00:13:55,060
+From here, before sending the Slack
+message, we can set an additional check.
+
+164
+00:13:56,060 --> 00:14:00,700
+So here, we could say does
+the contact have an email?
+
+165
+00:14:01,980 --> 00:14:08,420
+So this would be by reading the
+information we would have here in Slack.
+
+166
+00:14:10,360 --> 00:14:14,760
+json.email json.email
+If we have an email.
+
+167
+00:14:18,690 --> 00:14:21,290
+that exists, then we
+send the Slack message.
+
+168
+00:14:22,830 --> 00:14:26,630
+Here, we would have to
+do the same modifications.
+
+169
+00:14:26,970 --> 00:14:31,130
+So, copy this put it here.
+
+170
+00:14:31,290 --> 00:14:32,450
+We also check.
+
+171
+00:14:34,810 --> 00:14:37,610
+And if we have a valid
+email, we send the message.
+
+172
+00:14:38,310 --> 00:14:44,030
+In the cases where we don't have a valid
+email, and so the lookup was unsuccessful,
+
+173
+00:14:44,470 --> 00:14:48,750
+we could just drag a
+stop and throw error.
+
+174
+00:14:49,870 --> 00:14:55,430
+Contact not found in database.
+
+175
+00:14:57,450 --> 00:15:01,410
+And this we can do it this way.
+
+176
+00:15:01,950 --> 00:15:05,213
+Here, we could sort
+of factor this a little bit
+
+177
+00:15:05,214 --> 00:15:08,390
+better, seeing as all of
+these do the same thing.
+
+178
+00:15:08,530 --> 00:15:18,090
+We could just use a single if and a single
+throw error by attaching this one here.
+
+179
+00:15:19,090 --> 00:15:26,730
+This way, we have debugged the workflow
+and whether if we can't find the user,
+
+180
+00:15:26,930 --> 00:15:30,903
+next time we'll have an
+error and someone can hop in
+
+181
+00:15:30,904 --> 00:15:33,650
+and deal with the case
+where we don't have a user.
+
+182
+00:15:33,790 --> 00:15:37,010
+If this is usual, then we
+handle the case differently.
+
+183
+00:15:37,210 --> 00:15:39,810
+If it's not usual, we can
+figure out what's wrong.
+
+184
+00:15:41,430 --> 00:15:46,090
+Thanks for listening to the eighth and
+final video of the NLN beginner course
+
+185
+00:15:46,091 --> 00:15:50,750
+where we looked into debugging
+workflows and fixing failed executions.
+
+186
+00:15:51,110 --> 00:15:55,630
+In the advanced course, we'll be
+covering some much more advanced topics,
+
+187
+00:15:55,930 --> 00:16:01,110
+advanced workflow building, complex
+data flows, more advanced examples,
+
+188
+00:16:01,270 --> 00:16:04,030
+as well as error
+handling and debugging.
+
+189
+00:16:04,810 --> 00:16:08,730
+Thanks for your attention and for some
+of you, see you in the advanced course.
+

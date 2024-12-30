@@ -1,0 +1,780 @@
+﻿1
+00:00:00,000 --> 00:00:04,240
+Hello and welcome to video number
+nine of the beginner course for n8n.
+
+2
+00:00:04,620 --> 00:00:09,240
+In this video, we'll be covering
+collaboration, workflow sharing,
+
+3
+00:00:09,540 --> 00:00:12,860
+credentials, and some
+other useful tips and tricks.
+
+4
+00:00:14,000 --> 00:00:17,860
+The first thing I'd like us
+to cover is the community.
+
+5
+00:00:18,180 --> 00:00:20,518
+And this is really
+something that makes n8n
+
+6
+00:00:20,519 --> 00:00:23,361
+stand out from other
+automation platforms.
+
+7
+00:00:23,600 --> 00:00:26,240
+It's a very active and
+responsive community.
+
+8
+00:00:27,020 --> 00:00:32,040
+The community is a great place to find
+announcements, information about upcoming
+
+9
+00:00:32,041 --> 00:00:36,000
+features, or for example,
+to request new features.
+
+10
+00:00:36,280 --> 00:00:40,820
+You can also ask questions about
+your workflows or report on bugs.
+
+11
+00:00:41,300 --> 00:00:44,700
+This is where you'll find
+all of the community events.
+
+12
+00:00:45,580 --> 00:00:50,008
+What's great is the support
+usually answers very fast,
+
+13
+00:00:50,009 --> 00:00:53,660
+preventing any downtime when
+it comes to building workflows.
+
+14
+00:00:54,380 --> 00:00:58,497
+Finally, feature requesting
+is a great way to bring more
+
+15
+00:00:58,498 --> 00:01:02,400
+attention to a feature
+that you would like in n8n.
+
+16
+00:01:03,160 --> 00:01:06,466
+So don't hesitate to head
+over there and request
+
+17
+00:01:06,467 --> 00:01:09,401
+features if there is
+something you're looking for.
+
+18
+00:01:09,500 --> 00:01:13,520
+You can find the community
+on community .enedn.io.
+
+19
+00:01:15,640 --> 00:01:20,120
+Part of what the community
+helps build is a library of templates.
+
+20
+00:01:20,420 --> 00:01:24,255
+So templates cover a
+very wide array of common
+
+21
+00:01:24,256 --> 00:01:27,781
+automation problems that
+are being solved with n8n.
+
+22
+00:01:28,380 --> 00:01:31,640
+Do you want to
+build an API endpoint?
+
+23
+00:01:32,040 --> 00:01:37,500
+Instead of starting from scratch,
+start with this template by Jon.
+
+24
+00:01:37,960 --> 00:01:42,860
+If you want to backup all of your
+n8n work flows to a GitHub instance,
+
+25
+00:01:43,300 --> 00:01:47,735
+same thing you can just
+do this with a workflow
+
+26
+00:01:47,736 --> 00:01:50,920
+that already exists
+through these templates.
+
+27
+00:01:51,220 --> 00:01:54,100
+This will save you a lot of
+time when building workflows.
+
+28
+00:01:55,200 --> 00:01:55,840
+Enidn.io.
+
+29
+00:01:55,841 --> 00:02:00,540
+It might even save you the whole time
+dedicated to building something specific
+
+30
+00:02:00,541 --> 00:02:03,560
+that you can just find
+in the template library.
+
+31
+00:02:04,460 --> 00:02:09,640
+There are also workflows for building
+chatbox, extracting text from PDFs,
+
+32
+00:02:09,641 --> 00:02:12,580
+as well as many, many more
+very interesting use cases.
+
+33
+00:02:12,820 --> 00:02:17,585
+You can find all of
+these and more on nln .io
+
+34
+00:02:17,586 --> 00:02:21,600
+slash workflows or directly
+from the nln interface.
+
+35
+00:02:21,601 --> 00:02:26,440
+You can sort them by category,
+search by name or by node type.
+
+36
+00:02:26,700 --> 00:02:32,220
+So if you want to build a workflow using
+OpenAI, you can just type OpenAI and sort
+
+37
+00:02:32,221 --> 00:02:35,240
+of see what kind of
+templates are already available.
+
+38
+00:02:35,520 --> 00:02:39,600
+So always remember to check here
+before you start building your workflows.
+
+39
+00:02:40,780 --> 00:02:45,040
+Also, if you build something interesting
+or you build something that you think
+
+40
+00:02:45,041 --> 00:02:47,728
+might be useful to other
+people, you can also
+
+41
+00:02:47,729 --> 00:02:50,421
+submit it as a template
+for others to use.
+
+42
+00:02:50,500 --> 00:02:51,500
+Don't worry.
+
+43
+00:02:51,600 --> 00:02:55,060
+No credentials are shared when submitting
+workflows, so you don't have to worry
+
+44
+00:02:55,061 --> 00:02:58,540
+about any security issues
+when it comes to that.
+
+45
+00:03:00,900 --> 00:03:07,080
+Now, let's talk about the different kinds
+of access and users that are available in
+
+46
+00:03:07,081 --> 00:03:11,060
+nln when it comes to users,
+workflows and credentials.
+
+47
+00:03:12,340 --> 00:03:14,860
+And let's start off
+with user management.
+
+48
+00:03:16,300 --> 00:03:19,820
+There are three types
+or three levels of users.
+
+49
+00:03:20,260 --> 00:03:21,260
+Owner.
+
+50
+00:03:21,600 --> 00:03:21,700
+Admin.
+
+51
+00:03:21,860 --> 00:03:22,380
+And member.
+
+52
+00:03:22,860 --> 00:03:25,744
+These users will have
+different access levels
+
+53
+00:03:25,745 --> 00:03:27,900
+when it comes to
+workflows and credentials.
+
+54
+00:03:28,320 --> 00:03:34,660
+And this is made to ensure that no one
+has unwanted access to specific workflows,
+
+55
+00:03:34,900 --> 00:03:39,040
+API keys, or access
+to any specific tools.
+
+56
+00:03:40,640 --> 00:03:44,929
+The owner is... there's only
+one owner per nln instance,
+
+57
+00:03:44,930 --> 00:03:47,860
+and they have all of the
+rights listed here below.
+
+58
+00:03:48,020 --> 00:03:49,400
+I won't read
+through all of them.
+
+59
+00:03:49,401 --> 00:03:53,960
+What's important to note is that
+even though they have access to all the
+
+60
+00:03:53,961 --> 00:03:59,660
+workflows and credentials, they won't
+be able to read the sensitive information.
+
+61
+00:03:59,940 --> 00:04:07,540
+So if you get an API key from Slack,
+for example, and you create a credential,
+
+62
+00:04:07,820 --> 00:04:13,880
+the owner will have access to
+the credential to share it or revoke
+
+63
+00:04:13,881 --> 00:04:17,460
+ownership, but will not
+be able to extract the...
+
+64
+00:04:18,320 --> 00:04:21,960
+the API key or app
+token from the credential.
+
+65
+00:04:22,180 --> 00:04:25,644
+So it's access to sharing,
+but not access to the
+
+66
+00:04:25,645 --> 00:04:29,021
+underlying potentially
+sensitive information.
+
+67
+00:04:30,640 --> 00:04:33,340
+Then underneath
+owners, we have admins.
+
+68
+00:04:33,360 --> 00:04:39,280
+Admins are much like owners, except
+they don't have access to the nln cloud
+
+69
+00:04:39,281 --> 00:04:43,980
+dashboard or can't manage anything
+when it comes to the owner role.
+
+70
+00:04:44,080 --> 00:04:46,100
+So modifying or
+changing the owner role.
+
+71
+00:04:46,800 --> 00:04:47,440
+And then the owner is...
+
+72
+00:04:47,441 --> 00:04:54,000
+Members are just your standard normal
+NNN users, and they can manage their own
+
+73
+00:04:54,001 --> 00:04:59,920
+accounts and workflows, whether it
+be tags, assigning workflows, sharing
+
+74
+00:04:59,921 --> 00:05:03,060
+workflows, or their own
+settings such as passwords.
+
+75
+00:05:05,220 --> 00:05:11,135
+When building workflows, you
+will have the option to share or
+
+76
+00:05:11,136 --> 00:05:15,600
+restrict access to the workflow
+to different members of the team.
+
+77
+00:05:15,601 --> 00:05:21,500
+It is recommended that only the
+relevant users have access to the relevant
+
+78
+00:05:21,501 --> 00:05:29,080
+workflows to avoid unwanted changes being
+made or bugs being introduced by people
+
+79
+00:05:29,081 --> 00:05:31,480
+who might not understand
+the workflow at hand.
+
+80
+00:05:32,980 --> 00:05:37,705
+Workflow sharing is the
+method used to share or give
+
+81
+00:05:37,706 --> 00:05:42,080
+access to workflows between
+users of the same NNN instance.
+
+82
+00:05:42,680 --> 00:05:45,580
+Users can share
+workflows that they create.
+
+83
+00:05:45,600 --> 00:05:52,300
+And instance owners or admins can view
+and share all workflows in the instance.
+
+84
+00:05:52,700 --> 00:05:57,436
+By default, a member that
+does not have a workflow shared
+
+85
+00:05:57,437 --> 00:06:00,620
+with them will not be able
+to access that workflow.
+
+86
+00:06:01,200 --> 00:06:05,260
+So if you are going to be collaborating
+with other members on a workflow,
+
+87
+00:06:05,480 --> 00:06:07,600
+remember to go in and share.
+
+88
+00:06:08,140 --> 00:06:13,180
+The sharing option can be accessed
+at the top right of the workflows canvas.
+
+89
+00:06:15,620 --> 00:06:20,340
+You have from the main workflow menu,
+you can see all of the workflows that you
+
+90
+00:06:20,341 --> 00:06:25,080
+have access to, as well as a
+filter for workflows created by you.
+
+91
+00:06:25,260 --> 00:06:27,780
+So of which you
+have sharing rights.
+
+92
+00:06:29,900 --> 00:06:33,840
+There are two workflow
+roles, creator and editor.
+
+93
+00:06:34,400 --> 00:06:40,941
+Below you can see the different rights that
+creators and editors have on the workflow.
+
+94
+00:06:41,320 --> 00:06:43,960
+The creator is the user
+who created the workflow.
+
+95
+00:06:43,961 --> 00:06:48,880
+And editors are just other users that
+have access to the given workflow.
+
+96
+00:06:49,680 --> 00:06:53,346
+Workflow sharing allows
+editors to use all of the
+
+97
+00:06:53,347 --> 00:06:55,920
+credentials that are
+used in a given workflow.
+
+98
+00:06:56,240 --> 00:07:00,055
+This includes credentials
+that aren't explicitly
+
+99
+00:07:00,056 --> 00:07:02,661
+shared with them
+using credential sharing.
+
+100
+00:07:03,380 --> 00:07:11,120
+This means if I create a workflow that
+has, for example, a slack credential and I
+
+101
+00:07:11,121 --> 00:07:13,700
+share it to someone
+else that I'm working on.
+
+102
+00:07:13,701 --> 00:07:18,180
+This will also share the slack
+credential with that person,
+
+103
+00:07:18,181 --> 00:07:22,700
+even if they didn't have before
+access to that slack credential.
+
+104
+00:07:22,980 --> 00:07:28,616
+This is simply so the person
+that is being shared the workflow
+
+105
+00:07:28,617 --> 00:07:33,960
+with can jump into the workflow,
+make changes, test if needed.
+
+106
+00:07:35,720 --> 00:07:41,160
+The last topic, and this is an important
+one, especially when it comes to security,
+
+107
+00:07:41,400 --> 00:07:43,080
+is credential sharing.
+
+108
+00:07:45,120 --> 00:07:48,780
+Credential sharing allows
+you to share credentials that
+
+109
+00:07:48,781 --> 00:07:53,760
+you've created with other users
+in the same instance as you.
+
+110
+00:07:54,000 --> 00:07:57,840
+The other users can then use
+the credentials in their workflows,
+
+111
+00:07:58,220 --> 00:08:01,150
+but they won't be able
+to access or edit the
+
+112
+00:08:01,151 --> 00:08:03,340
+credential details, just
+as we mentioned earlier.
+
+113
+00:08:03,840 --> 00:08:08,618
+This is very important to
+ensure security, meaning that no
+
+114
+00:08:08,619 --> 00:08:13,000
+one can extract the app token
+or API key from the credentials.
+
+115
+00:08:13,001 --> 00:08:16,920
+And use it somewhere else where
+they might not be authorized to.
+
+116
+00:08:18,060 --> 00:08:20,940
+Users can share credentials
+that they have created.
+
+117
+00:08:21,160 --> 00:08:26,360
+And instance owners and users with
+the admin role can view and share all
+
+118
+00:08:26,361 --> 00:08:30,800
+credentials in the instance, again,
+without accessing the underlying data.
+
+119
+00:08:32,620 --> 00:08:37,244
+From the left menu, when
+you open a credential, you will
+
+120
+00:08:37,245 --> 00:08:41,280
+be able to add new users
+under the sharing settings.
+
+121
+00:08:41,980 --> 00:08:42,980
+This is where you
+can add new users.
+
+122
+00:08:43,000 --> 00:08:48,280
+This is where you can invite new users as
+well as revoke access should you want to
+
+123
+00:08:48,281 --> 00:08:51,600
+prevent someone from having
+access to a specific credential.
+
+124
+00:08:53,820 --> 00:08:58,360
+One last topic I'm going to
+cover in this video is the n8n API.
+
+125
+00:08:59,280 --> 00:09:01,600
+Now, this may seem
+a little bit funny.
+
+126
+00:09:02,000 --> 00:09:04,740
+We're using APIs in n8n.
+
+127
+00:09:05,000 --> 00:09:07,200
+Why does n8n have its own API?
+
+128
+00:09:09,040 --> 00:09:12,220
+This allows for two
+main use cases.
+
+129
+00:09:13,000 --> 00:09:19,660
+The first one is to use the n8n
+node to manage other n8n workflows.
+
+130
+00:09:20,140 --> 00:09:23,100
+We'll dive deeper into
+that in just a second.
+
+131
+00:09:23,500 --> 00:09:28,511
+And the second use
+case is to access, create,
+
+132
+00:09:28,512 --> 00:09:32,460
+edit n8n workflows
+from external programs.
+
+133
+00:09:32,880 --> 00:09:37,330
+So to use the n8n API,
+head over to the settings
+
+134
+00:09:37,331 --> 00:09:40,740
+and then the n8n API
+section in the settings.
+
+135
+00:09:40,741 --> 00:09:44,200
+And from here, you can
+generate a new API key.
+
+136
+00:09:45,140 --> 00:09:49,903
+This API key is used
+to authenticate to the
+
+137
+00:09:49,904 --> 00:09:54,421
+n8n API as you would
+pretty much any other API.
+
+138
+00:09:54,580 --> 00:09:55,720
+It's a REST API.
+
+139
+00:09:56,560 --> 00:10:03,220
+And from here, you have endpoints to
+retrieve execution logs, delete execution
+
+140
+00:10:03,221 --> 00:10:09,380
+logs, create, update, delete, as well
+as activate or deactivate workflows.
+
+141
+00:10:09,381 --> 00:10:14,800
+And you can also create and delete
+credentials, among many other features.
+
+142
+00:10:16,260 --> 00:10:20,129
+The second method is by
+using the n8n node, which
+
+143
+00:10:20,130 --> 00:10:23,920
+has pretty much all of the
+same features as the API.
+
+144
+00:10:24,240 --> 00:10:30,940
+The most useful use case for this will
+be updating workflows programmatically.
+
+145
+00:10:31,080 --> 00:10:36,360
+So for example, activating or deactivating
+workflows depending on certain conditions.
+
+146
+00:10:36,860 --> 00:10:38,440
+We could imagine...
+
+147
+00:10:39,380 --> 00:10:44,760
+that we have a workflow that we
+only want to run on working hours.
+
+148
+00:10:45,080 --> 00:10:46,760
+So let's say 8 A.M.
+
+149
+00:10:46,761 --> 00:10:47,761
+to 6 P.M.
+
+150
+00:10:47,920 --> 00:10:56,020
+We could use a supporting workflow
+to deactivate the workflow at 6 P.M.
+
+151
+00:10:56,021 --> 00:10:58,600
+and reactivate it at 8 A.M.
+
+152
+00:10:59,140 --> 00:11:02,020
+This could also be done
+in the workflow itself.
+
+153
+00:11:02,260 --> 00:11:04,600
+But here we could
+do it using the API.
+
+154
+00:11:05,540 --> 00:11:08,880
+There's also a generate
+security audit feature.
+
+155
+00:11:09,380 --> 00:11:12,555
+Which can come in handy
+for getting all of the execution
+
+156
+00:11:12,556 --> 00:11:16,200
+logs and anything you might
+need for a security audit.
+
+157
+00:11:18,100 --> 00:11:21,480
+Thanks for listening to video
+number nine of the beginner course.
+
+158
+00:11:21,720 --> 00:11:24,320
+Where we covered
+workflow sharing, credentials,
+
+159
+00:11:24,321 --> 00:11:26,941
+and many other
+useful tips and tricks.
+

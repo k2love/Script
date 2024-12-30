@@ -1,0 +1,901 @@
+﻿1
+00:00:00,870 --> 00:00:05,450
+Hey and welcome to video number
+six of the beginner course for n8n.
+
+2
+00:00:05,710 --> 00:00:11,210
+In this video we'll be covering some
+useful nodes and we'll keep on building
+
+3
+00:00:11,211 --> 00:00:16,010
+the workflow that we've been
+working on for the past few videos.
+
+4
+00:00:17,170 --> 00:00:22,650
+So diving right in, let's quickly
+cover some super useful nodes.
+
+5
+00:00:23,490 --> 00:00:28,630
+Just as a reminder, so far we've seen
+the Google sheets node, we've seen the if
+
+6
+00:00:28,631 --> 00:00:33,130
+node, we've seen the
+schedule trigger node.
+
+7
+00:00:33,450 --> 00:00:37,354
+In this video we're going to
+be covering some different
+
+8
+00:00:37,355 --> 00:00:40,850
+nodes that will likely come in
+handy when building workflows.
+
+9
+00:00:42,630 --> 00:00:46,750
+First of all, we have the
+edit fields or set node.
+
+10
+00:00:47,190 --> 00:00:53,270
+The edit field node is useful
+for managing data in your items.
+
+11
+00:00:53,730 --> 00:00:56,623
+This is going to be, for
+example, cleaning up the
+
+12
+00:00:56,624 --> 00:00:59,850
+data that we're currently
+using in the workflow.
+
+13
+00:01:00,290 --> 00:01:08,851
+But it can also be used to add, format,
+reduce any data that's in the items.
+
+14
+00:01:08,970 --> 00:01:12,227
+So that later on in the
+workflow we can be working
+
+15
+00:01:12,228 --> 00:01:15,711
+with data that's going
+to be a lot cleaner.
+
+16
+00:01:16,570 --> 00:01:22,513
+In the edit fields we have
+the option to keep only the
+
+17
+00:01:22,514 --> 00:01:29,170
+fields that we are setting
+or to include all the fields.
+
+18
+00:01:30,650 --> 00:01:35,650
+Another useful node is one
+of the sort of function nodes.
+
+19
+00:01:35,970 --> 00:01:41,210
+In this case, we're going to be talking
+about the aggregate node, which is part of
+
+20
+00:01:41,211 --> 00:01:46,690
+a category that helps
+dealing with multiple items.
+
+21
+00:01:47,050 --> 00:01:53,030
+So this one specifically is used
+to aggregate data across all items.
+
+22
+00:01:53,270 --> 00:01:57,270
+In this example, we see
+we have two input items.
+
+23
+00:01:57,490 --> 00:01:58,490
+Each.
+
+24
+00:01:58,740 --> 00:02:06,570
+person having their email and we can
+aggregate across the email field and take
+
+25
+00:02:06,571 --> 00:02:11,374
+these two items and turn
+them into one single output item
+
+26
+00:02:11,375 --> 00:02:16,050
+that contains all of the
+emails from all the input items.
+
+27
+00:02:16,990 --> 00:02:24,450
+We also have similar nodes to remove
+duplicates to limit the total number of
+
+28
+00:02:24,451 --> 00:02:31,630
+items or, for example, to break out
+one key of an item into multiple items,
+
+29
+00:02:31,830 --> 00:02:36,490
+which is going to be the opposite
+operation of the aggregate node.
+
+30
+00:02:37,550 --> 00:02:43,550
+Another very useful node this time in
+the trigger category is the webhook node.
+
+31
+00:02:44,610 --> 00:02:51,990
+When this trigger node is added to your
+canvas, you will be attributed a URL here
+
+32
+00:02:51,991 --> 00:02:57,310
+under test URL and production
+URL that you can modify if you'd like.
+
+33
+00:02:58,290 --> 00:03:04,410
+When testing this step, or once the
+workflow is activated, it will listen to
+
+34
+00:03:04,411 --> 00:03:10,510
+either the test URL or the production
+URL for incoming webhooks.
+
+35
+00:03:10,511 --> 00:03:18,350
+Then it will execute the workflow with
+the received data from the webhook as the
+
+36
+00:03:18,351 --> 00:03:24,090
+initial data so you can automate
+from that webhook reception.
+
+37
+00:03:26,590 --> 00:03:30,800
+Let's jump into N8n and keep
+building that workflow we've been
+
+38
+00:03:30,801 --> 00:03:34,770
+working on and also show you
+a quick example with webhooks.
+
+39
+00:03:36,310 --> 00:03:40,599
+So here we are back in
+N8n with the workflow that
+
+40
+00:03:40,600 --> 00:03:44,830
+we've been slowly building
+upon these past few videos.
+
+41
+00:03:45,230 --> 00:03:48,930
+Let's start off by testing the
+workflow so we have all of our data.
+
+42
+00:03:49,850 --> 00:03:54,070
+The next thing we're going to want
+to do is first of all clean the webhook.
+
+43
+00:03:54,090 --> 00:03:56,450
+Clean up a little bit the
+data that we're working with.
+
+44
+00:03:56,770 --> 00:04:02,350
+We're going to be doing
+this with the edit fields node.
+
+45
+00:04:02,970 --> 00:04:10,590
+This is a very very useful node and I
+always recommend that you use the edit
+
+46
+00:04:10,591 --> 00:04:16,170
+fields node to make sure that you're only
+keeping the data that is useful to you.
+
+47
+00:04:16,310 --> 00:04:20,534
+This will avoid you from
+having very complex items
+
+48
+00:04:20,535 --> 00:04:23,610
+with many fields that
+you might not be using.
+
+49
+00:04:24,090 --> 00:04:27,721
+Anyway you can always
+go back to that edit fields
+
+50
+00:04:27,722 --> 00:04:30,430
+node and add some
+extra fields if necessary.
+
+51
+00:04:30,810 --> 00:04:37,170
+So here in the include in output setting
+we're going to choose no input fields
+
+52
+00:04:37,171 --> 00:04:42,630
+because we're going to map everything
+that we need directly as fields here.
+
+53
+00:04:43,410 --> 00:04:48,334
+So we're going to add a
+full name field that as we sort
+
+54
+00:04:48,335 --> 00:04:52,190
+of saw before is going to
+be first name and last name.
+
+55
+00:04:52,690 --> 00:04:56,744
+And we're going to use
+the to uppercase function
+
+56
+00:04:56,745 --> 00:05:00,070
+to make sure that the
+last name is uppercase.
+
+57
+00:05:00,170 --> 00:05:06,630
+So here if we test this step we will
+only have the full name for each item.
+
+58
+00:05:08,670 --> 00:05:12,390
+As we showed in the last
+video we do need the email.
+
+59
+00:05:12,610 --> 00:05:18,710
+So we're going to drag the
+email field and name it email.
+
+60
+00:05:19,370 --> 00:05:22,870
+And we also need
+the company field.
+
+61
+00:05:22,990 --> 00:05:27,030
+So we're going to drag the
+company field and name it company.
+
+62
+00:05:27,690 --> 00:05:30,739
+Again here if we execute this
+step we're only going to have
+
+63
+00:05:30,740 --> 00:05:35,810
+the information that we need
+full name email and company.
+
+64
+00:05:37,590 --> 00:05:41,892
+From this step we can
+all the future nodes should
+
+65
+00:05:41,893 --> 00:05:44,610
+execute as they were
+supposed to previously.
+
+66
+00:05:45,130 --> 00:05:49,803
+We again have the email key
+that's available here and the
+
+67
+00:05:49,804 --> 00:05:53,790
+email key that is available
+that is available and used.
+
+68
+00:05:54,090 --> 00:05:55,090
+Here.
+
+69
+00:05:55,290 --> 00:06:01,270
+So what we're going to do is, we
+want to read the data from this sheet.
+
+70
+00:06:01,850 --> 00:06:06,581
+Then we're storing and
+making some light formatting to
+
+71
+00:06:06,582 --> 00:06:12,730
+make sure that we only keep
+the keys that are useful to us.
+
+72
+00:06:13,430 --> 00:06:17,970
+And what we're going to do is we're going
+to close off this very simple workflow by
+
+73
+00:06:17,971 --> 00:06:25,210
+sending some slack messages with
+the items that satisfy this condition.
+
+74
+00:06:26,190 --> 00:06:32,610
+So here from the true branch, we're
+going to use the aggregate node.
+
+75
+00:06:33,290 --> 00:06:36,645
+And here, make sure we
+execute the previous field
+
+76
+00:06:36,646 --> 00:06:39,490
+so we can sort of see
+what we're dealing with.
+
+77
+00:06:40,670 --> 00:06:46,370
+And we're going to
+aggregate the email field.
+
+78
+00:06:46,590 --> 00:06:49,210
+So here, we want to
+aggregate individual fields.
+
+79
+00:06:49,590 --> 00:06:51,750
+And here we want to
+input the field name.
+
+80
+00:06:52,690 --> 00:06:57,790
+So some nodes will
+ask you for field names.
+
+81
+00:06:58,150 --> 00:07:03,510
+And in this case, we're not
+going to use the expression.
+
+82
+00:07:03,710 --> 00:07:09,310
+So here, if you try to drag and drop the
+expression, it will automatically give you
+
+83
+00:07:09,311 --> 00:07:11,690
+the name of the field
+and not the expression.
+
+84
+00:07:12,450 --> 00:07:14,310
+So here, I can test this step.
+
+85
+00:07:14,470 --> 00:07:17,581
+And we're going to see
+we have one output, with
+
+86
+00:07:17,582 --> 00:07:21,091
+all of the emails that
+satisfy this condition.
+
+87
+00:07:22,550 --> 00:07:28,030
+Here, it might be interesting to
+include the information on their company.
+
+88
+00:07:28,650 --> 00:07:31,270
+So I can also add
+another field to aggregate.
+
+89
+00:07:31,390 --> 00:07:35,750
+And in this case, just
+type in the company field.
+
+90
+00:07:36,190 --> 00:07:40,270
+So here we have all of the
+emails and all of the companies.
+
+91
+00:07:41,250 --> 00:07:47,637
+What we'd like to do from here
+is send a slack message with
+
+92
+00:07:47,638 --> 00:07:51,130
+all of the emails and all of the
+companies that have signed up.
+
+93
+00:07:51,590 --> 00:07:59,990
+So we're going to use the slack
+node and the send message action.
+
+94
+00:08:01,100 --> 00:08:04,310
+I already here have a
+slack account connected.
+
+95
+00:08:04,590 --> 00:08:07,730
+This should already be
+set up in your instance.
+
+96
+00:08:08,390 --> 00:08:15,710
+And here I can write a very simple text
+message recap of the signups of the week,
+
+97
+00:08:15,830 --> 00:08:16,830
+for example.
+
+98
+00:08:17,470 --> 00:08:18,950
+Make sure we're
+using an expression.
+
+99
+00:08:19,470 --> 00:08:24,150
+And then here I can
+add in the list of emails.
+
+100
+00:08:28,100 --> 00:08:32,520
+And then companies
+that signed up this week.
+
+101
+00:08:33,880 --> 00:08:35,860
+And I can add the
+list of companies.
+
+102
+00:08:37,380 --> 00:08:43,440
+Here, if I test this step, oops, I need to
+decide who I'm sending the message to.
+
+103
+00:08:43,600 --> 00:08:48,860
+So a user, and I can just type
+in my name right here, Maxim.
+
+104
+00:08:49,780 --> 00:08:56,820
+So we're using my slack credentials that
+I've already set up, sending a message to
+
+105
+00:08:56,821 --> 00:09:02,240
+a user, which is myself, with a recap of
+all of the signups, which is a list of the
+
+106
+00:09:02,241 --> 00:09:06,760
+emails, and a recap of all of the
+companies, which is a list of companies.
+
+107
+00:09:07,620 --> 00:09:11,580
+If I test this step, I
+get a slack notification.
+
+108
+00:09:12,200 --> 00:09:19,280
+And here we get the response from
+slack, saying, okay, the message was sent.
+
+109
+00:09:19,560 --> 00:09:22,627
+Here is the message,
+and I can see that recap
+
+110
+00:09:22,628 --> 00:09:25,200
+of signups this week,
+I have all the emails.
+
+111
+00:09:25,880 --> 00:09:28,480
+Companies that signed up this
+week, I have all the companies.
+
+112
+00:09:30,140 --> 00:09:38,240
+Another way of doing this, and because of
+the way n8n executes each node once per
+
+113
+00:09:38,241 --> 00:09:43,520
+item, we could have decided
+to not aggregate the data.
+
+114
+00:09:43,660 --> 00:09:47,360
+So here if I delete this node,
+it'll just reconnect these two.
+
+115
+00:09:48,260 --> 00:09:57,161
+And here, I could change
+the message and say, new
+
+116
+00:09:57,162 --> 00:10:05,540
+signup from email, comma,
+company, name, colon, company.
+
+117
+00:10:06,620 --> 00:10:12,860
+And what this will do, as we saw in
+the previous slides, instead of having only
+
+118
+00:10:12,861 --> 00:10:20,460
+one message with all the emails and all
+the companies, here we have five messages.
+
+119
+00:10:20,620 --> 00:10:25,120
+So one message, new
+signup, Marcus at Quantum.
+
+120
+00:10:25,860 --> 00:10:33,720
+Then we have the next message,
+new signup, Sophia from Horizon, etc.
+
+121
+00:10:33,820 --> 00:10:42,120
+So because here we only have a few people
+in our items, it doesn't really matter if
+
+122
+00:10:42,121 --> 00:10:48,040
+we send just one message as a recap,
+or one individual message per person.
+
+123
+00:10:48,600 --> 00:10:53,900
+However, if we were to deal with tens
+or hundreds of emails, we would always
+
+124
+00:10:53,901 --> 00:11:00,340
+prioritize aggregating the data and
+sending it as one recap message.
+
+125
+00:11:01,980 --> 00:11:06,300
+Now let's take a quick look at
+a webhook workflow example.
+
+126
+00:11:06,640 --> 00:11:12,200
+So here I'm going to add to
+my canvas a webhook trigger.
+
+127
+00:11:12,201 --> 00:11:16,280
+This will give me a test
+URL and a production URL.
+
+128
+00:11:16,520 --> 00:11:22,480
+The test URL will be used when testing the
+workflow, and the production URL will be
+
+129
+00:11:22,481 --> 00:11:26,960
+used once the workflow is activated
+or has been pushed to production.
+
+130
+00:11:28,220 --> 00:11:34,541
+So here we're going to use the POST method,
+and I'm going to copy this test URL.
+
+131
+00:11:35,060 --> 00:11:40,720
+From here I can listen for the test event,
+and behind the scenes I have a little.
+
+132
+00:11:42,200 --> 00:11:48,940
+script that is going to allow
+me to send a little test event.
+
+133
+00:11:49,920 --> 00:11:54,779
+So here we can see
+I used a little Python
+
+134
+00:11:54,780 --> 00:12:00,261
+script to send the body
+to the webhook trigger.
+
+135
+00:12:00,740 --> 00:12:07,640
+And here we have the usual headers,
+parameters, query, and the body.
+
+136
+00:12:08,200 --> 00:12:11,841
+The body has information
+on a first name, last
+
+137
+00:12:11,861 --> 00:12:15,760
+name, company, email,
+domain, and the event.
+
+138
+00:12:16,820 --> 00:12:21,812
+So here, now that we've
+tested the workflow, I
+
+139
+00:12:21,813 --> 00:12:25,280
+can start building the
+workflow from this data.
+
+140
+00:12:25,820 --> 00:12:29,620
+Something you might want to do
+at this stage is just pin the data.
+
+141
+00:12:29,740 --> 00:12:34,420
+So if you have to leave and come back,
+you can always keep working with this data.
+
+142
+00:12:34,540 --> 00:12:41,680
+So here if I refresh the workflow, I
+still will have access to the pinned data.
+
+143
+00:12:41,681 --> 00:12:46,040
+And then from here we can
+build a pretty simple workflow.
+
+144
+00:12:46,420 --> 00:13:06,300
+If the event is equal to invited team
+member, then we send a Slack message that
+
+145
+00:13:06,301 --> 00:13:14,140
+says, again, sending to
+a user, sending to myself.
+
+146
+00:13:15,460 --> 00:13:17,520
+And I can send a simple message.
+
+147
+00:13:17,760 --> 00:13:23,620
+For example, email just
+invited a team member.
+
+148
+00:13:24,960 --> 00:13:26,760
+And then I can test this step.
+
+149
+00:13:27,620 --> 00:13:31,520
+And then every time a new team member
+is invited, I will receive the webhook.
+
+150
+00:13:31,620 --> 00:13:32,620
+It'll go down true.
+
+151
+00:13:33,640 --> 00:13:35,800
+And then it'll send
+me the Slack message.
+
+152
+00:13:36,960 --> 00:13:41,420
+If I had a new team member, so here
+I might have different kinds of events.
+
+153
+00:13:41,860 --> 00:13:46,151
+So I might have,
+instead of an invited team
+
+154
+00:13:46,152 --> 00:13:50,021
+member, I might have
+an account created event.
+
+155
+00:13:50,320 --> 00:13:55,620
+So what I'm going to do is unpin the
+data and send another test payload.
+
+156
+00:13:56,680 --> 00:14:05,800
+This time I'm going to send a
+payload with an account created event.
+
+157
+00:14:07,540 --> 00:14:12,660
+So this time not invited team
+member, but account created.
+
+158
+00:14:12,880 --> 00:14:15,800
+And I could create
+another branch.
+
+159
+00:14:16,020 --> 00:14:26,000
+For example, if the
+event is equal to account
+
+160
+00:14:26,001 --> 00:14:34,540
+created, then I want to
+send a Slack message.
+
+161
+00:14:35,800 --> 00:14:39,500
+Very similar to myself with.
+
+162
+00:14:45,290 --> 00:14:47,170
+a message saying.
+
+163
+00:14:52,310 --> 00:14:55,650
+email just created an account.
+
+164
+00:15:00,280 --> 00:15:03,040
+Now I just need to
+clean up the connections.
+
+165
+00:15:03,700 --> 00:15:07,880
+So here I want it here.
+
+166
+00:15:07,960 --> 00:15:10,740
+It's if it is not the
+account created.
+
+167
+00:15:10,780 --> 00:15:14,220
+Then I check if it's the
+team member invited.
+
+168
+00:15:14,680 --> 00:15:17,778
+And here I have a very
+simple workflow that
+
+169
+00:15:17,779 --> 00:15:20,540
+will let me know depending
+on the kind of event.
+
+170
+00:15:20,840 --> 00:15:25,100
+We could obviously switch
+out the if nodes for switches.
+
+171
+00:15:26,000 --> 00:15:28,460
+But that's for next time.
+
+172
+00:15:30,600 --> 00:15:37,180
+Thanks for listening to this sixth video of
+the n8n beginner course where we kept
+
+173
+00:15:37,181 --> 00:15:40,082
+on building that first
+workflow and had our
+
+174
+00:15:40,083 --> 00:15:43,940
+first little play around
+with the webhook node.
+
+175
+00:15:44,680 --> 00:15:49,289
+Something that's interesting
+to note here is more
+
+176
+00:15:49,290 --> 00:15:52,620
+than just filtering or
+creating different branches.
+
+177
+00:15:52,700 --> 00:15:55,180
+We dealt with multiple items.
+
+178
+00:15:55,520 --> 00:15:58,358
+And that's going to be
+something that's going
+
+179
+00:15:58,359 --> 00:16:00,860
+to be very useful when
+building your workflows.
+
+180
+00:16:01,000 --> 00:16:06,760
+If we need to aggregate some
+average data across a set of items.
+
+181
+00:16:07,240 --> 00:16:13,820
+In the next video, we'll be covering how
+n8n stores past executions of workflows.
+
+182
+00:16:13,821 --> 00:16:18,240
+And how we can use
+that to better handle errors.
+
+183
+00:16:18,940 --> 00:16:20,320
+So see you in the next video.
+
