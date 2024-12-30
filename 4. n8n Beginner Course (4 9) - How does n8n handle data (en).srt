@@ -1,0 +1,815 @@
+﻿1
+00:00:00,990 --> 00:00:06,050
+Hello and welcome to video number
+four of the beginner course of n8n.
+
+2
+00:00:06,830 --> 00:00:10,320
+In this video, we'll be
+covering what kinds of data
+
+3
+00:00:10,321 --> 00:00:14,950
+nodes use and how the data
+is passed from node to node.
+
+4
+00:00:15,950 --> 00:00:18,510
+This video is going to
+be a bit of a longer one.
+
+5
+00:00:18,690 --> 00:00:22,090
+And we'll cover some
+more technical concepts.
+
+6
+00:00:22,410 --> 00:00:26,530
+But it is very important that
+you understand these concepts.
+
+7
+00:00:26,670 --> 00:00:29,990
+And so that you can build
+the best workflows possible.
+
+8
+00:00:31,610 --> 00:00:35,330
+Let's start by explaining
+some core data concepts that
+
+9
+00:00:35,331 --> 00:00:38,550
+you need to understand to
+make the most out of Eniden.
+
+10
+00:00:40,230 --> 00:00:45,310
+There are two main data structures
+that we are going to take a look at today.
+
+11
+00:00:45,550 --> 00:00:48,430
+The first one is
+what we call a JSON.
+
+12
+00:00:48,730 --> 00:00:51,110
+And the second one is a list.
+
+13
+00:00:52,130 --> 00:00:58,490
+JSONs are a very common way of storing
+data digitally and are written between
+
+14
+00:00:58,610 --> 00:01:00,890
+braces or curly brackets.
+
+15
+00:01:01,470 --> 00:01:08,750
+They are made up of key value pairs,
+each one being separated by a comma.
+
+16
+00:01:10,030 --> 00:01:13,710
+Lists are nothing more
+than a collection of objects.
+
+17
+00:01:14,050 --> 00:01:19,822
+And they can be of the same
+or different type written between
+
+18
+00:01:19,823 --> 00:01:25,750
+brackets or square braces,
+and also separated by commas.
+
+19
+00:01:27,550 --> 00:01:30,190
+A JSON can be embedded.
+
+20
+00:01:30,390 --> 00:01:37,310
+And what we mean by this is, sometimes we
+will have a JSON where the value of a key
+
+21
+00:01:37,311 --> 00:01:43,270
+is equal to another JSON, we can
+use this to organize complex data.
+
+22
+00:01:44,490 --> 00:01:48,984
+In this example, we can use
+an embedded JSON to group all
+
+23
+00:01:48,985 --> 00:01:55,250
+the information about Emily's
+location into a location key.
+
+24
+00:01:55,930 --> 00:02:03,090
+This key contains itself a JSON,
+sorry, the value of this key is a JSON
+
+25
+00:02:03,091 --> 00:02:08,970
+that has two keys with information
+on Emily's country and city.
+
+26
+00:02:11,710 --> 00:02:17,530
+To access the data in a JSON, we
+can use the standard dot notation.
+
+27
+00:02:18,030 --> 00:02:23,230
+Here, daughter JSON Lexus
+lets us access the JSON itself.
+
+28
+00:02:23,690 --> 00:02:28,946
+And by tip typing dot first
+For the first underscore name,
+
+29
+00:02:28,947 --> 00:02:33,850
+we can access the value of
+the first underscore name key.
+
+30
+00:02:34,830 --> 00:02:40,830
+For embedded JSONs, we can
+use multiple dot notations in a row.
+
+31
+00:02:41,470 --> 00:02:51,170
+Here to get the location, we
+can write $JSON.location.country.
+
+32
+00:02:52,590 --> 00:02:57,281
+$JSON.location being itself
+a JSON on which we use
+
+33
+00:02:57,282 --> 00:03:03,350
+the dot notation to get
+the value of its key country.
+
+34
+00:03:05,150 --> 00:03:10,150
+Lists are simply a
+collection of objects.
+
+35
+00:03:10,390 --> 00:03:13,530
+We can have a mix of letters.
+
+36
+00:03:13,531 --> 00:03:25,010
+And as you can see here, written between
+square brackets and separated by commas.
+
+37
+00:03:26,810 --> 00:03:33,630
+And because JSONs themselves are objects,
+we can obviously make a list of JSONs.
+
+38
+00:03:34,430 --> 00:03:39,530
+Here we have the example JSON
+from earlier, separated by a comma,
+
+39
+00:03:39,750 --> 00:03:45,090
+and then two more JSONs
+that form, well, a list of JSONs.
+
+40
+00:03:45,650 --> 00:03:51,690
+As we can see here, we have the
+square brackets at the top, our first JSON,
+
+41
+00:03:51,810 --> 00:03:59,030
+a comma, our second JSON, a comma, our
+third JSON, and then finally our last brace.
+
+42
+00:04:01,570 --> 00:04:08,410
+There is a very interesting correspondence
+between JSONs and tables, where we can
+
+43
+00:04:08,411 --> 00:04:12,937
+tell that one JSON is
+equivalent to one row,
+
+44
+00:04:12,938 --> 00:04:17,331
+with the keys being the
+headers of those rows.
+
+45
+00:04:18,190 --> 00:04:22,101
+This might remind you a
+little bit the JSON and table
+
+46
+00:04:22,102 --> 00:04:25,790
+view that we saw in the
+previous video on edit nodes.
+
+47
+00:04:27,290 --> 00:04:33,990
+Here, when we have a list of JSONs,
+we can see that Emily here first name
+
+48
+00:04:33,991 --> 00:04:42,050
+Emily last name Johnson, email and her
+email fits very well into the row and then
+
+49
+00:04:42,051 --> 00:04:44,095
+we have an equivalent
+table, we have the different
+
+50
+00:04:44,096 --> 00:04:47,230
+keys that are the different
+columns of our table.
+
+51
+00:04:50,080 --> 00:04:57,400
+So we can imagine that if we have a list
+of three JSONs, then we have an equivalent
+
+52
+00:04:57,401 --> 00:05:04,220
+table with three different rows, each one
+with the values of the corresponding row.
+
+53
+00:05:05,380 --> 00:05:09,080
+In an again, this is
+what we call items.
+
+54
+00:05:09,081 --> 00:05:12,880
+Here in red, we have
+an example of an item.
+
+55
+00:05:12,960 --> 00:05:18,220
+We have the first item
+of the list and nodes
+
+56
+00:05:18,221 --> 00:05:22,660
+use items, plural, as
+inputs and as outputs.
+
+57
+00:05:22,980 --> 00:05:27,800
+These are the only accepted formats
+for node inputs and node outputs.
+
+58
+00:05:28,500 --> 00:05:33,358
+Even should we decide to
+return nothing, no information,
+
+59
+00:05:33,359 --> 00:05:38,560
+we still have to return a
+list with an empty JSON.
+
+60
+00:05:39,080 --> 00:05:43,840
+That would be considered the
+empty output for an NADN node.
+
+61
+00:05:46,000 --> 00:05:50,896
+So now let's look into how
+nodes actually use these items
+
+62
+00:05:50,897 --> 00:05:54,580
+when we're going to be executing
+them and building workflows.
+
+63
+00:05:56,900 --> 00:06:01,800
+Each node executes once
+per item in the input data.
+
+64
+00:06:02,040 --> 00:06:07,480
+So there are some exceptions that we
+will be covering in the advanced course.
+
+65
+00:06:07,481 --> 00:06:14,800
+But in general, you can remember
+that each node executes once per item.
+
+66
+00:06:14,960 --> 00:06:21,980
+For example, here we are using the date
+and time node to format different dates.
+
+67
+00:06:22,500 --> 00:06:26,443
+The node will read each
+item, format the date,
+
+68
+00:06:26,444 --> 00:06:30,801
+and then return it
+as an individual item.
+
+69
+00:06:31,140 --> 00:06:37,361
+This is how we build workflows by
+transitioning items through different nodes.
+
+70
+00:06:37,480 --> 00:06:45,040
+So here, if we look into this
+screenshot here, we have a list of items,
+
+71
+00:06:45,160 --> 00:06:47,760
+each with different dates.
+
+72
+00:06:48,920 --> 00:06:52,861
+And here as the output,
+we have, again, three
+
+73
+00:06:52,862 --> 00:06:56,440
+items because it was
+executed once per item.
+
+74
+00:06:56,800 --> 00:07:02,320
+And then we have the formatted
+date, which is the same associated date,
+
+75
+00:07:02,500 --> 00:07:05,140
+but in a different format.
+
+76
+00:07:05,141 --> 00:07:10,818
+In the parameters of
+the node, we can access
+
+77
+00:07:10,819 --> 00:07:14,580
+the additional settings
+through the gear icon.
+
+78
+00:07:14,880 --> 00:07:18,377
+And here we can decide to
+execute only once, where a
+
+79
+00:07:18,378 --> 00:07:24,340
+node will execute only
+for the first item of its input.
+
+80
+00:07:27,620 --> 00:07:31,978
+To better understand how
+workflows actually work,
+
+81
+00:07:31,979 --> 00:07:37,160
+here we have an execution
+schema of a very simple way.
+
+82
+00:07:37,180 --> 00:07:45,740
+The workflow starts when clicking Execute
+Workflow, reads data from a Google Sheet,
+
+83
+00:07:45,880 --> 00:07:50,300
+and then filters the items
+depending on specific conditions.
+
+84
+00:07:51,360 --> 00:07:59,580
+The Execute Workflow node launches and
+returns an empty JSON, so no data at all.
+
+85
+00:07:59,780 --> 00:08:05,760
+And here we can see we
+have our empty JSON in a list.
+
+86
+00:08:06,960 --> 00:08:13,420
+This is returned so that the next node can
+execute once, because we have one item.
+
+87
+00:08:14,280 --> 00:08:20,322
+The Google Sheets node
+then executes once, and reads
+
+88
+00:08:20,323 --> 00:08:24,560
+three items in the Google
+Sheet that it's reading from.
+
+89
+00:08:24,740 --> 00:08:30,640
+And so it returns three items,
+JSON1, JSON2, and JSON3.
+
+90
+00:08:30,840 --> 00:08:35,740
+Each being linked to
+the corresponding row.
+
+91
+00:08:35,760 --> 00:08:40,420
+So we can see it
+outputs three items.
+
+92
+00:08:42,500 --> 00:08:49,260
+The Filter node checks if each item
+satisfies a specific filter condition.
+
+93
+00:08:49,840 --> 00:08:57,400
+Here we can see that only one of the items
+does, and so it only outputs one item.
+
+94
+00:09:01,580 --> 00:09:05,570
+When building workflows,
+the whole point is to configure
+
+95
+00:09:05,571 --> 00:09:10,720
+a node to execute, depending
+on what's in the input data.
+
+96
+00:09:10,980 --> 00:09:18,560
+We can do this by dragging the key
+from the table, JSON, or schema view.
+
+97
+00:09:19,300 --> 00:09:22,260
+This will recreate what
+we call an expression.
+
+98
+00:09:23,700 --> 00:09:31,120
+Expressions will, for each item,
+return the associated value to that key.
+
+99
+00:09:32,100 --> 00:09:37,060
+The NN interface will show you
+an example value for each item.
+
+100
+00:09:37,080 --> 00:09:38,400
+For example, the first item.
+
+101
+00:09:39,800 --> 00:09:46,742
+So using the same data as
+before, in the schema view, we
+
+102
+00:09:46,743 --> 00:09:52,160
+can drag the first name
+key into the filter conditions.
+
+103
+00:09:52,900 --> 00:09:58,586
+And I can say, I only
+want to allow through the
+
+104
+00:09:58,587 --> 00:10:03,920
+filter if the first name
+is equal to something.
+
+105
+00:10:04,160 --> 00:10:05,260
+For example, Emily.
+
+106
+00:10:07,080 --> 00:10:10,020
+Here we have the
+expression editor.
+
+107
+00:10:10,740 --> 00:10:14,800
+And we have an
+example result for item 1.
+
+108
+00:10:14,940 --> 00:10:21,540
+So here, JSON dot first name
+of item 1 is equal to Emily.
+
+109
+00:10:23,000 --> 00:10:26,840
+Remember, nodes
+execute once per item.
+
+110
+00:10:27,060 --> 00:10:31,687
+And so as it executes for
+each item, the expression
+
+111
+00:10:31,688 --> 00:10:35,860
+will have the value
+associated to that key.
+
+112
+00:10:38,780 --> 00:10:45,600
+Everything between two braces,
+or curly brackets, is an expression.
+
+113
+00:10:45,900 --> 00:10:51,160
+So we can use expressions
+for many different use cases.
+
+114
+00:10:51,400 --> 00:10:55,740
+We can use item
+variables as we saw before.
+
+115
+00:10:55,980 --> 00:11:02,600
+So dollar, JSON dot first name,
+JSON dot last name, or email.
+
+116
+00:11:03,040 --> 00:11:06,180
+We can also use JavaScript.
+
+117
+00:11:06,181 --> 00:11:14,380
+So if we want to apply a JavaScript
+function or a JavaScript method to,
+
+118
+00:11:14,500 --> 00:11:24,200
+for example, one of the item's values,
+then we can use any of the built-in
+
+119
+00:11:24,201 --> 00:11:28,820
+JavaScript functions or
+methods between the curly braces.
+
+120
+00:11:29,760 --> 00:11:36,160
+We can also, in expressions,
+combine one or multiple expressions.
+
+121
+00:11:36,161 --> 00:11:38,960
+As well as plain text.
+
+122
+00:11:39,260 --> 00:11:46,040
+So here we have, using the Slack node,
+we have an example where we want to send
+
+123
+00:11:46,041 --> 00:11:53,280
+for each item the first name, space,
+last name, and then between parentheses,
+
+124
+00:11:53,420 --> 00:11:59,280
+the email, followed by a short message
+that will be the same for every person
+
+125
+00:11:59,820 --> 00:12:01,840
+just signed up to Acme.
+
+126
+00:12:02,180 --> 00:12:08,781
+Here we have an example of what the
+message would look like for the first item.
+
+127
+00:12:09,060 --> 00:12:15,800
+We can see that if we execute this
+node, and we have three input items,
+
+128
+00:12:15,960 --> 00:12:24,660
+we will get one message that is going
+to be different for each item in the input.
+
+129
+00:12:25,240 --> 00:12:29,718
+Jumping back into NNN, we
+can cover how to use these
+
+130
+00:12:29,719 --> 00:12:32,880
+expressions and look
+at it together in the tool.
+
+131
+00:12:33,220 --> 00:12:37,700
+So here we have the workflow
+that we built in our last video.
+
+132
+00:12:37,800 --> 00:12:42,120
+A manual execution followed by
+reading some data in a Google Sheet.
+
+133
+00:12:42,580 --> 00:12:47,460
+And I'm just going to click Test Workflow
+so we have the data already executed.
+
+134
+00:12:48,680 --> 00:12:55,700
+Here, again, using the plus up here
+or the little plus at the end of the node,
+
+135
+00:12:55,900 --> 00:12:57,300
+we can add a new node.
+
+136
+00:12:57,420 --> 00:13:00,379
+This time we're going to
+use the Edit Fields node
+
+137
+00:13:00,380 --> 00:13:03,160
+that we'll cover more in
+detail in the next video.
+
+138
+00:13:03,440 --> 00:13:05,940
+But just to show you a little
+bit how we can use expressions.
+
+139
+00:13:07,240 --> 00:13:11,829
+We'll leave the node
+configured as it is by default and
+
+140
+00:13:11,830 --> 00:13:15,720
+just add a new field that
+we're going to call Full Name.
+
+141
+00:13:15,960 --> 00:13:20,660
+So obviously, Full Name is going to
+be first name followed by last name.
+
+142
+00:13:20,880 --> 00:13:27,020
+So I can just drag the first
+name, drag the last name.
+
+143
+00:13:27,320 --> 00:13:37,200
+And if I click Test Step, we're going to
+see that each item is going to have now a
+
+144
+00:13:37,201 --> 00:13:42,420
+full name field with their first
+name followed by their last name.
+
+145
+00:13:43,040 --> 00:13:45,960
+Here in the JSON view,
+we'll see it a bit better.
+
+146
+00:13:46,080 --> 00:13:47,860
+Paul Harris, Paul Harris.
+
+147
+00:13:48,360 --> 00:13:50,200
+Marcus Bennett, Marcus Bennett.
+
+148
+00:13:51,180 --> 00:13:57,295
+In the expressions here, as
+mentioned in the slides, we can
+
+149
+00:13:57,296 --> 00:14:01,260
+see an example of what the
+result would be for the first item.
+
+150
+00:14:01,440 --> 00:14:03,460
+So Paul Harris,
+what we see here.
+
+151
+00:14:04,480 --> 00:14:09,080
+And in the expression, we can
+also add a little bit of JavaScript.
+
+152
+00:14:09,300 --> 00:14:15,060
+For example, I could want the
+last name to be two uppercase.
+
+153
+00:14:15,600 --> 00:14:20,338
+So this would make the
+first name as is in the input
+
+154
+00:14:20,339 --> 00:14:25,260
+data and the last name would
+be turned into uppercase.
+
+155
+00:14:25,261 --> 00:14:31,100
+So here, if I execute this, retest this
+step, we can see that now we not only have
+
+156
+00:14:31,101 --> 00:14:37,180
+the full name, but we have the full
+name with the last name that is uppercase.
+
+157
+00:14:39,060 --> 00:14:43,807
+Thanks for listening to the
+fourth video of the NADN beginner
+
+158
+00:14:43,808 --> 00:14:48,220
+course where we covered
+the key data concepts of NADN.
+
+159
+00:14:48,460 --> 00:14:53,800
+In our next video, we'll be using
+everything we learned in these videos to
+
+160
+00:14:53,801 --> 00:14:57,020
+finally start building
+our first workflows.
+
+161
+00:14:58,060 --> 00:15:04,980
+If you are working on a workflow,
+and have a hard time understanding why
+
+162
+00:15:04,981 --> 00:15:10,140
+your inputs and output data are the way
+they are, feel free to come back to this
+
+163
+00:15:10,141 --> 00:15:19,780
+video and make sure you have a thorough
+understanding of both items and lists and
+
+164
+00:15:19,781 --> 00:15:23,864
+JSONs, as these are key
+concepts to understand
+
+165
+00:15:23,865 --> 00:15:27,021
+when building workflows
+and using expressions.
+
+166
+00:15:28,100 --> 00:15:29,540
+See you in the next video.
+
