@@ -1,0 +1,2227 @@
+1
+00:00:00,000 --> 00:00:00,160
+Hi, everyone.
+
+2
+00:00:00,420 --> 00:00:04,560
+I'm Jang PM, and I'm here to show you how to work smarter using AI and no-code tools.
+
+3
+00:00:04,820 --> 00:00:12,200
+Today, we're diving into ChatGPT prompt engineering, which is all about getting better results from ChatGPT.
+
+4
+00:00:12,240 --> 00:00:18,580
+My goal for this session is to help you create outputs that are not only professional but also full of creative ideas.
+
+5
+00:00:18,680 --> 00:00:24,020
+I want to make sure that the results are polished enough to be directly applied in real-world scenarios.
+
+6
+00:00:24,021 --> 00:00:30,013
+If you've ever felt that ChatGPT's responses are too vague to use in your work,
+
+7
+00:00:30,014 --> 00:00:34,960
+then you’re in the right place. I'll be sharing some practical ideas and examples that you can try.
+
+8
+00:00:34,980 --> 00:00:38,040
+I hope this will help you integrate ChatGPT into your daily work.
+
+9
+00:00:38,600 --> 00:00:43,620
+I've spent time learning from various YouTube videos, lectures, and research papers on prompt engineering.
+
+10
+00:00:43,760 --> 00:00:51,940
+The core concept in this video is based on the 'cognitive prompting' lecture by Kim Chang-jun and Kak Gun-bong.
+
+11
+00:00:51,941 --> 00:00:58,260
+I’ve taken their excellent ideas and teachings and simplified them in my own way to make them easier for you to understand.
+
+12
+00:00:58,460 --> 00:01:04,779
+I've included links to helpful resources in the video description,
+
+13
+00:01:04,780 --> 00:01:09,661
+so if you want to delve deeper into the subject, please check them out.
+
+14
+00:01:10,100 --> 00:01:17,377
+Instead of providing job-specific prompt templates or random tips on how to improve prompt performance,
+
+15
+00:01:17,378 --> 00:01:23,760
+I wanted to focus on explaining the fundamental principles behind effective prompt engineering.
+
+16
+00:01:24,000 --> 00:01:26,000
+So, let's get started right away.
+
+17
+00:01:26,880 --> 00:01:30,100
+First, let’s look at how ChatGPT works.
+
+18
+00:01:30,930 --> 00:01:39,640
+ChatGPT works by reading all the web documents on the internet and predicting which word is most likely to come next, and it strings words together in this manner.
+
+19
+00:01:40,240 --> 00:01:48,480
+It doesn't actually understand or have the cognitive ability to make responses; it's simply a machine that strings together words through mathematical calculations.
+
+20
+00:01:48,481 --> 00:01:54,840
+However, its probabilistic calculations are so excellent that it forms sentences and coherent content.
+
+21
+00:01:55,160 --> 00:02:01,446
+For instance, if you input "I am eating," GPT will calculate which word is most probable to follow
+
+22
+00:02:01,447 --> 00:02:06,840
+and then add the word “a" , "an", or "some" and so on.
+
+23
+00:02:07,600 --> 00:02:11,240
+GPT performs these probabilistic calculations within the given context.
+
+24
+00:02:11,520 --> 00:02:16,980
+If you ask about broad topics, it will give you answers based on the most popular opinions found online.
+
+25
+00:02:16,981 --> 00:02:21,180
+These average opinions are not always the best answers.
+
+26
+00:02:21,240 --> 00:02:26,120
+If you need professional and creative responses, you need to focus its attention on a specific context.
+
+27
+00:02:26,760 --> 00:02:33,600
+Because it calculates probabilities in a broad context, you get general answers using common words.
+
+28
+00:02:33,720 --> 00:02:39,042
+However, when you focus ChatGPT on a specific context,
+
+29
+00:02:39,043 --> 00:02:43,640
+it performs the calculations within that narrow context, which results in more professional answers.
+
+30
+00:02:44,000 --> 00:02:48,600
+To illustrate, think about political and diplomatic rhetoric.
+
+31
+00:02:48,700 --> 00:02:54,200
+Why do politicians and diplomats often give vague and general answers?
+
+32
+00:02:54,320 --> 00:03:01,200
+It’s because they have so many factors to consider that they can't express clear opinions and instead speak in general terms.
+
+33
+00:03:01,840 --> 00:03:03,280
+ChatGPT is the same.
+
+34
+00:03:03,480 --> 00:03:09,680
+The more context it needs to consider, the more compressed and vague the information becomes.
+
+35
+00:03:09,940 --> 00:03:15,015
+Therefore, when using ChatGPT, you first need to consider whether you want average answers based on a general context,
+
+36
+00:03:15,016 --> 00:03:19,460
+or if you’re looking for professional, more focused answers.
+
+37
+00:03:19,580 --> 00:03:28,300
+If you want professional answers, you need to guide ChatGPT's attention to the specific context you desire,
+
+38
+00:03:28,301 --> 00:03:35,080
+and encourage it to generate professional, creative, and insightful responses within that context.
+
+39
+00:03:35,460 --> 00:03:37,440
+I've thought of an analogy for this.
+
+40
+00:03:37,900 --> 00:03:46,440
+Think of ChatGPT as a person who has read every book in a vast library of knowledge and gives you an answer based on the information they have.
+
+41
+00:03:46,980 --> 00:03:48,840
+If you ask a broad question like, "How should we live?"
+
+42
+00:03:48,880 --> 00:03:53,460
+you’ll get a vague and obvious response.
+
+43
+00:03:53,780 --> 00:03:55,820
+But, we need to consider something.
+
+44
+00:03:56,020 --> 00:03:57,300
+Is this always bad?
+
+45
+00:03:57,980 --> 00:04:02,700
+There are situations where getting a broad answer can be more helpful.
+
+46
+00:04:03,080 --> 00:04:09,820
+Sometimes you need a clear answer and sometimes you just want to get a broad scope of information.
+
+47
+00:04:10,140 --> 00:04:16,960
+Therefore, it’s good to have a strategy for how you will use ChatGPT, and to guide it in that direction.
+
+48
+00:04:16,980 --> 00:04:21,360
+The important thing is to know what you want, not that it gives answers in this way.
+
+49
+00:04:21,440 --> 00:04:26,901
+So, how can we get ChatGPT to show the same level of professionalism that a real professional would,
+
+50
+00:04:26,902 --> 00:04:31,381
+and that is applicable to real-world tasks? How can we use it in this context?
+
+51
+00:04:31,480 --> 00:04:39,201
+If you need marketing help, it would be more useful to get responses based on a marketing book that includes use cases similar to yours,
+
+52
+00:04:39,202 --> 00:04:45,020
+so that you can get more professional and practical ideas.
+
+53
+00:04:45,021 --> 00:04:53,480
+To get professional responses, you need to make ChatGPT open a specific section or a specific book, so to speak.
+
+54
+00:04:53,580 --> 00:04:57,540
+But this is a high-level cognitive ability for knowledge workers.
+
+55
+00:04:58,360 --> 00:05:02,220
+First, you need to understand exactly what your problem is.
+
+56
+00:05:02,340 --> 00:05:08,709
+Second, you need to know what kind of expertise you need to solve that problem, and third,
+
+57
+00:05:08,710 --> 00:05:14,000
+you need to be able to evaluate whether the answers ChatGPT provides are good or bad.
+
+58
+00:05:15,020 --> 00:05:17,640
+So, using ChatGPT requires a high level of metacognition.
+
+59
+00:05:17,740 --> 00:05:24,980
+In any case, if you want to focus ChatGPT on your specific context, consider these three points.
+
+60
+00:05:25,300 --> 00:05:33,540
+ChatGPT needs to understand the problem you have in the same way that you do, at the same level of understanding.
+
+61
+00:05:33,820 --> 00:05:42,040
+It needs to clearly understand what tasks you need to do, the context, and what constraints to consider.
+
+62
+00:05:42,041 --> 00:05:46,120
+Next, you need to draw out ChatGPT's expertise to solve the problem.
+
+63
+00:05:46,320 --> 00:05:53,940
+ChatGPT has various expertise, but it's like an expert who doesn't know what they know.
+
+64
+00:05:54,140 --> 00:06:02,040
+Therefore, you need to use prompts that help ChatGPT focus on a specific expert’s context to draw out that expertise.
+
+65
+00:06:02,260 --> 00:06:09,364
+Think about which expert could solve this problem best and what kind of expertise is required.
+
+66
+00:06:09,365 --> 00:06:15,740
+Include the job title, technical terms, or names of relevant research papers.
+
+67
+00:06:16,400 --> 00:06:24,460
+This will give higher weight to web documents related to that job title, naturally leading to better responses.
+
+68
+00:06:24,920 --> 00:06:31,790
+Also, you need to guide ChatGPT to faithfully imitate how an expert thinks and works,
+
+69
+00:06:31,791 --> 00:06:37,440
+so it can handle the task like an expert.
+
+70
+00:06:37,441 --> 00:06:39,920
+That's how you draw out expertise.
+
+71
+00:06:40,000 --> 00:06:48,760
+Finally, you need to guide it to a successful output by providing clear guidance on what a successful outcome should look like,
+
+72
+00:06:48,761 --> 00:06:56,740
+why it would be successful, how it should think, and how it should write, and by giving it successful examples.
+
+73
+00:06:56,741 --> 00:07:02,740
+ChatGPT will then imitate this method and help you to get a successful result.
+
+74
+00:07:03,040 --> 00:07:04,960
+So, make sure it understands the problem.
+
+75
+00:07:04,980 --> 00:07:06,460
+Draw out the expertise.
+
+76
+00:07:07,440 --> 00:07:09,020
+And guide it to success.
+
+77
+00:07:09,060 --> 00:07:15,480
+When writing prompts, always consider these three points and try to apply this perspective.
+
+78
+00:07:15,700 --> 00:07:19,880
+It can be difficult to write specific prompts.
+
+79
+00:07:20,140 --> 00:07:27,340
+So, I’ve compiled a list of six elements that you can include in your prompts to make them more specific.
+
+80
+00:07:27,620 --> 00:07:33,260
+These elements are not from my own research, but I’ve adapted them from a video by Jeff Su, a Google product manager.
+
+81
+00:07:33,261 --> 00:07:37,660
+His video provides a great framework, and I’ll be using it to explain these elements.
+
+82
+00:07:37,720 --> 00:07:41,260
+If you want to see the original source, check out the link in the description.
+
+83
+00:07:42,000 --> 00:07:50,280
+Jeff Su says you need to include these six elements in your prompt: command, context, persona, examples, format, and tone.
+
+84
+00:07:50,900 --> 00:07:56,120
+The elements at the top of this list have a higher priority and are more important.
+
+85
+00:07:56,180 --> 00:07:59,560
+The elements at the bottom are good to have but less critical.
+
+86
+00:08:00,140 --> 00:08:01,280
+Let's look at each one.
+
+87
+00:08:02,160 --> 00:08:06,900
+A command is an action you're asking ChatGPT to do.
+
+88
+00:08:07,080 --> 00:08:15,020
+This includes verbs or phrases like: write, list, organize, summarize. This is the command.
+
+89
+00:08:15,640 --> 00:08:18,620
+These must be included in your prompts.
+
+90
+00:08:18,740 --> 00:08:21,560
+You can also have multiple commands in one prompt.
+
+91
+00:08:21,780 --> 00:08:29,720
+You can ask it to identify benefits, summarize them, and then create something new based on that. You can include many tasks in one prompt.
+
+92
+00:08:29,721 --> 00:08:39,660
+But, if you want a higher quality and detailed response, it's better to use only one verb or command per prompt.
+
+93
+00:08:39,800 --> 00:08:46,800
+Breaking it down into step-by-step prompts is a much better way to get high quality, professional and detailed responses.
+
+94
+00:08:47,020 --> 00:08:48,220
+I’ll explain that later.
+
+95
+00:08:48,480 --> 00:08:54,020
+For now, just remember that a command is a must and one prompt should have only one command.
+
+96
+00:08:54,320 --> 00:08:55,220
+Next is context.
+
+97
+00:08:55,221 --> 00:09:05,640
+This involves giving a clear picture of your situation, and informing ChatGPT about what you value most. This will make ChatGPT focus on your context,
+
+98
+00:09:05,641 --> 00:09:11,440
+instead of just giving a generic response. This is what the context element is about.
+
+99
+00:09:11,860 --> 00:09:16,160
+To make the context more specific, I ask myself these questions:
+
+100
+00:09:16,260 --> 00:09:28,000
+What is my current situation and background? What do I want to achieve with this prompt? What are my concerns when doing this task,
+
+101
+00:09:28,001 --> 00:09:35,957
+and what are the other constraints or rules?
+
+102
+00:09:35,958 --> 00:09:41,720
+By asking yourself these questions and providing clear explanations, you can help ChatGPT focus its attention.
+
+103
+00:09:41,900 --> 00:09:43,160
+Let me give you an example.
+
+104
+00:09:43,600 --> 00:09:47,580
+Let's say you're writing a flyer to promote a gym.
+
+105
+00:09:47,660 --> 00:09:53,440
+You can simply prompt: "Write a flyer to promote a gym.”
+
+106
+00:09:53,441 --> 00:09:57,460
+But, giving a detailed context will give you a better response.
+
+107
+00:09:57,520 --> 00:10:05,900
+You need to explain what the gym is like and what should be included in the flyer.
+
+108
+00:10:06,320 --> 00:10:14,940
+So, give it the name of the gym, what the gym values most, and specify that this gym focuses on beginners.
+
+109
+00:10:14,941 --> 00:10:20,308
+Rather than offering programs that focus on rapid weight loss or body profiles, which could harm your health,
+
+110
+00:10:20,309 --> 00:10:25,680
+they focus on increasing basal metabolic rate and helping customers restore their health over the long term.
+
+111
+00:10:25,800 --> 00:10:27,340
+This is a fairly traditional gym.
+
+112
+00:10:27,480 --> 00:10:29,980
+You need to explain the gym’s characteristics.
+
+113
+00:10:30,080 --> 00:10:39,900
+For the flyer content, I want to target parents for the new school semester in March, and the message should be to “come to the gym after sending the kids to school”.
+
+114
+00:10:40,100 --> 00:10:43,440
+And offer a discount for PT sessions before 6 PM.
+
+115
+00:10:43,441 --> 00:10:46,400
+Give these specific details as guidance.
+
+116
+00:10:46,600 --> 00:10:49,540
+Let’s compare the outputs when you do this.
+
+117
+00:10:49,740 --> 00:10:51,640
+Let's compare these two prompts.
+
+118
+00:10:51,760 --> 00:10:57,420
+The left prompt writes the flyer, but the content is vague.
+
+119
+00:10:57,780 --> 00:11:00,060
+At first glance, it looks okay.
+
+120
+00:11:00,140 --> 00:11:04,160
+But, it also feels generic and soulless.
+
+121
+00:11:04,520 --> 00:11:08,300
+It lists services and facilities that you’d find in almost any gym.
+
+122
+00:11:08,620 --> 00:11:11,740
+The promotions are also very generic.
+
+123
+00:11:11,741 --> 00:11:16,220
+It’s not a bad flyer but not useful enough.
+
+124
+00:11:16,620 --> 00:11:18,560
+Let's provide enough context.
+
+125
+00:11:18,660 --> 00:11:28,800
+As I said, if you explain what you value most and the key message you want to convey in this flyer, it will explain the gym’s unique advantages.
+
+126
+00:11:28,801 --> 00:11:35,340
+It also specifies that this flyer is for the start of the new school semester and gives a discount.
+
+127
+00:11:35,660 --> 00:11:38,800
+It also lists differentiation points specific to this gym.
+
+128
+00:11:38,801 --> 00:11:44,260
+The copy is also much more tailored to the target customer.
+
+129
+00:11:44,700 --> 00:11:47,880
+You can see that the output is improved both in terms of form and content.
+
+130
+00:11:48,680 --> 00:11:49,140
+Next is persona.
+
+131
+00:11:49,300 --> 00:11:58,400
+To focus on more professional aspects, you can have it role-play as a person, role, or job title that is good at solving the problem.
+
+132
+00:11:58,780 --> 00:12:05,100
+The more specific and professional the name, the more technical terms it includes, the more professional the response will be.
+
+133
+00:12:05,101 --> 00:12:15,800
+It's not actually role-playing, but using an expert’s name, technical terms will help it focus on content that is more likely to have professional content,
+
+134
+00:12:15,860 --> 00:12:22,100
+which leads to more professional responses.
+
+135
+00:12:22,220 --> 00:12:30,480
+Many people use persona-based prompts, but they tend to use very general expert titles.
+
+136
+00:12:30,780 --> 00:12:32,180
+You are a senior marketer.
+
+137
+00:12:32,280 --> 00:12:33,840
+You are an SEO expert.
+
+138
+00:12:35,660 --> 00:12:44,822
+While this is okay, you can improve the response by using more specific expert titles, and describing their unique advantages.
+
+139
+00:12:44,823 --> 00:12:51,380
+This will ensure a more professional response and a higher chance of getting useful information.
+
+140
+00:12:51,480 --> 00:12:55,840
+Let's say you are planning a YouTube video about K-Food.
+
+141
+00:12:55,920 --> 00:12:59,280
+You can prompt it like this.
+
+142
+00:12:59,440 --> 00:13:08,160
+But, if you think about who is best at making K-Food YouTube content, the YouTuber “Korean Englishman” comes to mind.
+
+143
+00:13:08,740 --> 00:13:12,140
+So, I didn't specify Korean Englishman, but you could.
+
+144
+00:13:12,280 --> 00:13:14,800
+I described the person in more detail.
+
+145
+00:13:14,960 --> 00:13:25,200
+He is a YouTuber who introduces Korean food, like chicken, tteokbokki, and toast, which are everyday foods for Koreans, but less well-known around the world. He cooks the foods,
+
+146
+00:13:25,201 --> 00:13:30,007
+has foreigners try them, creates reaction videos, and tells interesting stories about food.
+
+147
+00:13:30,008 --> 00:13:35,221
+He also films foreigners’ lively reactions while eating.
+
+148
+00:13:35,380 --> 00:13:37,920
+So, that’s a description of the YouTuber.
+
+149
+00:13:38,160 --> 00:13:46,377
+And instead of just asking it to create content from a YouTuber’s perspective, say that this content is sponsored by the Korea Tourism Organization to promote Korean food to foreigners,
+
+150
+00:13:46,378 --> 00:13:52,460
+and it needs to spark curiosity about Korea.
+
+151
+00:13:52,640 --> 00:13:56,780
+I gave it a very specific persona and a very specific situation.
+
+152
+00:13:57,120 --> 00:14:01,100
+Let's see how the two responses differ.
+
+153
+00:14:01,120 --> 00:14:05,420
+If you compare them, the left response is quite average.
+
+154
+00:14:05,840 --> 00:14:10,000
+It seems okay, but it feels soulless.
+
+155
+00:14:10,140 --> 00:14:14,940
+Wine pairings are not bad but I don’t think this will get many views or be very interesting.
+
+156
+00:14:15,240 --> 00:14:18,780
+A K-Food challenge with a famous celebrity is okay.
+
+157
+00:14:18,920 --> 00:14:21,080
+But, it's a bit disappointing.
+
+158
+00:14:21,220 --> 00:14:26,060
+It's not bad, but it’s not very innovative, professional, or lively.
+
+159
+00:14:26,220 --> 00:14:28,880
+It doesn't feel like a real YouTube video.
+
+160
+00:14:29,020 --> 00:14:35,670
+However, with the more specific persona, it suggests a Korean-style chicken experience, testing the spiciness of tteokbokki,
+
+161
+00:14:35,710 --> 00:14:41,240
+introducing Korean toast for breakfast, and having foreigners try kimchi and bibimbap.
+
+162
+00:14:41,420 --> 00:14:47,960
+These are somewhat typical ideas, but the responses are much more lively and specific compared to the one on the left.
+
+163
+00:14:48,400 --> 00:14:53,900
+This shows that a very specific persona leads to more professional and creative answers.
+
+164
+00:14:53,920 --> 00:14:55,040
+This is what I wanted to point out.
+
+165
+00:14:55,140 --> 00:15:00,652
+And another thing I want to say about personas is that rather than simply using generic personas,
+
+166
+00:15:00,653 --> 00:15:06,480
+the responses are better when you use lively and detailed ones because the output will be from an expert’s point of view.
+
+167
+00:15:06,640 --> 00:15:17,760
+Here, without a persona, let’s imagine I’m the CEO of a kimbap company, and there is a demand for kimbap in Japan. So I want to create a branch in Japan and try to sell kimbap in the Japanese market. I asked for a business plan.
+
+168
+00:15:17,761 --> 00:15:22,540
+I want you to create a business plan for this.
+
+169
+00:15:22,780 --> 00:15:24,820
+It will write a business plan for you.
+
+170
+00:15:25,060 --> 00:15:26,960
+But it's very generic.
+
+171
+00:15:27,080 --> 00:15:29,120
+But it's very generic.
+
+172
+00:15:29,121 --> 00:15:32,340
+You won't get a business plan that you could use in a real business.
+
+173
+00:15:32,341 --> 00:15:39,680
+However, if you give it a persona, such as an international business expert, with experience helping companies expand overseas, the output becomes much better.
+
+174
+00:15:39,681 --> 00:15:46,780
+and have experience helping companies expand overseas, then the quality of the response will be much better.
+
+175
+00:15:46,840 --> 00:15:51,340
+But, you can go even further and provide an even more specific persona.
+
+176
+00:15:51,560 --> 00:15:59,100
+Like in the case of the Korean Englishman, you need to think of a specific person and highlight the advantages and expertise of that person.
+
+177
+00:15:59,120 --> 00:16:00,360
+And apply that persona to it.
+
+178
+00:16:00,600 --> 00:16:06,420
+So, this is a CBO, a business leader of a Korean startup and the head of a Japanese subsidiary.
+
+179
+00:16:06,760 --> 00:16:15,280
+He has experience establishing a subsidiary in Japan, and has achieved exponential growth in the Japanese market.
+
+180
+00:16:15,500 --> 00:16:21,500
+Also, he has experience helping domestic companies expand overseas as a consultant.
+
+181
+00:16:21,860 --> 00:16:23,980
+I gave it this situation.
+
+182
+00:16:24,360 --> 00:16:26,040
+Then, I gave it the same prompt.
+
+183
+00:16:26,160 --> 00:16:28,360
+Let's see how the responses change.
+
+184
+00:16:29,120 --> 00:16:31,460
+The right output is with a more general persona.
+
+185
+00:16:31,500 --> 00:16:34,140
+The left output is with a very specific persona.
+
+186
+00:16:34,780 --> 00:16:37,220
+Looking at the Korean response, the right one is great.
+
+187
+00:16:37,380 --> 00:16:45,860
+It describes the market research required, how to review business strategies, and what the goals and tasks are. It wrote the document like an expert.
+
+188
+00:16:46,240 --> 00:16:56,020
+It also considers regulations, manages supply chains, establishes branches, and it has a plan for continuous improvement and expansion. It's a fairly professional response, but
+
+189
+00:16:56,021 --> 00:17:05,860
+if you use a very specific persona to draw out more of its expertise, the output becomes much more detailed and professional, both in form and content.
+
+190
+00:17:06,080 --> 00:17:13,020
+I have given a specific situation, and it divided the overall goals and specific tasks, which is one of the differences.
+
+191
+00:17:13,560 --> 00:17:26,360
+Here, it goes beyond simply establishing a legal branch and considers how to create a marketing and branding strategy in the Japanese market, and how to build an effective distribution network
+
+192
+00:17:26,361 --> 00:17:31,380
+and sales to increase distribution.
+
+193
+00:17:31,420 --> 00:17:37,900
+It also gives more detailed answers regarding how to monitor performance and drive growth.
+
+194
+00:17:38,100 --> 00:17:45,060
+The marketing strategy also includes collaborating with local influencers, which is a more innovative and up-to-date response.
+
+195
+00:17:45,220 --> 00:17:50,480
+Simply providing a specific and lively persona increases the quality of the output.
+
+196
+00:17:50,481 --> 00:17:51,840
+Next is examples.
+
+197
+00:17:52,180 --> 00:17:55,880
+I highly recommend and emphasize this.
+
+198
+00:17:56,260 --> 00:18:00,240
+Examples can significantly improve output quality, but many people don’t use them.
+
+199
+00:18:01,140 --> 00:18:04,780
+Just adding examples will greatly improve your output.
+
+200
+00:18:05,300 --> 00:18:11,820
+A research paper has shown that if the examples are not too long, giving two or more will improve the performance much more than providing just one.
+
+201
+00:18:12,060 --> 00:18:16,000
+This is called few-shot learning, and giving multiple examples is a better approach.
+
+202
+00:18:16,540 --> 00:18:17,620
+How do you give examples?
+
+203
+00:18:17,621 --> 00:18:25,280
+If you are using a paid model, such as GPT-4, you can add examples by link or by uploading files.
+
+204
+00:18:26,080 --> 00:18:28,280
+You can also enter the text within the prompt.
+
+205
+00:18:28,940 --> 00:18:33,800
+If you are using a free version of ChatGPT, you can't use links or file uploads, so you'll need to enter everything as text.
+
+206
+00:18:33,960 --> 00:18:37,760
+If you are using the paid version, the file name is very important.
+
+207
+00:18:37,940 --> 00:18:44,360
+If the file name is strange or in Korean, it might not upload properly, or it might not be able to refer to it.
+
+208
+00:18:44,361 --> 00:18:51,480
+So, if you are using a paid model, rename the file to match the content and use English.
+
+209
+00:18:51,620 --> 00:18:54,000
+This is how you can provide examples.
+
+210
+00:18:54,400 --> 00:18:57,220
+Providing examples will increase the output quality.
+
+211
+00:18:57,780 --> 00:18:59,280
+Let's look at this in more detail.
+
+212
+00:19:00,000 --> 00:19:06,760
+You are a civil litigation expert and you need to write a formal demand letter to a buyer who has failed to pay for the semiconductors they purchased.
+
+213
+00:19:06,780 --> 00:19:07,880
+You can prompt it like this.
+
+214
+00:19:08,200 --> 00:19:09,760
+It writes a demand letter.
+
+215
+00:19:09,920 --> 00:19:13,520
+But, you can include a sample demand letter.
+
+216
+00:19:14,360 --> 00:19:17,360
+It doesn't have to be a demand letter for your specific situation.
+
+217
+00:19:17,480 --> 00:19:26,120
+But, if you give a sample demand letter that it can imitate, and have it follow that format, it will write it according to the template.
+
+218
+00:19:26,540 --> 00:19:33,519
+So, if your company has a document format and you want the output to match that format, you can use the document as an example,
+
+219
+00:19:33,520 --> 00:19:38,880
+and the output will follow that format, which makes it much more useful.
+
+220
+00:19:39,020 --> 00:19:41,300
+The left response is without an example.
+
+221
+00:19:41,320 --> 00:19:44,120
+The right response includes a sample demand letter as text.
+
+222
+00:19:44,360 --> 00:19:50,520
+If you're using a free version of ChatGPT, you can enter long text strings like this.
+
+223
+00:19:51,360 --> 00:19:54,020
+The left response writes the demand letter.
+
+224
+00:19:54,120 --> 00:19:57,000
+It seems to have a general understanding of what a demand letter is.
+
+225
+00:19:57,560 --> 00:20:07,380
+But, if you provide an example, it will divide it into sender and recipient, and include phrases like "I hope the recipient flourishes", that are often used in demand letters.
+
+226
+00:20:07,600 --> 00:20:08,700
+It will imitate it.
+
+227
+00:20:08,701 --> 00:20:12,660
+So, it will use the sender and recipient format, and add phrases like "I wish you success in your business".
+
+228
+00:20:12,800 --> 00:20:20,380
+It will use the correct demand letter format, mention the contract, what the issues are, and what action needs to be taken,
+
+229
+00:20:20,381 --> 00:20:27,680
+and it will write in the style of a demand letter.
+
+230
+00:20:27,900 --> 00:20:33,320
+By providing examples, you can get output that is much more applicable for real-world use.
+
+231
+00:20:33,321 --> 00:20:36,300
+In addition to mimicking the form,
+
+232
+00:20:36,580 --> 00:20:42,220
+it will also mimic the tone, content structure, delivery method, and style.
+
+233
+00:20:42,460 --> 00:20:53,600
+When creating reports or results, you can use a sample case that shows the tone that should be used in the report,
+
+234
+00:20:53,880 --> 00:20:56,160
+Let's say you are writing a PR document.
+
+235
+00:20:56,400 --> 00:21:03,300
+So, I entered the persona, asked it to write a PR document, and asked it what the PR document should be about, how long it should be, and in what format it should be written.
+
+236
+00:21:03,320 --> 00:21:07,020
+I used a specific prompt like this.
+
+237
+00:21:07,120 --> 00:21:10,580
+And then, I added an example to the prompt.
+
+238
+00:21:11,070 --> 00:21:18,717
+If I include an example of a good PR document, it will use this example as a guide for its tone,
+
+239
+00:21:18,718 --> 00:21:24,320
+content structure, and choice of words, and produce a draft that is much closer to the example.
+
+240
+00:21:24,540 --> 00:21:26,840
+The left response is without an example.
+
+241
+00:21:27,260 --> 00:21:28,920
+This is not a bad press release.
+
+242
+00:21:29,080 --> 00:21:30,560
+The content structure is interesting.
+
+243
+00:21:30,561 --> 00:21:33,820
+It explains the content of the service.
+
+244
+00:21:33,880 --> 00:21:38,813
+But, if I include a good example of a press release and have it imitate the content structure,
+
+245
+00:21:38,814 --> 00:21:43,100
+it will write the press release according to this style and it will look more like a Korean style press release.
+
+246
+00:21:43,260 --> 00:21:49,989
+It summarizes the key points in two, explains the launch of the product, and concludes with a related interview, which is a typical Korean press release style.
+
+247
+00:21:49,990 --> 00:21:55,180
+So, it will imitate the typical format of a Korean press release.
+
+248
+00:21:55,181 --> 00:22:02,041
+So, it will summarize the key points, explain what it is about, and then provide the key points.
+
+249
+00:22:02,042 --> 00:22:07,200
+It will then explain what is unique about it and conclude with a related interview.
+
+250
+00:22:07,240 --> 00:22:18,260
+By providing examples of similar documents from competitors or similar previous documents from your company, it will imitate them and write a document that meets your needs.
+
+251
+00:22:18,261 --> 00:22:25,160
+So you can see that providing examples can help you get an output tailored to your needs.
+
+252
+00:22:26,020 --> 00:22:31,516
+The next element is format. When we give instructions for a task, we usually specify the format.
+
+253
+00:22:31,517 --> 00:22:36,661
+We give specific instructions on how we want the task done, and we expect the task to be done according to those instructions.
+
+254
+00:22:37,020 --> 00:22:39,940
+However, it often does not follow those instructions.
+
+255
+00:22:40,280 --> 00:22:46,384
+But, if you provide examples of good responses and bad responses, it will understand the instructions more accurately,
+
+256
+00:22:46,385 --> 00:22:51,520
+and avoid giving responses that violate the instructions.
+
+257
+00:22:51,740 --> 00:22:55,160
+In this example, let’s say it’s translating between Korean and English.
+
+258
+00:22:55,180 --> 00:22:56,860
+So, I created a translation task.
+
+259
+00:22:57,700 --> 00:23:06,320
+I asked it to act as a professional Korean-English translator and translate Korean to English word-for-word. I also told it not to respond to the prompt, and only output the translated result.
+
+260
+00:23:06,930 --> 00:23:08,780
+And here is where I use examples.
+
+261
+00:23:09,120 --> 00:23:16,460
+I included an example: "안녕하세요" should be translated to "hello", and it's wrong to respond "반갑습니다 무엇을 도와드릴까요".
+
+262
+00:23:16,520 --> 00:23:20,427
+And, if I enter "오늘 날씨 어때요", the correct response should be "What's the weather like today",
+
+263
+00:23:20,428 --> 00:23:24,820
+and it's wrong to respond to that.
+
+264
+00:23:25,180 --> 00:23:28,600
+I gave these examples using a few-shot approach.
+
+265
+00:23:28,660 --> 00:23:34,480
+By providing these examples, it will understand the instructions much more accurately and follow them much more effectively.
+
+266
+00:23:34,940 --> 00:23:37,820
+The left side is only the instructions without examples.
+
+267
+00:23:38,460 --> 00:23:42,960
+When you make a request, it seems to handle it quite well at first glance.
+
+268
+00:23:43,820 --> 00:23:48,040
+But, I made a request that was a bit tricky, like a prompt.
+
+269
+00:23:48,200 --> 00:23:57,540
+It should have responded with a direct translation, but instead it wrote a detailed response, as if it was ChatGPT answering this question.
+
+270
+00:23:57,760 --> 00:24:03,080
+It can fail to follow instructions and go in the wrong direction.
+
+271
+00:24:03,220 --> 00:24:12,700
+However, when I use two or more examples that explain how to follow the instructions correctly, it responds much more accurately.
+
+272
+00:24:12,860 --> 00:24:15,460
+It translates simple text correctly.
+
+273
+00:24:15,560 --> 00:24:21,400
+And when I input a prompt, instead of responding to the prompt, it simply translates it.
+
+274
+00:24:21,401 --> 00:24:30,420
+So, ChatGPT sometimes does not follow instructions or guidance and gives answers as it pleases. This tendency is more prominent in the free version of ChatGPT,
+
+275
+00:24:30,421 --> 00:24:35,860
+but providing more detailed instructions using examples will help it follow them much better.
+
+276
+00:24:36,020 --> 00:24:44,300
+Next is the format. Specifying the output format will make the response match the format.
+
+277
+00:24:44,500 --> 00:24:55,360
+If you specify whether the output should be a table or text, and if text, if you want bullet points or markdown format, specifying the desired format
+
+278
+00:24:55,540 --> 00:25:03,120
+or the length, such as thousand words or two thousand words, it will generate text that matches your criteria.
+
+279
+00:25:03,220 --> 00:25:08,991
+In addition to specifying the length and format, if you provide an outline of how the content should be structured,
+
+280
+00:25:08,992 --> 00:25:13,961
+it will add content that follows that outline.
+
+281
+00:25:14,080 --> 00:25:17,220
+This can help you get the output you want.
+
+282
+00:25:18,900 --> 00:25:27,560
+Therefore, when you are writing your presentation, you should consider your kernels, and your presentation, but if you are presenting to a family the situation will be different.
+
+283
+00:25:27,980 --> 00:25:53,600
+Anyway, when you are providing the content, be careful about the kernels, and if you check the output, you can see that it follows the format I specified such as the subject, expected effects, outline, and time allocation.
+
+284
+00:25:53,601 --> 00:25:57,920
+It includes the topic, expected benefits, outline, and time allocation, as requested.
+
+285
+00:25:58,080 --> 00:26:02,600
+When I asked for a timetable in table format, it did it in table format.
+
+286
+00:26:03,000 --> 00:26:07,760
+When you format your prompts, it is best to use markdown format.
+
+287
+00:26:07,900 --> 00:26:17,400
+You can specify the main title and the sub-content with bullets, etc. ChatGPT understands this markdown format,
+
+288
+00:26:17,401 --> 00:26:26,960
+so, it is a good format for specifying the format of text. Here, when I asked for a business plan, I specified how the plan should be structured,
+
+289
+00:26:26,961 --> 00:26:31,748
+and it provided the service plan, target customer,
+
+290
+00:26:31,749 --> 00:26:36,221
+target market, key features, and differentiation strategy, and it did that for me.
+
+291
+00:26:36,360 --> 00:26:37,600
+Finally, there is tone.
+
+292
+00:26:37,880 --> 00:26:44,120
+If you specify adjectives like "concise", "friendly", or "kind", it will generally write it in that tone.
+
+293
+00:26:44,140 --> 00:26:44,440
+That is what it does.
+
+294
+00:26:44,580 --> 00:26:54,640
+For tone, I don't use it when I'm looking at the output myself, but I tend to use it when the writing will be shown to someone outside of the company or to customers.
+
+295
+00:26:54,820 --> 00:27:00,640
+Adjusting the tone can make your output seem much more refined.
+
+296
+00:27:00,940 --> 00:27:06,800
+And when it’s hard to explain with adjectives, I provide specific examples to make it imitate the tone.
+
+297
+00:27:07,280 --> 00:27:18,180
+UX writing is about writing from a customer's point of view to make apps and websites easier to use. I provided a good UX writing example and asked it to rewrite the content using UX writing techniques.
+
+298
+00:27:18,181 --> 00:27:26,800
+I want you to rewrite this content using UX writing techniques based on examples of successful UX writing.
+
+299
+00:27:27,160 --> 00:27:32,980
+For example, instead of “Don’t show today,” I used “See again tomorrow” to make it more positive. Instead of “product details,” I used “product description” to use terminology relevant to the service. I used Korean instead of English.
+
+300
+00:27:32,981 --> 00:27:40,160
+I added the example to show how it should use Korean terminology rather than English.
+
+301
+00:27:40,300 --> 00:27:46,316
+You can just provide examples, but if you explain why they are good,
+
+302
+00:27:46,317 --> 00:27:52,900
+it will be better because it will write the output according to your priorities.
+
+303
+00:27:53,080 --> 00:27:58,000
+And adding a lot of content to a ChatGPT prompt does not always improve it.
+
+304
+00:27:58,280 --> 00:28:05,820
+If you pick a few good examples and explain why they are good, you can get good results with fewer examples.
+
+305
+00:28:06,300 --> 00:28:08,620
+I will explain this in more detail later.
+
+306
+00:28:09,180 --> 00:28:15,500
+The prompt says: rewrite the text using UX writing techniques based on the examples I provided.
+
+307
+00:28:15,620 --> 00:28:22,100
+I explained why the examples are good and how the examples should be used to perform UX writing.
+
+308
+00:28:22,360 --> 00:28:25,540
+And I asked it to rewrite the given text.
+
+309
+00:28:25,820 --> 00:28:30,904
+So, instead of saying “If you leave this page, your content will not be saved”, it used more encouraging
+
+310
+00:28:30,905 --> 00:28:36,480
+and positive expressions and phrases to encourage user action.
+
+311
+00:28:36,620 --> 00:28:39,200
+It gave a phrase that means: “If you leave, your work will disappear.”
+
+312
+00:28:39,201 --> 00:28:39,920
+Is it okay?
+
+313
+00:28:40,000 --> 00:28:41,380
+This is a great phrase.
+
+314
+00:28:41,381 --> 00:28:47,420
+It gives a few suggestions and asks you to choose one, which can be applied to your work.
+
+315
+00:28:48,140 --> 00:28:48,860
+What do you think?
+
+316
+00:28:49,160 --> 00:28:54,633
+I have explained the six elements of specific prompt writing sequentially and provided examples of how outputs improve when those elements are included.
+
+317
+00:28:54,634 --> 00:28:59,220
+I don’t know if you were able to understand how these elements can be used to produce a better output.
+
+318
+00:28:59,860 --> 00:29:06,210
+When writing prompts, remember these elements and try to include them as much as possible.
+
+319
+00:29:06,211 --> 00:29:11,360
+This will help you produce better outputs.
+
+320
+00:29:11,380 --> 00:29:13,440
+This is the key message that I wanted to share with you.
+
+321
+00:29:13,480 --> 00:29:18,000
+I hope these tips will be helpful when writing your prompts.
+
+322
+00:29:18,320 --> 00:29:23,820
+I’ve finished my main points, but I want to bring up some discussion topics regarding prompts.
+
+323
+00:29:24,160 --> 00:29:26,440
+There's no single right answer for writing prompts.
+
+324
+00:29:26,660 --> 00:29:28,580
+It’s something you need to train and practice.
+
+325
+00:29:28,840 --> 00:29:36,420
+Considering the discussion points I’m about to share will definitely improve your prompt writing skills.
+
+326
+00:29:36,700 --> 00:29:41,360
+Think about the discussion points first and then look at my opinion.
+
+327
+00:29:41,380 --> 00:29:46,380
+Feel free to discuss or debate with my ideas and add your own.
+
+328
+00:29:46,560 --> 00:29:50,860
+If you leave a comment, this video will be a much richer learning resource.
+
+329
+00:29:51,560 --> 00:29:53,380
+The core principle is,
+
+330
+00:29:53,500 --> 00:30:01,180
+how do you guide ChatGPT's attention to a certain context and expertise to get better responses?
+
+331
+00:30:01,320 --> 00:30:03,580
+Think about this point when leaving comments.
+
+332
+00:30:04,260 --> 00:30:07,640
+The first discussion point is: is it better to use Korean or English prompts?
+
+333
+00:30:08,360 --> 00:30:11,360
+Generally, people say that English prompts give better responses.
+
+334
+00:30:11,361 --> 00:30:12,361
+And this is true.
+
+335
+00:30:12,400 --> 00:30:13,400
+It is true.
+
+336
+00:30:13,440 --> 00:30:14,900
+But, why is that?
+
+337
+00:30:15,320 --> 00:30:18,020
+Are English prompts always better in every situation?
+
+338
+00:30:18,220 --> 00:30:19,400
+Think about that.
+
+339
+00:30:19,600 --> 00:30:23,080
+English prompts generally give longer and more professional responses.
+
+340
+00:30:23,180 --> 00:30:27,840
+The reason it generates longer content is because English is more token-efficient.
+
+341
+00:30:28,120 --> 00:30:32,900
+So, when you use English, it can use fewer tokens compared to Korean when using the same content.
+
+342
+00:30:33,160 --> 00:30:35,100
+Therefore, the response can be longer.
+
+343
+00:30:35,160 --> 00:30:37,940
+And because it is longer, it can provide more detailed responses.
+
+344
+00:30:37,941 --> 00:30:42,280
+But, this is not the only reason why English prompts give better responses.
+
+345
+00:30:42,540 --> 00:30:46,000
+There is far more professional knowledge available in English.
+
+346
+00:30:46,120 --> 00:30:56,821
+So, when users use English, it has better access to professional content, which means that it is considering that context and providing more professional answers.
+
+347
+00:30:57,040 --> 00:31:04,320
+So, it is true that English is better when you want to generate professional and creative text.
+
+348
+00:31:04,480 --> 00:31:12,480
+However, for marketing writing or situations specific to Korea, where the unique qualities of Korean are important, Korean prompts can be better.
+
+349
+00:31:12,600 --> 00:31:20,840
+When you use Korean, more weight is given to Korean web documents, which leads to responses that are better suited to the Korean situation.
+
+350
+00:31:21,060 --> 00:31:25,040
+So, I created prompts that make copy for a virtual brand.
+
+351
+00:31:25,700 --> 00:31:30,780
+I compared prompts in English that are then translated with prompts in Korean.
+
+352
+00:31:30,900 --> 00:31:36,820
+The left is a direct Korean prompt and the right is the result of translating a response from an English prompt.
+
+353
+00:31:36,821 --> 00:31:43,060
+You can see that Korean-style marketing copy is better when using a Korean prompt.
+
+354
+00:31:43,140 --> 00:31:54,180
+So, for the yogurt copy, things like "Filled with Texture" and "A New Standard" are common expressions used in Korean marketing and they are quite familiar to us.
+
+355
+00:31:54,440 --> 00:31:56,720
+This is because the responses are given in a Korean context.
+
+356
+00:31:56,980 --> 00:31:59,140
+However, if you use English,
+
+357
+00:31:59,180 --> 00:32:05,900
+the professionalism might increase, but in situations where you need to maintain a Korean style and tone, it is often less suitable.
+
+358
+00:32:06,080 --> 00:32:06,800
+“Savor App”.
+
+359
+00:32:06,820 --> 00:32:10,400
+Every spoonful is a very awkward expression in Korean.
+
+360
+00:32:10,460 --> 00:32:12,220
+It is very awkward in Korean.
+
+361
+00:32:12,400 --> 00:32:17,240
+And the phrase "Feel the natural beat" is not commonly used in Korean.
+
+362
+00:32:17,460 --> 00:32:19,400
+This is not something that Koreans say.
+
+363
+00:32:19,800 --> 00:32:21,180
+What is it called, a rhyme?
+
+364
+00:32:21,220 --> 00:32:27,820
+The expressions that focus on that type of thing are not necessary in Korean, and they are more of the copywriting style preferred by people in the US.
+
+365
+00:32:28,160 --> 00:32:31,860
+So, if you need a Korean context, Korean prompts are better.
+
+366
+00:32:32,040 --> 00:32:38,083
+When writing YouTube titles, planning YouTube content, using Korean YouTube videos as references
+
+367
+00:32:38,084 --> 00:32:44,140
+will probably be better than using English prompts to reference English YouTubers.
+
+368
+00:32:44,240 --> 00:32:51,281
+So, you should consider whether the situation you are in needs to have a Korean context or whether you need content that focuses on professionalism,
+
+369
+00:32:51,282 --> 00:32:56,400
+and then determine whether you should use Korean or English prompts.
+
+370
+00:32:56,980 --> 00:33:03,760
+Second, people usually use ChatGPT with the role of humans asking and ChatGPT answering.
+
+371
+00:33:03,940 --> 00:33:05,020
+Is that always the case?
+
+372
+00:33:05,021 --> 00:33:18,060
+As I've said in previous videos, when using AI as a tool, instead of thinking of yourself as the one giving orders and the AI as the one just providing the result, it's better to think of AI and humans as collaborating,
+
+373
+00:33:18,061 --> 00:33:23,160
+working together to improve the quality of the output.
+
+374
+00:33:23,300 --> 00:33:27,420
+You should have this perspective when writing prompts.
+
+375
+00:33:27,660 --> 00:33:34,060
+So, ask ChatGPT what you can do to improve your prompts.
+
+376
+00:33:34,061 --> 00:33:40,260
+I mentioned that it's good to use professional terms or specific names of experts to focus it on a specific context.
+
+377
+00:33:40,261 --> 00:33:45,740
+So ask it, "Which expert do you think would solve this problem best?"
+
+378
+00:33:45,780 --> 00:33:46,820
+Ask it like that.
+
+379
+00:33:47,000 --> 00:33:48,940
+This can give you a hint regarding who the expert should be.
+
+380
+00:33:49,080 --> 00:33:58,500
+And you need to give detailed information regarding your situation. Don’t just explain it and have it generate a response, but instead ask what information you should give to improve the response
+
+381
+00:33:58,501 --> 00:34:04,040
+and better help it understand your situation.
+
+382
+00:34:04,060 --> 00:34:12,008
+After providing the explanation, have it evaluate how clear and well-organized your explanation is.
+
+383
+00:34:12,009 --> 00:34:18,621
+Ask it to give a score and provide suggestions on what you can do to improve it.
+
+384
+00:34:18,660 --> 00:34:20,500
+You can have it evaluate your output.
+
+385
+00:34:20,760 --> 00:34:30,000
+So, instead of just having ChatGPT answer your questions, collaborate with it to improve the prompts, and get better results.
+
+386
+00:34:30,200 --> 00:34:34,620
+So, instead of just saying "create ad copy for an offline workshop,"
+
+387
+00:34:34,680 --> 00:34:37,620
+"write two lines of copy and give suggestions."
+
+388
+00:34:37,660 --> 00:34:40,020
+It will write copy for you.
+
+389
+00:34:40,080 --> 00:34:42,100
+And it's not a bad idea to choose one from the suggestions.
+
+390
+00:34:42,240 --> 00:34:52,480
+But, it’s much better to ask which expert with what expertise or experience would be most suitable for performing this mission to find the persona.
+
+391
+00:34:52,900 --> 00:35:00,660
+"An ad copywriter who has experience writing content in the AI field. Create ad copy from that perspective."
+
+392
+00:35:00,700 --> 00:35:05,320
+You can derive an expert and use that expertise as the persona.
+
+393
+00:35:05,700 --> 00:35:09,260
+Then, ask: "What information do you need to improve this answer?"
+
+394
+00:35:09,360 --> 00:35:11,560
+"What additional information do you need?"
+
+395
+00:35:11,620 --> 00:35:17,678
+If you ask this question, it will ask for information like what the goal of the workshop is, who will attend, what kind of format it will be,
+
+396
+00:35:17,679 --> 00:35:23,040
+and what differentiates it from other workshops. ChatGPT will ask you for information to improve its response.
+
+397
+00:35:23,160 --> 00:35:32,880
+And by providing it with that information, you can help ChatGPT to understand the context and give an answer that matches your needs.
+
+398
+00:35:33,040 --> 00:35:38,953
+So, you should collaborate with ChatGPT and engage in mutual questions and answers to improve your prompts,
+
+399
+00:35:38,954 --> 00:35:44,100
+and thirdly, I've emphasized the importance of specific prompts.
+
+400
+00:35:44,160 --> 00:35:49,040
+But, we need to consider if it's always better to use specific prompts.
+
+401
+00:35:49,660 --> 00:35:54,860
+When you are very specific, ChatGPT will focus on that specific situation.
+
+402
+00:35:54,960 --> 00:35:55,960
+Is that always good?
+
+403
+00:35:56,040 --> 00:36:02,950
+First, if there's too much input, ChatGPT might focus on too many things and lose focus.
+
+404
+00:36:02,951 --> 00:36:08,380
+It could also focus on things that you didn't think were as important as they are,
+
+405
+00:36:08,620 --> 00:36:12,780
+which means it may not go in the direction you want.
+
+406
+00:36:13,620 --> 00:36:23,700
+One of the situations where I experience this most is when I provide examples or reference data. If the reference data is too large, it will forget the key requirements it needs to reflect
+
+407
+00:36:23,701 --> 00:36:31,740
+and focus too much on the examples or reference data, and the response may go in the wrong direction.
+
+408
+00:36:31,741 --> 00:36:33,840
+For example, like this.
+
+409
+00:36:33,920 --> 00:36:39,180
+This is one of my YouTube videos and I wanted to improve the title and thumbnail.
+
+410
+00:36:39,340 --> 00:36:51,500
+So, I took the titles of a popular YouTuber called Kim Jakka TV, gave them to ChatGPT, and asked it to identify the characteristics and improve the title of my video.
+
+411
+00:36:52,000 --> 00:36:56,820
+The left prompt gave the full script of my video.
+
+412
+00:36:56,920 --> 00:37:02,120
+The right prompt only gave the key points that I wanted to be included in the title, and it improved the title and applied it to my channel.
+
+413
+00:37:02,200 --> 00:37:04,320
+Let's see how the responses differ.
+
+414
+00:37:05,520 --> 00:37:10,600
+I asked it to take the most popular titles of Kim Jakka TV and analyze them.
+
+415
+00:37:10,760 --> 00:37:19,480
+Based on the analysis, I asked it to identify the techniques that the YouTuber used to drive views.
+
+416
+00:37:19,660 --> 00:37:24,140
+I wanted it to use these techniques to rewrite the title of my video.
+
+417
+00:37:24,440 --> 00:37:29,480
+You can see that I’m using the persona of an editor to write the title.
+
+418
+00:37:29,660 --> 00:37:31,720
+And to use concise language for my video.
+
+419
+00:37:31,721 --> 00:37:34,680
+And that it's important to use a provocative title to drive curiosity.
+
+420
+00:37:34,780 --> 00:37:43,080
+So, I asked it to use the title style of the videos mentioned above, and rewrite the title based on the content in the script below.
+
+421
+00:37:43,760 --> 00:37:50,660
+I then provided the full script of my video, which took up a large portion of the prompt.
+
+422
+00:37:50,820 --> 00:37:56,820
+So, ChatGPT focused a lot of its attention on understanding and summarizing the content of the video.
+
+423
+00:37:57,360 --> 00:38:01,620
+It did provide titles based on the content.
+
+424
+00:38:01,720 --> 00:38:10,200
+But, the key point for me was to create a YouTube title that people would click, not to summarize the content.
+
+425
+00:38:10,600 --> 00:38:20,120
+So, while these titles are not bad, they don't capture the strengths of Kim Jakka TV, and they're not the kind of titles that would grab attention.
+
+426
+00:38:20,540 --> 00:38:28,061
+But, if I pick a very specific example from Kim Jakka TV and tell it to imitate it, and focus on a smaller range of things to imitate,
+
+427
+00:38:28,062 --> 00:38:34,680
+and instead of giving the full script, if I only give the key points,
+
+428
+00:38:35,180 --> 00:38:44,628
+it will focus on those points and those examples, so you can see that the title is more in line with what I wanted and more attention-grabbing, like the titles of Kim Jakka TV.
+
+429
+00:38:44,629 --> 00:38:51,140
+It will make a title that is closer to what I wanted, and it would be more attention-grabbing, like Kim Jakka TV’s titles.
+
+430
+00:38:51,720 --> 00:38:57,420
+This shows that giving too much content in your prompts is not always better.
+
+431
+00:38:57,600 --> 00:39:01,700
+So, when I asked it to write a PR document, I provided the entire PR document.
+
+432
+00:39:01,800 --> 00:39:12,640
+The previous example was okay, because the content was related, and ChatGPT was able to stay focused. But if I give it a completely irrelevant PR document as a reference,
+
+433
+00:39:12,641 --> 00:39:19,808
+and have it imitate that whole thing, it will focus its attention on that content,
+
+434
+00:39:19,809 --> 00:39:26,500
+which can lead to content that is mixed up or a press release that is completely off the mark.
+
+435
+00:39:26,501 --> 00:39:34,848
+So, it is important to think about how you can ensure that ChatGPT’s attention is focused on what is important and that giving too much content in your prompts can lead to undesirable outcomes.
+
+436
+00:39:34,849 --> 00:39:42,400
+So, you should think about how you can make ChatGPT’s attention focused on what you want it to, and avoid giving it too much content.
+
+437
+00:39:42,440 --> 00:39:51,940
+When you train and give resources to ChatGPT, people think that if they give it enough information, it will understand everything like a human, but
+
+438
+00:39:52,440 --> 00:39:58,505
+ChatGPT doesn’t work like that. Instead, it focuses on certain parts of the prompt, and the responses are created based on that,
+
+439
+00:39:58,506 --> 00:40:04,920
+so, if you provide too much data, the results may not be what you want.
+
+440
+00:40:05,120 --> 00:40:09,420
+Here's another situation where a specific prompt is not always better.
+
+441
+00:40:09,540 --> 00:40:14,020
+Not all problems require specific and professional contexts.
+
+442
+00:40:14,180 --> 00:40:26,580
+For example: summarizing, extracting patterns from the source, and converting from type A to type B format, or converting a blog post into a YouTube interview script, and identifying relationships between two unstructured data points.
+
+443
+00:40:26,581 --> 00:40:35,340
+To make it easier, this is like the Korean SAT test.
+
+444
+00:40:35,341 --> 00:40:36,341
+It’s called the Korean Language section.
+
+445
+00:40:36,760 --> 00:40:42,140
+There are situations on the test where you’re given a passage and you have to answer questions based on that passage.
+
+446
+00:40:42,380 --> 00:40:47,000
+You don't need a very specific prompt in those types of situations.
+
+447
+00:40:47,260 --> 00:40:51,600
+You don’t need to say "You’re a very good summarizer."
+
+448
+00:40:51,720 --> 00:40:54,440
+Summarizing is a skill that it has.
+
+449
+00:40:54,441 --> 00:40:59,100
+It can handle the task well with its language ability alone, so it’s better to use simple prompts.
+
+450
+00:40:59,360 --> 00:41:08,760
+So, tasks like extracting delivery information from reviews, categorizing reviews as positive, neutral or negative, extracting only company names from resumes.
+
+451
+00:41:08,761 --> 00:41:18,000
+These types of tasks, like those on the Korean Language section of the SAT, where there is a clear answer, and do not require specific domain knowledge, and where its language skills alone are enough to solve the task,
+
+452
+00:41:18,001 --> 00:41:23,500
+it's better to use simple prompts instead of more specific ones.
+
+453
+00:41:24,440 --> 00:41:29,000
+People want to template good prompts and reuse them.
+
+454
+00:41:29,020 --> 00:41:30,480
+I understand that desire.
+
+455
+00:41:30,660 --> 00:41:33,980
+But, is it better to use a completed prompt template?
+
+456
+00:41:34,100 --> 00:41:37,540
+I think it’s better to use a step-by-step prompt.
+
+457
+00:41:37,680 --> 00:41:43,960
+This is because ChatGPT is supposed to imitate how an expert works, and experts don’t create a final product right away.
+
+458
+00:41:44,200 --> 00:41:50,500
+We need to have ChatGPT imitate an expert’s work process, so it needs to work in a step-by-step process.
+
+459
+00:41:50,780 --> 00:42:01,980
+When you are trying to make ChatGPT work step-by-step, instead of putting all the steps into one prompt and having it do all that at once, it's better to break the tasks down
+
+460
+00:42:01,981 --> 00:42:09,240
+and give it one task at a time, improving the response through conversations. This gives better results.
+
+461
+00:42:09,380 --> 00:42:16,320
+There are also prompt techniques for step-by-step tasks such as “Let's Think Step by Step”.
+
+462
+00:42:16,560 --> 00:42:27,800
+This is better than not having it, because it follows the steps you specified and processes it step-by-step. So, using this is better than having it work as one whole process.
+
+463
+00:42:27,801 --> 00:42:32,260
+But, even better than “Let's Think Step by Step” is to break down the tasks and request it one by one,
+
+464
+00:42:32,380 --> 00:42:37,558
+and improve the responses over time. This is an even better approach to a step-by-step prompt.
+
+465
+00:42:37,559 --> 00:42:42,000
+and improve the responses gradually. I think that is even better for a step-by-step prompt.
+
+466
+00:42:43,220 --> 00:42:48,080
+Let's say you are a recruiter on LinkedIn and you want to send DMs to candidates.
+
+467
+00:42:48,220 --> 00:42:53,560
+So, explain your company and invite them for an informal coffee chat.
+
+468
+00:42:53,561 --> 00:43:00,380
+I provided all the steps needed to write the recruitment message, and I asked it to generate a response based on those steps.
+
+469
+00:43:00,760 --> 00:43:06,300
+The left side has all the steps in one prompt, so it gives the result in one shot.
+
+470
+00:43:06,400 --> 00:43:13,600
+The right side has the steps broken down into separate tasks, and uses a step-by-step approach to create the response.
+
+471
+00:43:13,740 --> 00:43:19,220
+This results in a much more natural and smooth output.
+
+472
+00:43:19,780 --> 00:43:24,660
+The recruitment message on the left isn't bad, but it feels a bit stiff.
+
+473
+00:43:24,740 --> 00:43:33,840
+But, the recruitment DM on the right is much closer to a real LinkedIn DM and it was more suitable for the situation of inviting candidates for a casual coffee chat.
+
+474
+00:43:34,340 --> 00:43:44,760
+To do this, you have to break it down into tasks, derive advantages, revise advantages into catchy headlines, and create a message based on the headlines and
+
+475
+00:43:44,761 --> 00:43:50,275
+provide consideration points. This makes it easy for you to see each step and provide feedback on each one.
+
+476
+00:43:50,276 --> 00:43:54,640
+It also has the advantage of giving feedback during each step.
+
+477
+00:43:54,840 --> 00:44:01,754
+Also, instead of using one prompt that has too much content and doesn't focus on the appropriate aspects,
+
+478
+00:44:01,755 --> 00:44:06,800
+it gets much better results when you focus on one task at a time.
+
+479
+00:44:06,880 --> 00:44:10,920
+So, I recommend using intermediate steps when writing prompts.
+
+480
+00:44:11,120 --> 00:44:14,480
+In conclusion, prompt engineering seems to come down to these two things.
+
+481
+00:44:14,660 --> 00:44:20,960
+I think this is the key point. To do your job well, what do you need to do?
+
+482
+00:44:20,961 --> 00:44:27,786
+What mindset, what metacognitive skills do you need to have to produce successful results?
+
+483
+00:44:27,787 --> 00:44:33,561
+A person who has this skill and can articulate it in language is good at prompt engineering.
+
+484
+00:44:33,660 --> 00:44:42,300
+People who have experience and have thought deeply about their work, and who know how to succeed and fail, and who have metacognition,
+
+485
+00:44:42,301 --> 00:44:45,980
+can use that metacognition, articulate it in language, and get better results from ChatGPT.
+
+486
+00:44:46,220 --> 00:44:56,580
+You also need to fine-tune it. Don't expect results just because you have the metacognition and can write it as a prompt. You need to guide ChatGPT to focus on the expertise you want and generate the output you want.
+
+487
+00:44:56,581 --> 00:45:02,660
+You need to guide ChatGPT to focus on the expertise you want and generate the output you want.
+
+488
+00:45:03,180 --> 00:45:07,180
+If you do these two things, you’ll get the results you want from ChatGPT.
+
+489
+00:45:07,960 --> 00:45:13,647
+Finally, let me show you the process of how I used ChatGPT to write a blog post,
+
+490
+00:45:13,648 --> 00:45:17,820
+so you can see how all these tips come together.
+
+491
+00:45:18,440 --> 00:45:24,997
+When I used ChatGPT to create a blog post automatically before, I just provided the title and asked an SEO expert to write a blog post,
+
+492
+00:45:24,998 --> 00:45:31,580
+which resulted in a soulless piece of writing.
+
+493
+00:45:31,700 --> 00:45:42,840
+But, if you focus on drawing out the expertise, providing your own context, and providing a benchmark of what you want, and have it imitate that,
+
+494
+00:45:42,841 --> 00:45:48,700
+you can get reasonably good results from ChatGPT.
+
+495
+00:45:48,920 --> 00:45:59,240
+I don't think ChatGPT is an all-powerful tool, but I also don’t think it is not capable of creating practical results.
+
+496
+00:45:59,300 --> 00:46:06,760
+I think that, depending on the way that you work with it, you can produce real and practical results, and I want to emphasize this point.
+
+497
+00:46:06,920 --> 00:46:09,860
+Let’s look at the blog writing process.
+
+498
+00:46:09,880 --> 00:46:16,000
+I explain my context and then ask which expert would be the best to handle this mission.
+
+499
+00:46:16,240 --> 00:46:23,820
+So, I’m drawing out expertise and using that to produce output with ChatGPT.
+
+500
+00:46:23,980 --> 00:46:28,780
+Instead of going straight to the final piece, I first have it produce an intermediate result.
+
+501
+00:46:29,740 --> 00:46:32,360
+What is an intermediate result in writing?
+
+502
+00:46:32,460 --> 00:46:33,700
+That would be the outline.
+
+503
+00:46:33,980 --> 00:46:42,972
+So, after giving it a specific persona and describing the specific expertise of the persona, and after providing my context,
+
+504
+00:46:42,973 --> 00:46:49,880
+I ask it a question about the topic: "What should a solopreneur choose between a niche and a mass market?"
+
+505
+00:46:49,920 --> 00:46:53,920
+Then I asked it to write an outline for the blog post.
+
+506
+00:46:54,060 --> 00:46:58,440
+Based on that, it will create an outline.
+
+507
+00:46:58,680 --> 00:47:08,080
+And to improve that outline, I asked it what additional information I need to provide. I told it that I want to make this outline unique and differentiated.
+
+508
+00:47:08,081 --> 00:47:14,926
+And it asked for more real world success cases, data, and things to think about.
+
+509
+00:47:14,927 --> 00:47:20,360
+So, it asked for real world successful cases, data, and aspects to think about.
+
+510
+00:47:20,380 --> 00:47:24,540
+And then, I give it feedback by giving it the information that I have available.
+
+511
+00:47:24,760 --> 00:47:27,600
+This will help to further develop the context.
+
+512
+00:47:27,700 --> 00:47:34,160
+Based on that, it will write a new outline and I will provide feedback like a supervisor.
+
+513
+00:47:34,660 --> 00:47:40,740
+I ask it to remove sections 5 and 6, and ask it to expand on section 4.
+
+514
+00:47:40,820 --> 00:47:42,780
+And then it’s time to write.
+
+515
+00:47:42,800 --> 00:47:46,380
+When writing, you can use the outline and have it write the whole thing.
+
+516
+00:47:46,720 --> 00:47:53,580
+Or you can have it write each section separately and put them together. This will give a better result.
+
+517
+00:47:53,800 --> 00:47:55,500
+It will also be longer.
+
+518
+00:47:55,600 --> 00:47:59,500
+So, by breaking it down into steps, you can have it write your blog post.
+
+519
+00:47:59,920 --> 00:48:04,220
+So, when I translate the text to Korean, the content is great.
+
+520
+00:48:04,380 --> 00:48:06,940
+But, the Korean is awkward.
+
+521
+00:48:07,280 --> 00:48:15,000
+This is because I used an English prompt to draw out more of the content-related professionalism, which means the writing is better suited for an English blog post.
+
+522
+00:48:15,520 --> 00:48:25,680
+So, if I provide an example of one of my previous blog posts, and have it imitate that, the writing becomes much more natural and similar to what I would write.
+
+523
+00:48:26,320 --> 00:48:32,072
+By using this method, instead of just giving a title and asking it to write, by drawing out the expertise and having it imitate the expert’s methods,
+
+524
+00:48:32,073 --> 00:48:38,200
+and break down the tasks step by step, you get a much more professional and well-written output.
+
+525
+00:48:38,300 --> 00:48:48,040
+To make the writing more unique, I asked it what additional information I needed to give, and it asked me to tell my personal success story.
+
+526
+00:48:48,220 --> 00:48:55,340
+So, I told it about my success story, and the journey I went through when creating my no-code YouTube channel, and it wrote this.
+
+527
+00:48:55,460 --> 00:48:58,740
+It is much more unique, and includes details about my experience.
+
+528
+00:48:59,100 --> 00:49:05,140
+I gave an example of a Korean blog post and asked it to rewrite in Korean, so the writing style has now become more natural.
+
+529
+00:49:05,500 --> 00:49:11,160
+This shows you how you can use ChatGPT to improve your output.
+
+530
+00:49:12,120 --> 00:49:15,040
+So, if you want to write good prompts,
+
+531
+00:49:15,041 --> 00:49:20,407
+you first need to think about your goals and what you want to achieve with ChatGPT,
+
+532
+00:49:20,408 --> 00:49:25,980
+and you need to think about the specific context of the problem you are trying to solve, and articulate it in language.
+
+533
+00:49:26,020 --> 00:49:34,200
+To do this, you have to imitate an expert, which means you need to articulate in language what expertise is needed, and how an expert would go about this task.
+
+534
+00:49:34,201 --> 00:49:42,260
+You also need to guide it to imitate that, and be able to assess the results, and know what is good, bad, what can be improved,
+
+535
+00:49:42,261 --> 00:49:50,000
+and then improve it through multiple iterations of the prompt. This is how you write a good prompt and get better results.
+
+536
+00:49:50,360 --> 00:49:58,540
+You might think that this is too much work, but working with ChatGPT will help you to improve your metacognitive abilities, and using well-structured prompts based on those skills,
+
+537
+00:49:58,541 --> 00:50:03,938
+will increase your level of competence in your work,
+
+538
+00:50:03,939 --> 00:50:08,460
+and definitely improve your productivity.
+
+539
+00:50:08,560 --> 00:50:13,560
+Isn't all this similar to how humans work and communicate effectively?
+
+540
+00:50:13,561 --> 00:50:22,720
+The skill of writing good ChatGPT prompts is simply about articulating in language how humans work and then having it imitate that.
+
+541
+00:50:22,880 --> 00:50:28,511
+So, if you know how you can do your work well and you have that metacognition, and you have the patience to
+
+542
+00:50:28,512 --> 00:50:33,260
+communicate well with ChatGPT, you can write good ChatGPT prompts.
+
+543
+00:50:33,760 --> 00:50:38,540
+So, I don't think of ChatGPT as an all-powerful magic key.
+
+544
+00:50:38,660 --> 00:50:41,420
+I think of it more as a work partner.
+
+545
+00:50:41,620 --> 00:50:51,200
+And as a human, I feel that my expertise, domain knowledge, liberal arts, intuition, and insight,
+
+546
+00:50:51,360 --> 00:50:54,080
+are becoming more important for guiding ChatGPT.
+
+547
+00:50:54,240 --> 00:50:57,280
+When I had this conversation with the machine, I didn't write a single line of code.
+
+548
+00:50:57,440 --> 00:51:01,380
+And I didn't use any new techniques when talking with this machine.
+
+549
+00:51:01,580 --> 00:51:10,340
+If you think of it as a person and do your best, you can have a much better experience using ChatGPT.
+
+550
+00:51:10,520 --> 00:51:13,540
+In some ways, I think liberal arts skills are becoming more important.
+
+551
+00:51:13,541 --> 00:51:20,580
+I'm not saying that people who specialize in the liberal arts are better, but I do believe those types of skills are becoming more important.
+
+552
+00:51:20,581 --> 00:51:26,226
+So, I think that people with problem-solving skills, rather than those with deep technical knowledge,
+
+553
+00:51:26,227 --> 00:51:30,900
+will be the ones who can be successful in the age of AI.
+
+554
+00:51:31,260 --> 00:51:37,800
+By combining your human skills with AI, you can become a real "in-demand" talent in the age of AI.
+
+555
+00:51:37,880 --> 00:51:39,500
+That’s what this is all about.
+
+556
+00:51:39,940 --> 00:51:43,520
+If you found this video inspiring or it provided food for thought, please like it.
+
+557
+00:51:43,521 --> 00:51:49,200
+In my next video, I will prepare a lecture about how to create AI images.
