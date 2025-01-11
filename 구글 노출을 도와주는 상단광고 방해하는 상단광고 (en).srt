@@ -1,0 +1,896 @@
+1
+00:00:00,060 --> 00:00:03,041
+$100 while working, $200 while sleeping.
+
+2
+00:00:05,886 --> 00:00:12,180
+I've finally applied for channel monetization, surpassing 1,000 subscribers and 4,000 watch hours.
+
+3
+00:00:12,520 --> 00:00:16,300
+Since I already had an AdSense account, I used that existing one.
+
+4
+00:00:16,420 --> 00:00:21,240
+I believe it's all thanks to you, my subscribers, and I'll share everything I can.
+
+5
+00:00:21,660 --> 00:00:23,480
+I said I'd share what I can, right?
+
+6
+00:00:23,680 --> 00:00:24,860
+There are things I really can't.
+
+7
+00:00:25,020 --> 00:00:26,537
+If I reveal those, my channel will be ruined.
+
+8
+00:00:26,561 --> 00:00:32,340
+But if you follow what I'm teaching now, you'll eventually figure it out on your own.
+
+9
+00:00:32,500 --> 00:00:36,521
+The moment you understand that, you’ll be making so much money, it'll make even Steve Jobs look like an amateur.
+
+10
+00:00:36,551 --> 00:00:41,746
+So, don't worry too much about it, and I'll share everything I can.
+
+11
+00:00:41,920 --> 00:00:43,760
+The AdSense ecosystem keeps changing.
+
+12
+00:00:43,906 --> 00:00:46,833
+The logic of Daum, Google, and Naver also keeps changing.
+
+13
+00:00:46,857 --> 00:00:51,646
+I'll try to keep up with those changes as quickly as possible and share what I learn.
+
+14
+00:00:51,760 --> 00:00:54,825
+So keep getting great information through me, your Isayang Jobs.
+
+15
+00:00:54,849 --> 00:00:59,900
+And whenever you feel shaky as a digital nomad, stay strong and keep going.
+
+16
+00:01:00,120 --> 00:01:02,800
+Also, I'm constantly expanding my pipelines.
+
+17
+00:01:03,120 --> 00:01:04,640
+I don't know how far I’ll go.
+
+18
+00:01:04,860 --> 00:01:07,180
+For example, you invest in stocks or real estate, right?
+
+19
+00:01:07,526 --> 00:01:13,154
+In the digital nomad world, we do AdSense, AdPost, Coupang Partners, and so on.
+
+20
+00:01:13,261 --> 00:01:16,300
+But you can't rely on just those because the income fluctuates a lot.
+
+21
+00:01:16,420 --> 00:01:19,080
+AdSense is relatively more stable in terms of income.
+
+22
+00:01:19,280 --> 00:01:22,435
+AdSense is what gives you a steady income,
+
+23
+00:01:22,513 --> 00:01:25,315
+but the others aren't stable yet.
+
+24
+00:01:25,393 --> 00:01:30,528
+So, you need to keep expanding your pipelines, build a base with the ones that survive,
+
+25
+00:01:30,552 --> 00:01:32,711
+and then keep adding more pipelines.
+
+26
+00:01:32,924 --> 00:01:38,831
+To create a new pipeline, you need to have stable lines already in place.
+
+27
+00:01:39,017 --> 00:01:43,983
+If you do that, you’ll keep adding new things, and eventually, you'll be able to earn money even if you do almost nothing.
+
+28
+00:01:44,240 --> 00:01:48,980
+Or, you can just post what you need to. Right now, you write blog posts even when you don't want to.
+
+29
+00:01:49,173 --> 00:01:50,821
+Because it's trending, right?
+
+30
+00:01:50,910 --> 00:01:57,184
+You write informational posts after studying, even when you don’t know what they're about. But once things stabilize,
+
+31
+00:01:57,331 --> 00:02:03,000
+you can write about what you know well, what you want to share, and your income will still be stable.
+
+32
+00:02:03,239 --> 00:02:06,853
+That's great, isn't it? Let's keep going together until then.
+
+33
+00:02:07,079 --> 00:02:13,226
+Okay, today, as I mentioned in the title, and now that I have ads, I'll try to place them well.
+
+34
+00:02:13,373 --> 00:02:16,000
+For us AdSense users, especially bloggers,
+
+35
+00:02:16,030 --> 00:02:21,033
+the click-through rate varies greatly depending on where you place ads.
+
+36
+00:02:21,153 --> 00:02:25,056
+In my previous video, I showed you how to use mobile full-screen ads.
+
+37
+00:02:25,080 --> 00:02:28,256
+Like that, for us digital nomads doing AdSense,
+
+38
+00:02:28,368 --> 00:02:33,300
+writing articles and creating videos are important, but strategic ad placement is also important.
+
+39
+00:02:33,453 --> 00:02:38,423
+I'll try to place ads well on my YouTube channel too, according to the content I make.
+
+40
+00:02:38,543 --> 00:02:40,303
+Please support me, I'm counting on you.
+
+41
+00:02:40,410 --> 00:02:44,130
+I think my channel will last a long time if you do.
+
+42
+00:02:44,376 --> 00:02:47,583
+I'll always be grateful, and let's start today.
+
+43
+00:02:47,709 --> 00:02:49,983
+Today, what I want to show you is...
+
+44
+00:02:50,070 --> 00:02:52,290
+I want to talk about top ads.
+
+45
+00:02:52,403 --> 00:02:53,710
+You place top ads, right?
+
+46
+00:02:54,370 --> 00:02:58,605
+Whether you’ve been doing YouTube or AdSense for a long time or not,
+
+47
+00:02:58,629 --> 00:03:03,508
+the place with the highest click-through rate and the highest revenue is the top ad.
+
+48
+00:03:03,675 --> 00:03:06,495
+So, we can't not put ads at the top.
+
+49
+00:03:06,655 --> 00:03:09,928
+Since we can’t avoid it, we cannot overlook this point.
+
+50
+00:03:10,055 --> 00:03:14,614
+How you place the top ads can affect your session duration, bounce rate,
+
+51
+00:03:14,708 --> 00:03:17,768
+and even your cost per click (CPC).
+
+52
+00:03:17,915 --> 00:03:19,688
+So, you need to place them smartly.
+
+53
+00:03:19,908 --> 00:03:23,886
+You’ve just been placing them and maintaining them because they made money, right?
+
+54
+00:03:24,026 --> 00:03:25,026
+So you just think, "Whatever."
+
+55
+00:03:25,165 --> 00:03:29,940
+You don't want to deal with the headache of figuring it out, so you stick with it because it's making money.
+
+56
+00:03:30,038 --> 00:03:32,666
+That might not be helpful in the long run.
+
+57
+00:03:32,746 --> 00:03:36,174
+Today, I'll tell you about a few types of top ad placements.
+
+58
+00:03:36,261 --> 00:03:38,508
+First, there are people who place them like this.
+
+59
+00:03:38,801 --> 00:03:42,528
+The first top ad placement I'll show you is like this:
+
+60
+00:03:42,668 --> 00:03:45,373
+When it's above the title when you enter the page.
+
+61
+00:03:45,540 --> 00:03:51,153
+In this case, the ad might be seen first, but the problem is, what happens if the ad doesn't load quickly?
+
+62
+00:03:51,299 --> 00:03:54,146
+It appears as a blank space. Then people will scroll down right away.
+
+63
+00:03:54,406 --> 00:03:58,219
+These days, phone speeds and internet speeds are faster,
+
+64
+00:03:58,272 --> 00:04:02,759
+so if it doesn't load within a fraction of a second, people notice and scroll down immediately.
+
+65
+00:04:02,959 --> 00:04:07,840
+As someone who plays an instrument, you know the hands are faster than the eyes. So if it doesn't load, you scroll.
+
+66
+00:04:08,200 --> 00:04:12,108
+So, even if you want to show it immediately, if it doesn't load, they scroll down.
+
+67
+00:04:12,322 --> 00:04:17,886
+Also, if there's an ad as soon as you enter, what comes to mind? Those clickbait pages written by clickbait journalists.
+
+68
+00:04:17,993 --> 00:04:21,046
+If they hate that, they might leave the page right away.
+
+69
+00:04:21,166 --> 00:04:23,740
+Another one is an ad right below the title.
+
+70
+00:04:23,893 --> 00:04:28,100
+I showed you how to place it in the skin editing in my previous video.
+
+71
+00:04:28,200 --> 00:04:31,753
+Once you place it there, just like the previous one,
+
+72
+00:04:31,853 --> 00:04:35,899
+if you put the ad code in the skin editor, it will automatically appear.
+
+73
+00:04:35,986 --> 00:04:37,140
+It's very convenient.
+
+74
+00:04:37,267 --> 00:04:42,691
+And it loads faster than the Kakao account linked version, which is why I recommended it before.
+
+75
+00:04:42,786 --> 00:04:46,058
+But, when you do it this way, it's the same here too.
+
+76
+00:04:46,205 --> 00:04:49,900
+If the ad doesn't load right away here either, it will appear blank.
+
+77
+00:04:50,018 --> 00:04:53,196
+And people might think it doesn't look good.
+
+78
+00:04:53,250 --> 00:04:57,643
+Or they might think there's nothing there and scroll up before even seeing the ad.
+
+79
+00:04:57,783 --> 00:05:03,403
+So, placing ads above like this should be a conscious decision, except for specific situations.
+
+80
+00:05:03,550 --> 00:05:07,636
+I'll explain later when placing these ads can be beneficial.
+
+81
+00:05:07,781 --> 00:05:12,228
+But for now, I'm talking about creating a pension-like blog.
+
+82
+00:05:12,348 --> 00:05:15,755
+Not a post that you use for two or three days and throw away.
+
+83
+00:05:15,946 --> 00:05:19,694
+I'm talking about blog posts that will keep generating income,
+
+84
+00:05:19,814 --> 00:05:24,861
+and you want the session duration to keep going up.
+
+85
+00:05:25,047 --> 00:05:30,675
+In that case, putting ads above the title, or the ad appearing before the main content,
+
+86
+00:05:30,779 --> 00:05:32,862
+clearly contributes to a higher bounce rate,
+
+87
+00:05:32,981 --> 00:05:37,087
+and reduces readability, so I don't recommend it.
+
+88
+00:05:37,234 --> 00:05:39,880
+So, what do I recommend? It's this:
+
+89
+00:05:40,060 --> 00:05:42,763
+As you can see here, you understand, right?
+
+90
+00:05:42,956 --> 00:05:47,870
+When someone first comes to your page, what they want most should be at the top.
+
+91
+00:05:48,129 --> 00:05:51,615
+It shouldn't start with an ad and ruin the design.
+
+92
+00:05:51,773 --> 00:05:55,373
+The title comes first. The title appears first, followed by the main content.
+
+93
+00:05:55,444 --> 00:05:59,564
+The main content appears for about four or five lines. And then the ad appears.
+
+94
+00:05:59,704 --> 00:06:03,184
+It's still a link ad, so I used a link ad as an example.
+
+95
+00:06:03,317 --> 00:06:09,083
+If you read the text above, you’ll be willing to wait until the ad loads even if it's a little delayed.
+
+96
+00:06:09,216 --> 00:06:12,896
+If you place the ad in this area, you will definitely see the ad.
+
+97
+00:06:13,030 --> 00:06:14,504
+So, it's a great method.
+
+98
+00:06:14,584 --> 00:06:17,870
+And I told you before to put the description at the top.
+
+99
+00:06:17,977 --> 00:06:22,523
+So, the most important information, the answer, should be in the first paragraph.
+
+100
+00:06:22,662 --> 00:06:26,137
+So that people can read the content in the introduction while waiting for the ad to load, for 1 second or 0.5 seconds.
+
+101
+00:06:26,289 --> 00:06:30,369
+They can read the content in the introduction while waiting for the ad to load.
+
+102
+00:06:30,539 --> 00:06:34,785
+The ad appears here. But it might not be an ad they like.
+
+103
+00:06:34,905 --> 00:06:37,290
+Or they might want to see the content below.
+
+104
+00:06:37,484 --> 00:06:38,850
+What will they do then? They will scroll down.
+
+105
+00:06:39,004 --> 00:06:44,299
+When they scroll down, the H2 tag appears with a title and the main content continues.
+
+106
+00:06:44,379 --> 00:06:48,032
+But as you can see, while reading this main content, they see another ad.
+
+107
+00:06:48,179 --> 00:06:52,482
+The ad should be placed so it can be seen anywhere on the page.
+
+108
+00:06:52,622 --> 00:06:53,877
+It shouldn't be like this, for example:
+
+109
+00:06:54,031 --> 00:06:57,012
+If the content covers the ad,
+
+110
+00:06:57,197 --> 00:07:01,787
+people can easily scroll past the ad without seeing it.
+
+111
+00:07:02,020 --> 00:07:07,573
+So for example, they see the first paragraph and then see the first ad.
+
+112
+00:07:07,686 --> 00:07:09,726
+But they don't want to see the ad, so they cover it.
+
+113
+00:07:09,926 --> 00:07:13,242
+Does covering it mean they won't see the ad? They will still see it.
+
+114
+00:07:13,429 --> 00:07:19,521
+If you design it like this, the ad will continue to be visible. If a targeted or contextual ad appears,
+
+115
+00:07:19,660 --> 00:07:22,635
+they will likely click on it if they like it.
+
+116
+00:07:22,735 --> 00:07:26,027
+We tend to place ads carelessly, but especially these kinds of ads are not good.
+
+117
+00:07:26,160 --> 00:07:29,167
+There's a paragraph, then an ad, and then another ad below it.
+
+118
+00:07:29,360 --> 00:07:33,073
+If you do this, the ad will be right under the first ad.
+
+119
+00:07:33,195 --> 00:07:35,268
+You can scroll past all of it without seeing it.
+
+120
+00:07:35,461 --> 00:07:39,756
+So when you place ads, don't assume people will only look at the ads.
+
+121
+00:07:39,901 --> 00:07:44,709
+They will be looking at the main content, and the ads will naturally be within their peripheral vision.
+
+122
+00:07:44,855 --> 00:07:49,480
+You need to keep that in mind. They'll see it like this. They'll see the second one like this.
+
+123
+00:07:49,549 --> 00:07:52,402
+For example, as I mentioned before, nobody looks at it like this.
+
+124
+00:07:52,515 --> 00:07:55,826
+Nobody likes ads so much that they look at them like this.
+
+125
+00:07:56,053 --> 00:07:59,200
+If it's placed like this, they will naturally look at it this way.
+
+126
+00:07:59,366 --> 00:08:03,466
+Like I said before, just put two ads at the top, somehow.
+
+127
+00:08:03,592 --> 00:08:07,885
+Place them there, and when there is good content in the middle, don't put too many ads.
+
+128
+00:08:08,018 --> 00:08:10,900
+And place ads at the very end. So they can make a decision then.
+
+129
+00:08:11,018 --> 00:08:13,625
+Or they can scroll back up and click the ad. I told you about that before.
+
+130
+00:08:13,758 --> 00:08:16,470
+Do you agree? Placing the ads like this.
+
+131
+00:08:16,623 --> 00:08:21,785
+If you want to set it up as the third method that I suggested,
+
+132
+00:08:22,010 --> 00:08:25,248
+how can we achieve this when we write a post?
+
+133
+00:08:25,448 --> 00:08:26,795
+I'll show you.
+
+134
+00:08:26,948 --> 00:08:30,761
+This is the new post page of my Isayang Jobs website.
+
+135
+00:08:30,941 --> 00:08:38,293
+First, write the title: "Ads will soon be on the Isayang Jobs YouTube channel."
+
+136
+00:08:39,020 --> 00:08:40,520
+Thank you for subscribing.
+
+137
+00:08:41,833 --> 00:08:43,613
+Okay, I'm just writing that for fun.
+
+138
+00:08:43,746 --> 00:08:46,105
+I told you about the description before, right?
+
+139
+00:08:46,251 --> 00:08:48,058
+Write the description part.
+
+140
+00:08:48,205 --> 00:08:52,458
+If you just do what Google tells you to, it will naturally work out.
+
+141
+00:08:52,725 --> 00:08:56,830
+For example, let's say I wrote a description like this. 160 characters.
+
+142
+00:08:56,996 --> 00:09:02,165
+"The Isayang Jobs channel will soon have ads thanks to the great love of subscribers."
+
+143
+00:09:02,338 --> 00:09:05,754
+I’m new to YouTube, so the ad placements might be annoying,
+
+144
+00:09:05,948 --> 00:09:11,296
+but if you keep supporting me as you have been, I will provide you with more tips as an AdSense and digital nomad.
+
+145
+00:09:11,388 --> 00:09:14,719
+I will give you tips on how to have an easygoing life.
+
+146
+00:09:14,839 --> 00:09:19,473
+I've subtly revealed my true feelings, and now you've written the description.
+
+147
+00:09:19,586 --> 00:09:21,619
+We agreed to write the description like this, right?
+
+148
+00:09:21,759 --> 00:09:23,266
+Then you can put an ad.
+
+149
+00:09:23,406 --> 00:09:26,484
+Leave a space and create the ad placement.
+
+150
+00:09:26,591 --> 00:09:31,351
+Create it like this and then, here is the top ad placement method.
+
+151
+00:09:31,438 --> 00:09:34,064
+An H2 tag will be placed like this.
+
+152
+00:09:34,271 --> 00:09:37,043
+The tag will be inserted, and more content will be below it.
+
+153
+00:09:37,256 --> 00:09:38,700
+Content will be written like this.
+
+154
+00:09:38,776 --> 00:09:42,696
+So, one space here, two spaces here. This is my style. I like this.
+
+155
+00:09:42,920 --> 00:09:44,667
+I don't like to put them too close together.
+
+156
+00:09:44,793 --> 00:09:47,287
+I like to clearly show the ads.
+
+157
+00:09:47,526 --> 00:09:52,631
+And then, go to the HTML and place the AdSense ad in this part.
+
+158
+00:09:52,804 --> 00:09:58,099
+Then, when you return, it will be like this. This is the ad part. Some people place ads using the form,
+
+159
+00:09:58,204 --> 00:10:00,247
+but in my experience, this is just my feeling,
+
+160
+00:10:00,361 --> 00:10:05,836
+it seems like the new editor breaks the AdSense ads a little more when you place them using the form.
+
+161
+00:10:05,936 --> 00:10:07,036
+It may not be true.
+
+162
+00:10:07,189 --> 00:10:12,229
+So, it's your choice, but I still place ads directly using the HTML code.
+
+163
+00:10:12,589 --> 00:10:17,617
+So, put in two lines of description, leave one space, and place the AdSense ad.
+
+164
+00:10:17,789 --> 00:10:20,615
+Leave two spaces and then start writing your content.
+
+165
+00:10:20,862 --> 00:10:23,776
+Just like we saw on the blog, the first four lines.
+
+166
+00:10:23,996 --> 00:10:28,205
+On a typical phone, whether it's an iPhone or Galaxy, the main content will appear for about four lines.
+
+167
+00:10:28,296 --> 00:10:32,343
+The title will be above it, and the ad will take up 50% of the rest of the screen.
+
+168
+00:10:32,476 --> 00:10:34,317
+You only need to place one ad here.
+
+169
+00:10:34,537 --> 00:10:37,194
+If you put two, what happens is you look at the ad, right?
+
+170
+00:10:37,367 --> 00:10:40,301
+You see it and scroll down. And then there's another ad.
+
+171
+00:10:40,447 --> 00:10:42,121
+Then you will start to quickly scroll down.
+
+172
+00:10:42,307 --> 00:10:45,000
+And then it doesn't go the way we intended.
+
+173
+00:10:45,076 --> 00:10:46,696
+So, just one ad here.
+
+174
+00:10:46,823 --> 00:10:51,603
+Whether you put a display ad or a link ad, place it like this.
+
+175
+00:10:51,803 --> 00:10:55,401
+Then you can use the top ads like this.
+
+176
+00:10:55,555 --> 00:11:00,783
+The method I didn't recommend before is the one above, this one.
+
+177
+00:11:00,889 --> 00:11:03,112
+This method can cause the ad to load slowly.
+
+178
+00:11:03,359 --> 00:11:05,754
+And even if the ad loads, people didn't come to see the ad.
+
+179
+00:11:05,825 --> 00:11:09,182
+They scroll down, and they can push away the ad and just view the content.
+
+180
+00:11:09,335 --> 00:11:13,462
+Even putting an ad above the title might be good in some cases.
+
+181
+00:11:13,532 --> 00:11:15,612
+If you’re only focusing on trending keywords, it's a bit different.
+
+182
+00:11:15,772 --> 00:11:18,340
+For trending keywords, you need to put a lot of ads.
+
+183
+00:11:18,538 --> 00:11:21,610
+Because you'll only be using the post for three or four days.
+
+184
+00:11:21,743 --> 00:11:27,955
+It's a post that's going to bring in 50,000 visitors in 3 days, attracting 10,000 or 15,000 visitors a day, and then you will throw it away.
+
+185
+00:11:28,062 --> 00:11:29,726
+So, session duration is not important.
+
+186
+00:11:29,893 --> 00:11:33,546
+You need to make sure people see the ads as much as possible.
+
+187
+00:11:33,646 --> 00:11:38,339
+So, you can put them above, here, there, and even put two ads at a time.
+
+188
+00:11:38,439 --> 00:11:40,111
+Doing it this way is effective.
+
+189
+00:11:40,311 --> 00:11:45,740
+The top ad placement that I'm talking about now is for posts that you want to keep ranking on Google,
+
+190
+00:11:45,960 --> 00:11:50,967
+that you want to use like a pension, and if you write really good, valuable content,
+
+191
+00:11:51,072 --> 00:11:55,758
+that users will find helpful,
+
+192
+00:11:55,998 --> 00:12:01,988
+placing the ads before the main content isn't very helpful, that’s what I’m trying to say.
+
+193
+00:12:02,228 --> 00:12:04,124
+I used to put them at the very top.
+
+194
+00:12:04,284 --> 00:12:10,359
+I would always put them at the top and place as many ads as possible, here, there, in the middle, everywhere.
+
+195
+00:12:10,878 --> 00:12:15,243
+As a result, the speed was slow, and there was no improvement. It was all just hard work.
+
+196
+00:12:15,430 --> 00:12:17,230
+I was doing a lot of digital labor.
+
+197
+00:12:17,372 --> 00:12:19,964
+But after changing my ad placements,
+
+198
+00:12:20,196 --> 00:12:24,757
+the posts that were generating revenue had a higher click-through rate, higher revenue,
+
+199
+00:12:24,949 --> 00:12:27,748
+and were more stable. And as a content provider,
+
+200
+00:12:27,861 --> 00:12:32,651
+I used to feel a sense of shame for writing clickbait and things like that.
+
+201
+00:12:32,883 --> 00:12:34,347
+I didn't feel good about it.
+
+202
+00:12:34,467 --> 00:12:37,161
+I always said to my wife,
+
+203
+00:12:37,246 --> 00:12:43,056
+I would say “This clickbait is really hard on my mental health.”
+
+204
+00:12:43,176 --> 00:12:48,796
+But now, while I expect the revenue to naturally come, I'm writing the content to be most helpful for users.
+
+205
+00:12:48,948 --> 00:12:53,201
+And I started thinking about the ad placement while I was trying to do that.
+
+206
+00:12:53,454 --> 00:12:59,222
+I thought about how to do it in a way that is helpful to the users and doesn’t violate Google AdSense policies.
+
+207
+00:12:59,488 --> 00:13:04,328
+As a result, it actually became helpful to the users, and as the poster, I didn't feel ashamed.
+
+208
+00:13:04,533 --> 00:13:06,633
+Right, and the revenue went up.
+
+209
+00:13:06,793 --> 00:13:09,645
+Of course, I'm not saying this is the correct answer.
+
+210
+00:13:09,741 --> 00:13:13,573
+There may be other ways that work well when it comes to top ads, but
+
+211
+00:13:13,737 --> 00:13:17,461
+If there are people who want to get help from my experience,
+
+212
+00:13:17,559 --> 00:13:19,439
+then I recommend doing this.
+
+213
+00:13:19,631 --> 00:13:22,745
+So, if you want to create a valuable main blog,
+
+214
+00:13:22,897 --> 00:13:26,747
+a blog that will keep increasing in value like a pension,
+
+215
+00:13:26,872 --> 00:13:32,675
+when you place top ads, let go of your greed and place them from the user's perspective.
+
+216
+00:13:32,888 --> 00:13:34,731
+Okay, that's it for today.
+
+217
+00:13:34,837 --> 00:13:38,151
+There's one more thing I want to mention about top ads.
+
+218
+00:13:38,311 --> 00:13:40,860
+I'll talk about that again soon.
+
+219
+00:13:41,040 --> 00:13:45,308
+Until then, try this and see how it goes, I'd be interested in your results.
+
+220
+00:13:45,668 --> 00:13:48,129
+Ads are most important for us.
+
+221
+00:13:48,255 --> 00:13:50,469
+The Isayang Jobs channel is also very important.
+
+222
+00:13:50,635 --> 00:13:51,826
+Please take care of us.
+
+223
+00:13:51,946 --> 00:13:52,579
+Thank you.
+
+224
+00:13:52,766 --> 00:13:54,072
+This was Isayang Jobs.
+
