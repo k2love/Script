@@ -1,0 +1,1688 @@
+1
+00:00:00,000 --> 00:00:06,800
+I've completely automated my social media posts using MAKE. Just check the automatically gathered content, and AI will craft posts for each platform.
+
+2
+00:00:06,860 --> 00:00:09,200
+It even handles the posting for me.
+
+3
+00:00:09,420 --> 00:00:11,900
+Makes social media posting so much easier, right?
+
+4
+00:00:12,140 --> 00:00:17,520
+Lately, you've probably heard that social media marketing is no longer optional, but essential.
+
+5
+00:00:17,680 --> 00:00:25,740
+Many ordinary workers are now making as much from their social media activity after work as they do from their primary job.
+
+6
+00:00:25,741 --> 00:00:31,680
+Social media seems to be the best way to build your personal brand or create a side hustle.
+
+7
+00:00:31,940 --> 00:00:36,900
+However, those of you who have tried it know that managing social media is not easy.
+
+8
+00:00:37,280 --> 00:00:43,900
+It's quite a burden to constantly come up with new ideas and create posts tailored for each platform.
+
+9
+00:00:44,350 --> 00:00:55,300
+But, did you know that overseas marketers are already using AI automation systems to operate their social media accounts and achieve great results, without lifting a finger?
+
+10
+00:00:55,420 --> 00:00:55,720
+Yes.
+
+11
+00:00:55,740 --> 00:01:00,960
+Many of them are easily publishing more than one post per day.
+
+12
+00:01:01,120 --> 00:01:09,680
+Today, I'll show you how to set up a system that automatically posts on your social media accounts with just one setup.
+
+13
+00:01:10,020 --> 00:01:18,920
+With this AI automation system, you can automatically handle the entire process, from gathering the latest news, writing the posts, to posting them.
+
+14
+00:01:19,340 --> 00:01:24,960
+You can finally achieve your dream of posting daily, without having to worry about what to write.
+
+15
+00:01:24,961 --> 00:01:30,895
+If you watch till the end, I’ll provide templates, detailed prompt examples, and even show you how I apply this in my work
+
+16
+00:01:30,896 --> 00:01:36,620
+so that you can implement this automation system right away.
+
+17
+00:01:36,640 --> 00:01:38,500
+So, please watch till the end.
+
+18
+00:01:38,960 --> 00:01:47,740
+Note that while this video focuses on LinkedIn and Twitter, you can also apply this to Instagram or other social media channels.
+
+19
+00:01:49,740 --> 00:01:56,235
+Now, let's take a look at the final output and see how this automation system works.
+
+20
+00:01:56,582 --> 00:01:59,052
+This automation system works in three main stages.
+
+21
+00:01:59,433 --> 00:02:02,273
+First, we'll use Google Alerts to
+
+22
+00:02:02,511 --> 00:02:06,620
+automatically collect the latest news on your chosen topics from various news sites,
+
+23
+00:02:06,791 --> 00:02:08,658
+and save them to Google Sheets.
+
+24
+00:02:09,138 --> 00:02:14,308
+Then, among the collected news, you select the articles you want to post on social media.
+
+25
+00:02:14,561 --> 00:02:19,060
+When you check the checkbox, ChatGPT will automatically turn them into social media posts.
+
+26
+00:02:19,380 --> 00:02:24,406
+Lastly, if you like the post that ChatGPT wrote, click the publish button
+
+27
+00:02:24,645 --> 00:02:27,593
+to automatically post it to your social media accounts.
+
+28
+00:02:27,813 --> 00:02:33,468
+Of course, you can set this up so that the entire process runs fully automatically, without having to check any boxes.
+
+29
+00:02:33,755 --> 00:02:36,361
+I’ll explain this part in detail later.
+
+30
+00:02:36,827 --> 00:02:41,776
+Although there's a fully automated method, I recommend using the checkbox method first.
+
+31
+00:02:41,981 --> 00:02:44,656
+Because it allows for more natural writing.
+
+32
+00:02:44,963 --> 00:02:50,312
+By going through this check box process until the prompt is refined,
+
+33
+00:02:50,690 --> 00:02:53,150
+you can produce posts that sound like they were written by a person.
+
+34
+00:02:53,363 --> 00:02:57,866
+We will build this automation system using a site called make.com.
+
+35
+00:02:58,206 --> 00:03:05,186
+If you're new to make.com, you can sign up through the link in the description or the pinned comment.
+
+36
+00:03:05,326 --> 00:03:11,206
+Let's start with the first step in social media automation: setting up Google Alerts.
+
+37
+00:03:11,625 --> 00:03:16,412
+Through Google Alerts, we can gather news articles daily via RSS.
+
+38
+00:03:16,739 --> 00:03:20,334
+Some of you may be unfamiliar with the concept of RSS.
+
+39
+00:03:20,787 --> 00:03:24,242
+RSS is a technology that allows users to receive new content
+
+40
+00:03:24,501 --> 00:03:27,601
+without having to visit the website directly.
+
+41
+00:03:28,067 --> 00:03:32,767
+Many news sites and blogs offer their own RSS feeds.
+
+42
+00:03:33,107 --> 00:03:35,962
+For example, if you subscribe to the Maeil Business Newspaper's RSS feed,
+
+43
+00:03:36,227 --> 00:03:40,860
+you can receive the latest news alerts without visiting their website.
+
+44
+00:03:41,207 --> 00:03:44,568
+While you can get RSS feeds from each news site,
+
+45
+00:03:44,839 --> 00:03:48,213
+Google Alerts allows you to skip visiting each of those sites.
+
+46
+00:03:48,466 --> 00:03:55,226
+It’s very useful because you just set keywords here, and it gathers all the news on the topics you're interested in.
+
+47
+00:03:55,512 --> 00:04:00,453
+Visit the Google Alerts website and search for the keywords you want.
+
+48
+00:04:00,698 --> 00:04:03,585
+The latest news related to those keywords will appear.
+
+49
+00:04:03,978 --> 00:04:06,572
+I'll search for "AI".
+
+50
+00:04:07,225 --> 00:04:10,691
+When you search, you'll see a list of AI-related news.
+
+51
+00:04:11,017 --> 00:04:15,584
+If you want to collect this news, click "Create Alert" at the top.
+
+52
+00:04:15,937 --> 00:04:18,390
+Then, click the pencil icon,
+
+53
+00:04:18,477 --> 00:04:23,488
+change the "Deliver to" option to "RSS feed" and click "Update Alert."
+
+54
+00:04:24,135 --> 00:04:28,308
+An antenna icon will appear next to the AI keyword.
+
+55
+00:04:28,682 --> 00:04:34,215
+Clicking this icon will take you to the RSS news feed address, which is in XML format.
+
+56
+00:04:34,745 --> 00:04:39,381
+Select the entire address in the address bar, and press Ctrl+C to copy it.
+
+57
+00:04:39,708 --> 00:04:43,961
+Now, let's build an automation system using make.com.
+
+58
+00:04:44,681 --> 00:04:48,161
+When you log in to make.com, you will see the same screen as mine.
+
+59
+00:04:48,215 --> 00:04:51,109
+Click the "Scenarios" button on the left,
+
+60
+00:04:51,439 --> 00:04:56,388
+and click "Create a new scenario" at the top right to create a new scenario.
+
+61
+00:04:57,941 --> 00:05:00,561
+First, let's create a scenario to gather news.
+
+62
+00:05:00,775 --> 00:05:04,861
+I've already prepared a JSON file to some extent in my YouTube description.
+
+63
+00:05:05,088 --> 00:05:06,935
+Let’s start with that.
+
+64
+00:05:07,288 --> 00:05:11,010
+First, download the JSON file from the YouTube description.
+
+65
+00:05:11,317 --> 00:05:15,172
+Those of you who have downloaded the file, click the "..." at the bottom of the scenario,
+
+66
+00:05:15,617 --> 00:05:17,828
+and click "Import Blueprint".
+
+67
+00:05:18,393 --> 00:05:22,153
+Upload the downloaded file and click "Save."
+
+68
+00:05:22,200 --> 00:05:24,166
+You'll see a screen like this.
+
+69
+00:05:24,573 --> 00:05:28,266
+Click on the RSS news collection part.
+
+70
+00:05:28,546 --> 00:05:36,287
+You will see the same options window as mine. Paste the feed address we created earlier into the URL part by pressing Ctrl+V.
+
+71
+00:05:36,367 --> 00:05:39,027
+This will collect AI news.
+
+72
+00:05:39,427 --> 00:05:45,111
+"Date From" and "Date To" are where you enter the date range for the news to collect.
+
+73
+00:05:45,533 --> 00:05:53,464
+Currently, it's set to "Now" and "-6", which means it will gather the news from now to 6 days ago.
+
+74
+00:05:53,884 --> 00:06:00,805
+I'll change 6 to 1, so it will only get the news from today until yesterday.
+
+75
+00:06:01,551 --> 00:06:05,771
+Below, you will see the "Maximum Number of Returned Items" section.
+
+76
+00:06:05,884 --> 00:06:09,684
+This is where you set the number of news to gather at once.
+
+77
+00:06:10,090 --> 00:06:13,817
+It's currently set to gather a maximum of 5 news articles.
+
+78
+00:06:14,257 --> 00:06:17,764
+Keep these settings and click "OK" to save.
+
+79
+00:06:18,564 --> 00:06:23,717
+Clicking "Run Once" at the bottom will execute this scenario. Let's click it.
+
+80
+00:06:24,317 --> 00:06:26,542
+Click "Run Anyway".
+
+81
+00:06:27,569 --> 00:06:32,529
+Wait a moment after clicking, and a white circle will appear at the top, just like mine.
+
+82
+00:06:33,055 --> 00:06:36,590
+Click the white circle above the "RSS news collection" section,
+
+83
+00:06:36,649 --> 00:06:40,185
+and you can see what news has been collected.
+
+84
+00:06:40,738 --> 00:06:47,758
+You can see that a total of five news articles have been gathered: Bundle 1, Bundle 2, and Bundle 3.
+
+85
+00:06:48,198 --> 00:06:52,682
+Inside each bundle, you can see the title of the news, an overview of the news,
+
+86
+00:06:53,311 --> 00:06:55,938
+and the URL has also been collected.
+
+87
+00:06:56,078 --> 00:07:01,817
+Importantly, we only have the news titles and URLs, but not the news content.
+
+88
+00:07:02,136 --> 00:07:06,952
+To gather the main content, we need to access the URL and get the actual article content.
+
+89
+00:07:07,263 --> 00:07:11,817
+However, the problem is that this URL is not the actual article URL.
+
+90
+00:07:12,443 --> 00:07:14,069
+Let me copy it and show you.
+
+91
+00:07:14,202 --> 00:07:19,157
+If I copy this and paste it into the internet and check the actual destination,
+
+92
+00:07:19,629 --> 00:07:22,209
+you can see that the actual address is this one.
+
+93
+00:07:22,309 --> 00:07:26,430
+To clean up the address and make it a direct URL,
+
+94
+00:07:26,541 --> 00:07:30,495
+I've added 3 modules in advance on make.com.
+
+95
+00:07:30,829 --> 00:07:37,031
+Each of these modules act like a filter, cleaning up the complex URL step by step.
+
+96
+00:07:37,644 --> 00:07:41,384
+The first module has this pattern inside.
+
+97
+00:07:41,551 --> 00:07:44,317
+This is a type of rule called a regular expression.
+
+98
+00:07:44,397 --> 00:07:47,838
+This regular expression rule means that in this URL,
+
+99
+00:07:48,310 --> 00:07:54,437
+it will only extract the URL between "URL=" and "&CT."
+
+100
+00:07:54,563 --> 00:07:59,623
+The second module means it will replace %3D with =.
+
+101
+00:07:59,957 --> 00:08:07,376
+And the third module means that if there is %3F in the URL, it will replace that with a question mark (?).
+
+102
+00:08:08,042 --> 00:08:10,311
+After these three refining steps,
+
+103
+00:08:10,628 --> 00:08:14,931
+it will change into the clean article URL that I showed you earlier.
+
+104
+00:08:15,497 --> 00:08:18,939
+Let’s click the white module of "URL Refinement 3,"
+
+105
+00:08:19,277 --> 00:08:23,024
+then click the "Operation" part, and check the output section.
+
+106
+00:08:23,531 --> 00:08:27,535
+You can see that the real article URL has been extracted cleanly.
+
+107
+00:08:27,875 --> 00:08:31,535
+Now, let's gather the actual news content using this clean URL.
+
+108
+00:08:31,908 --> 00:08:35,895
+Click the plus button, and search for "http".
+
+109
+00:08:36,127 --> 00:08:38,944
+Then, click "Make a request" and add it.
+
+110
+00:08:39,024 --> 00:08:44,431
+When you click on the URL part, the results created by the previous modules will appear.
+
+111
+00:08:44,531 --> 00:08:48,869
+Think of these boxes marked with different colors as baskets.
+
+112
+00:08:49,176 --> 00:08:53,109
+Each of these baskets contains the information that we need.
+
+113
+00:08:53,269 --> 00:08:55,377
+The information that we need to put here,
+
+114
+00:08:55,451 --> 00:08:59,815
+is the clean URL that was filtered by URL Refinement 3.
+
+115
+00:09:00,269 --> 00:09:02,924
+If you look under URL Refinement 3,
+
+116
+00:09:03,329 --> 00:09:07,589
+you will see a preview of what is contained in that basket.
+
+117
+00:09:07,862 --> 00:09:10,203
+Because it contains the clean URL,
+
+118
+00:09:10,281 --> 00:09:14,648
+click the text basket from URL Refinement 3 to add it.
+
+119
+00:09:14,734 --> 00:09:20,693
+The method will remain as "get" in its current state, which means to get or gather the news.
+
+120
+00:09:21,440 --> 00:09:23,947
+Here’s a tip only the pros know.
+
+121
+00:09:24,413 --> 00:09:28,582
+Most sites block scraping of their content
+
+122
+00:09:28,899 --> 00:09:32,905
+by checking the headers. If it looks like a bot is scraping, they'll block it.
+
+123
+00:09:33,219 --> 00:09:38,422
+So, we'll create fake headers to make the site think we're real people.
+
+124
+00:09:38,695 --> 00:09:41,190
+In the header section, click "add header."
+
+125
+00:09:42,742 --> 00:09:45,634
+Add "cookie" to the name section.
+
+126
+00:09:45,994 --> 00:09:47,116
+Click it again,
+
+127
+00:09:48,661 --> 00:09:50,634
+and type "accept."
+
+128
+00:09:50,943 --> 00:09:54,203
+Click it once more, and this time, type "accept"
+
+129
+00:09:56,221 --> 00:09:59,382
+-Encoding" and add it.
+
+130
+00:09:59,683 --> 00:10:05,539
+Add another one and type "User-Agent."
+
+131
+00:10:05,739 --> 00:10:09,390
+This will allow us to scrape news from website URLs.
+
+132
+00:10:09,737 --> 00:10:12,943
+Let's test to see if it scrapes well.
+
+133
+00:10:13,597 --> 00:10:14,770
+Click OK.
+
+134
+00:10:15,090 --> 00:10:17,530
+Let's click run once to test it.
+
+135
+00:10:18,337 --> 00:10:22,238
+A white circle will appear above the http module.
+
+136
+00:10:22,569 --> 00:10:28,022
+If you click it, you can see that it says 5 news articles and 5 results have been executed.
+
+137
+00:10:28,422 --> 00:10:31,124
+Click any operation, and
+
+138
+00:10:31,449 --> 00:10:38,799
+you can see that these values were input and these values were output.
+
+139
+00:10:39,152 --> 00:10:44,106
+If you click the data under the bundle in the output,
+
+140
+00:10:45,464 --> 00:10:52,681
+you can see the entire HTML of the corresponding web page, including the news article, has been scraped.
+
+141
+00:10:53,041 --> 00:10:58,741
+But what we really need is not this entire HTML code, but the content of the news.
+
+142
+00:10:58,821 --> 00:11:02,634
+So, we need to extract only the actual text from this HTML code.
+
+143
+00:11:02,967 --> 00:11:05,427
+Let’s add a new module for this.
+
+144
+00:11:05,907 --> 00:11:09,787
+Click the plus button, and search for "Text parser".
+
+145
+00:11:10,107 --> 00:11:15,647
+When you click on Text parser, you'll see an "html to text" module.
+
+146
+00:11:16,560 --> 00:11:23,999
+Click on it. If you insert the html to be converted in the "html" section, it will convert it into text format.
+
+147
+00:11:24,086 --> 00:11:29,342
+Click the empty space, and the results from previous modules will appear, like before.
+
+148
+00:11:29,747 --> 00:11:36,022
+What we need is the results from this http module, this data value.
+
+149
+00:11:36,323 --> 00:11:39,574
+Click data to add it, and then click "OK".
+
+150
+00:11:39,940 --> 00:11:41,247
+Let's run it once.
+
+151
+00:11:41,834 --> 00:11:43,458
+Click "Run Anyway."
+
+152
+00:11:44,964 --> 00:11:50,832
+Wait a moment, and the http module will execute. Then, 5 results will appear in the Text parser.
+
+153
+00:11:51,231 --> 00:11:55,246
+Click on it. Inside the output, in the text section,
+
+154
+00:11:55,510 --> 00:12:00,911
+you can see that only the text area with the html has been removed.
+
+155
+00:12:01,011 --> 00:12:03,534
+However, if you look at the extracted news in detail,
+
+156
+00:12:03,864 --> 00:12:08,174
+what we want is the actual content, but not only the main content.
+
+157
+00:12:08,513 --> 00:12:15,930
+You can see that it also includes things like sharing options and website menu sections.
+
+158
+00:12:16,350 --> 00:12:22,566
+Since we only want the main text, let's extract only that part cleanly.
+
+159
+00:12:23,092 --> 00:12:27,793
+Before that, let’s change the names of the added modules to something easier to understand.
+
+160
+00:12:27,933 --> 00:12:31,118
+Right-click on the http module and click "rename".
+
+161
+00:12:31,630 --> 00:12:35,530
+I'll change it to "Extract News Data".
+
+162
+00:12:35,816 --> 00:12:39,373
+And also, rename the "Text parser" and change it to
+
+163
+00:12:39,713 --> 00:12:45,799
+"Convert HTML to Text".
+
+164
+00:12:46,299 --> 00:12:50,820
+Next, click the plus button beside the module to add a new module.
+
+165
+00:12:51,293 --> 00:12:55,666
+Click "Open AI," and click "Create a Completion."
+
+166
+00:12:57,131 --> 00:13:03,325
+For those who are connecting for the first time, you won't see the connection like me but a button that you can click.
+
+167
+00:13:03,560 --> 00:13:07,439
+The method for connecting is not difficult. I'll leave it in detail in the description.
+
+168
+00:13:07,852 --> 00:13:11,349
+Follow that guide to connect, and you'll see the same window as me.
+
+169
+00:13:12,409 --> 00:13:16,216
+Now, let’s configure settings to cleanly extract the main body of the news.
+
+170
+00:13:17,230 --> 00:13:23,544
+In the options section, select GPT-3.5 for the model.
+
+171
+00:13:24,825 --> 00:13:28,585
+I’ll select 3.5 turbo 0125.
+
+172
+00:13:32,434 --> 00:13:36,420
+If you set the model to GPT-4o, the accuracy will improve,
+
+173
+00:13:36,492 --> 00:13:42,072
+but the amount of text inside is very large as you saw earlier.
+
+174
+00:13:42,631 --> 00:13:46,408
+So, if you use GPT-4o, the cost will be too high.
+
+175
+00:13:46,747 --> 00:13:49,953
+So, I’ll use the cheaper GPT-3.5 for this.
+
+176
+00:13:50,300 --> 00:13:56,034
+Next, add a message below the Message, and set the role to "user."
+
+177
+00:13:56,534 --> 00:13:59,010
+Then, write this in the text content.
+
+178
+00:13:59,396 --> 00:14:06,176
+"Remove all parts of this document that are not related to the news."
+
+179
+00:14:06,482 --> 00:14:11,324
+"Only the news title and the news content should remain."
+
+180
+00:14:11,591 --> 00:14:12,191
+#Document
+
+181
+00:14:13,744 --> 00:14:19,345
+And to let ChatGPT know what the topic of this news is, I will add it here.
+
+182
+00:14:19,825 --> 00:14:22,094
+Put parentheses next to the news,
+
+183
+00:14:22,490 --> 00:14:27,354
+and add the title of the news from the RSS collection module,
+
+184
+00:14:27,890 --> 00:14:30,703
+by clicking the title section.
+
+185
+00:14:31,003 --> 00:14:34,753
+And also, next to the document, add the news content that we’ll extract,
+
+186
+00:14:34,977 --> 00:14:40,485
+by clicking the text in the html to text conversion module.
+
+187
+00:14:40,851 --> 00:14:44,926
+Then, turn on "Show Advanced Settings" below,
+
+188
+00:14:45,566 --> 00:14:50,980
+open the advanced menu, and lower the temperature to about 0.2.
+
+189
+00:14:51,289 --> 00:14:56,108
+The closer this temperature value is to 1, the more creative the response will be.
+
+190
+00:14:56,600 --> 00:15:03,130
+But since we don't need a creative response at this time, set it to around 0.2, which is close to 0.
+
+191
+00:15:03,670 --> 00:15:08,218
+"Max completion token" is where you set the length of the response,
+
+192
+00:15:08,640 --> 00:15:13,027
+but I will enter 0 here to have no limitations to the length of the response.
+
+193
+00:15:15,350 --> 00:15:19,907
+Click "OK," and click "Run Once" again to execute it.
+
+194
+00:15:24,638 --> 00:15:29,113
+Since it costs a lot, let's run only the first one and click stop.
+
+195
+00:15:32,675 --> 00:15:35,910
+After it executes, click this white bubble at the top of the Open AI
+
+196
+00:15:36,247 --> 00:15:39,421
+to check the result.
+
+197
+00:15:39,640 --> 00:15:44,120
+You can see that the actual news content has been extracted in the result section.
+
+198
+00:15:44,628 --> 00:15:49,196
+Note that, right now, I’m using 3.5-0125, which is the cheapest option.
+
+199
+00:15:49,536 --> 00:15:53,061
+So, the content extraction isn't very accurate.
+
+200
+00:15:53,440 --> 00:15:58,081
+The more expensive the model you use, the more accurate the results will be.
+
+201
+00:15:58,419 --> 00:16:02,460
+Please consider the cost when you’re setting up your configuration.
+
+202
+00:16:02,633 --> 00:16:08,581
+Now that the news content has been extracted successfully, let's save this content in Google Sheets.
+
+203
+00:16:08,908 --> 00:16:10,727
+First, let's create a Google Sheet.
+
+204
+00:16:10,879 --> 00:16:15,402
+Go to the Google Spreadsheets site, create a blank spreadsheet,
+
+205
+00:16:16,302 --> 00:16:23,287
+and name it "News Scrap". Add headers at the top: "Title", "Original URL",
+
+206
+00:16:23,985 --> 00:16:27,133
+and "Date Posted".
+
+207
+00:16:27,593 --> 00:16:29,566
+Go back to make.com.
+
+208
+00:16:30,024 --> 00:16:36,212
+Click the plus button to the right of the last Open AI module, and click on the Google Sheets,
+
+209
+00:16:36,879 --> 00:16:38,933
+and select "Add a row".
+
+210
+00:16:40,021 --> 00:16:44,191
+I've already linked Google Sheets to my account, so it appears like this.
+
+211
+00:16:44,482 --> 00:16:46,784
+But for you, a button will appear.
+
+212
+00:16:46,937 --> 00:16:49,721
+Click that button and log in to connect.
+
+213
+00:16:50,215 --> 00:16:55,316
+After connecting, click the button under Spreadsheet ID,
+
+214
+00:16:56,121 --> 00:17:00,107
+search for the News Scrap that we created earlier, and add it.
+
+215
+00:17:00,454 --> 00:17:04,774
+And for the sheet name, use sheet1. Since we added headers earlier,
+
+216
+00:17:05,192 --> 00:17:07,771
+set the "Headers" option to yes.
+
+217
+00:17:08,138 --> 00:17:13,383
+In the "Values" section, you can put the data that you want to input into Google Sheets.
+
+218
+00:17:13,756 --> 00:17:18,301
+Since we need to put the news title in the title column, click on the title under the RSS News Collection module,
+
+219
+00:17:18,740 --> 00:17:24,116
+in this pop-up window, and add it.
+
+220
+00:17:24,710 --> 00:17:28,241
+Next, we need to add the original news article to the "Original" section.
+
+221
+00:17:28,886 --> 00:17:35,407
+In this pop-up window, we extracted the original news content using the Open AI module,
+
+222
+00:17:35,561 --> 00:17:37,987
+so add the result value.
+
+223
+00:17:38,358 --> 00:17:39,746
+And for the URL section,
+
+224
+00:17:39,824 --> 00:17:46,958
+add the text result from the URL Refinement 3 module, which is the cleaned-up version of the URL.
+
+225
+00:17:47,351 --> 00:17:52,960
+For the "Date Posted" section, select and add the date created from the RSS news collection module.
+
+226
+00:17:53,440 --> 00:17:56,514
+Choose the created date and add it.
+
+227
+00:17:56,934 --> 00:17:58,165
+Click "OK".
+
+228
+00:17:58,725 --> 00:18:02,572
+Let’s click Run Once to see if it works.
+
+229
+00:18:05,140 --> 00:18:08,312
+Let’s wait for it to finish.
+
+230
+00:18:08,372 --> 00:18:12,576
+Sometimes, errors can occur while it’s executing.
+
+231
+00:18:12,690 --> 00:18:18,718
+The reason for this error is because it’s exceeding the maximum token count of GPT 3.5.
+
+232
+00:18:19,032 --> 00:18:22,038
+In this case, right click and
+
+233
+00:18:22,345 --> 00:18:25,284
+add an error handler.
+
+234
+00:18:25,771 --> 00:18:29,504
+You can specify how to handle the error.
+
+235
+00:18:30,004 --> 00:18:34,123
+If you select "ignore" in the error handler module,
+
+236
+00:18:34,528 --> 00:18:37,515
+it will ignore the error and continue execution.
+
+237
+00:18:37,730 --> 00:18:43,797
+It says that the results for four of the news articles have been executed. Let’s check the "News Scrap" Google Sheet.
+
+238
+00:18:44,377 --> 00:18:48,238
+You can see that these four news articles have been successfully scraped.
+
+239
+00:18:48,344 --> 00:18:54,186
+Now, since we added the error handler, let's run it again and check if it executes properly.
+
+240
+00:18:54,552 --> 00:18:57,699
+Click "Run Once" and it’s executing.
+
+241
+00:18:58,139 --> 00:19:01,340
+The first one executed, and the second one too.
+
+242
+00:19:01,747 --> 00:19:04,217
+It says the third one has been completed.
+
+243
+00:19:04,537 --> 00:19:06,910
+The fourth one has been processed as well.
+
+244
+00:19:06,934 --> 00:19:14,686
+It has ignored one error and has saved the other four to the "News Scrap" sheet.
+
+245
+00:19:17,250 --> 00:19:20,063
+So far, we’ve built a flow that gathers news.
+
+246
+00:19:20,436 --> 00:19:22,804
+We're done after one more modification.
+
+247
+00:19:23,224 --> 00:19:25,477
+That is, the execution interval of this scenario.
+
+248
+00:19:25,683 --> 00:19:29,273
+Click the clock icon on the left of the first module.
+
+249
+00:19:29,718 --> 00:19:32,699
+You can set the execution interval of the scenario here.
+
+250
+00:19:32,872 --> 00:19:35,678
+The default is 15 minutes, as you can see.
+
+251
+00:19:36,072 --> 00:19:39,951
+You can change this execution interval to what you want.
+
+252
+00:19:40,171 --> 00:19:42,840
+If you want to collect news every morning,
+
+253
+00:19:43,506 --> 00:19:48,483
+click below Run Scenario, change the execution interval to "Every Day",
+
+254
+00:19:48,883 --> 00:19:53,336
+and change the time to the time you want and click OK.
+
+255
+00:19:53,829 --> 00:19:57,408
+Then, it will ask if you want to activate the scenario.
+
+256
+00:19:57,728 --> 00:20:00,580
+Click "Activate Scenario" to activate it.
+
+257
+00:20:00,898 --> 00:20:07,777
+This part will be turned on, and it’s set up to run every day at 4:06 PM.
+
+258
+00:20:08,758 --> 00:20:13,830
+Now, let's build an automated social media publishing system using the collected news.
+
+259
+00:20:14,216 --> 00:20:18,755
+First, let’s add a header “Convert to Social Media Post” in the Google Sheet.
+
+260
+00:20:19,987 --> 00:20:22,718
+And add check boxes below it.
+
+261
+00:20:25,104 --> 00:20:29,478
+Next to it, type LinkedIn and Twitter.
+
+262
+00:20:33,066 --> 00:20:39,514
+When the Convert to Social Media Post checkbox is checked, a LinkedIn post and a Twitter post will be created next to it.
+
+263
+00:20:40,034 --> 00:20:42,537
+And type "Publish" next to it.
+
+264
+00:20:43,303 --> 00:20:45,309
+Add checkboxes here as well.
+
+265
+00:20:47,577 --> 00:20:52,083
+If this checkbox is checked, the posts created here will be immediately published.
+
+266
+00:20:52,496 --> 00:20:57,312
+First, we need to make sure Make can detect when this checkbox is checked.
+
+267
+00:20:57,739 --> 00:21:00,622
+The connection that allows this is called a webhook.
+
+268
+00:21:01,062 --> 00:21:05,560
+A webhook can be set up using the Google Sheets extension of make.com.
+
+269
+00:21:06,170 --> 00:21:10,054
+In the "Extensions" menu, click "Add-ons", and then "Get add-ons".
+
+270
+00:21:11,595 --> 00:21:13,738
+Search for "make" here,
+
+271
+00:21:15,310 --> 00:21:16,942
+and the extension will appear.
+
+272
+00:21:17,118 --> 00:21:19,668
+I already have it installed, so it says "Uninstall".
+
+273
+00:21:19,909 --> 00:21:23,382
+But for you, it will say "Install". Click it to install.
+
+274
+00:21:24,300 --> 00:21:30,401
+Then, go back to make.com, and click "Create a new scenario" to create a new scenario.
+
+275
+00:21:32,320 --> 00:21:38,080
+Click the Google Sheet and the "Watch changes" module and add it.
+
+276
+00:21:38,220 --> 00:21:43,260
+When the webhook section appears, click "Add" next to it to create a new webhook.
+
+277
+00:21:45,069 --> 00:21:47,260
+The Webhook URL will appear.
+
+278
+00:21:47,486 --> 00:21:52,335
+Click "Copy Address" to copy it, and go back to Google Sheets.
+
+279
+00:21:52,799 --> 00:21:58,932
+Click "Extensions", "Make for Google Sheets", and then "Settings" to bring up the sidebar.
+
+280
+00:21:59,200 --> 00:22:01,780
+There's a section where you can enter the Webhook URL.
+
+281
+00:22:02,000 --> 00:22:07,000
+Paste it here using Ctrl+V, and click save to connect.
+
+282
+00:22:09,240 --> 00:22:11,087
+It will say that the settings have been saved.
+
+283
+00:22:11,220 --> 00:22:14,040
+Go back to the make scenario and click "OK".
+
+284
+00:22:14,146 --> 00:22:17,312
+To test, click Run Once at the bottom.
+
+285
+00:22:17,412 --> 00:22:21,147
+The circle will spin, and it will say that it’s detecting the Google Sheet.
+
+286
+00:22:21,373 --> 00:22:24,881
+In this state, if you check a checkbox in the Google Sheet,
+
+287
+00:22:26,876 --> 00:22:29,824
+it will say it has been detected, and the results will appear.
+
+288
+00:22:29,924 --> 00:22:33,238
+If you check the content in the output bundle,
+
+289
+00:22:33,497 --> 00:22:37,228
+the old value is false, which means the checkbox was unchecked,
+
+290
+00:22:37,252 --> 00:22:43,140
+and the current value is true, which means the make has successfully detected the change in the checkbox.
+
+291
+00:22:43,540 --> 00:22:46,013
+Click the range section to open it,
+
+292
+00:22:46,500 --> 00:22:52,312
+you can see that it says that the detection occurred on the second row and fifth column.
+
+293
+00:22:52,585 --> 00:22:59,020
+If you check the location of the checkbox we checked, you can see it is on the second row and the fifth column.
+
+294
+00:22:59,740 --> 00:23:02,260
+You can see that it has been detected successfully.
+
+295
+00:23:02,706 --> 00:23:06,720
+Now that we’ve verified that the webhook is working correctly, let’s continue.
+
+296
+00:23:07,180 --> 00:23:12,700
+Click the plus button next to the module, and add "Router" which is in "Flow control".
+
+297
+00:23:13,154 --> 00:23:15,500
+If you add it, you'll see that it divides into two paths.
+
+298
+00:23:15,940 --> 00:23:20,399
+The top path will be the flow for when the "Convert to Social Media Post" checkbox is checked, where the post will be written,
+
+299
+00:23:20,525 --> 00:23:25,660
+and the bottom path will be the flow for when the Publish checkbox is checked, where the post will be published.
+
+300
+00:23:26,131 --> 00:23:32,020
+Right click on the top line, and click "Set up a filter" to open the filter window.
+
+301
+00:23:32,240 --> 00:23:36,584
+Since this path should be executed when the "Convert to Social Media Post" checkbox is checked,
+
+302
+00:23:36,815 --> 00:23:45,432
+create a rule where the old value is false, and the current value is true.
+
+303
+00:23:45,559 --> 00:23:50,328
+Then, add another "and rule", and click "Column start".
+
+304
+00:23:50,421 --> 00:23:55,540
+The checkbox that we're trying to configure is in the first, second, third, fourth, and fifth column.
+
+305
+00:23:55,680 --> 00:23:59,051
+So, put 5 in the column start section.
+
+306
+00:23:59,075 --> 00:24:04,200
+Then, add another "and rule", and add 5 in the column end section as well.
+
+307
+00:24:04,580 --> 00:24:06,031
+Click "OK".
+
+308
+00:24:06,131 --> 00:24:11,080
+With this, this flow will only be executed when the "Convert to Social Media Post" checkbox is checked.
+
+309
+00:24:11,742 --> 00:24:17,602
+Next, click the plus button and select "Open AI Create a Completion".
+
+310
+00:24:17,695 --> 00:24:24,784
+I'll select the GPT-4o Mini for the model.
+
+311
+00:24:24,977 --> 00:24:28,555
+Click "Add Message", and set the role to "User".
+
+312
+00:24:29,342 --> 00:24:34,660
+In the Text content section, copy and paste the prompt from the YouTube description.
+
+313
+00:24:35,455 --> 00:24:42,140
+This prompt is to ask ChatGPT, acting as a marketer, to create good LinkedIn and Twitter posts.
+
+314
+00:24:42,540 --> 00:24:47,307
+When we ask ChatGPT, we need to provide the news content to be converted into social media posts.
+
+315
+00:24:47,965 --> 00:24:52,276
+So, we'll add the original news content after the "Read and Analyze" section.
+
+316
+00:24:52,589 --> 00:24:58,160
+If we check where the original news content is in Google Sheet, we can see that it’s in the second column.
+
+317
+00:24:58,666 --> 00:25:04,920
+So, in this pop-up window, click the B column, which is the second column in "Row Value", and add it.
+
+318
+00:25:05,240 --> 00:25:10,079
+Also, to display the source, we'll also add the URL next to the original link.
+
+319
+00:25:10,300 --> 00:25:15,857
+If we check where the URL is in the Google Sheet again, we can see it is in the third column.
+
+320
+00:25:16,843 --> 00:25:22,161
+So, in the prompt section, enter the third column, which is the C column, in this pop-up window.
+
+321
+00:25:23,760 --> 00:25:28,758
+Then, scroll down and set the "Max Tokens" to about 1000.
+
+322
+00:25:28,938 --> 00:25:32,739
+Then, turn on "Show Advanced Settings" below.
+
+323
+00:25:33,470 --> 00:25:36,724
+And set the temperature to about 0.32.
+
+324
+00:25:37,694 --> 00:25:41,015
+Leave the rest as the default, and click OK.
+
+325
+00:25:41,128 --> 00:25:43,280
+Click "Run Once" to test it.
+
+326
+00:25:43,547 --> 00:25:45,841
+Go to the Google Sheet,
+
+327
+00:25:46,406 --> 00:25:51,747
+check the checkbox next to the news you want to post, and go back to the Make scenario.
+
+328
+00:25:52,007 --> 00:25:58,940
+You can see that it has detected the change, and the input was entered into ChatGPT which is writing the post.
+
+329
+00:25:59,349 --> 00:26:00,954
+If you check the result value,
+
+330
+00:26:01,326 --> 00:26:05,401
+in the "Output" section, click "Result", and you can see that a LinkedIn post,
+
+331
+00:26:05,840 --> 00:26:08,267
+and a Twitter post were created.
+
+332
+00:26:08,360 --> 00:26:11,769
+We will add the LinkedIn post to the LinkedIn column in the Google Sheet.
+
+333
+00:26:12,080 --> 00:26:16,307
+And we will add the Twitter post to the Twitter column in the Google Sheet.
+
+334
+00:26:16,501 --> 00:26:22,480
+Since the two posts are combined into one, we will use a tool called a regular expression to separate them.
+
+335
+00:26:22,892 --> 00:26:24,999
+As mentioned earlier, a regular expression is
+
+336
+00:26:25,091 --> 00:26:29,812
+a type of formula that extracts the parts of the text that we want.
+
+337
+00:26:30,006 --> 00:26:32,516
+Click the plus button next to Open AI,
+
+338
+00:26:33,619 --> 00:26:38,226
+and select "Match Pattern" under "Text parser."
+
+339
+00:26:39,340 --> 00:26:45,820
+Copy and paste the regular expression pattern that I've uploaded in the pinned comment, here.
+
+340
+00:26:45,946 --> 00:26:48,818
+And change "Global match" to "Yes".
+
+341
+00:26:49,151 --> 00:26:53,747
+It will search the text from beginning to the end, and find all values that match this pattern.
+
+342
+00:26:54,066 --> 00:27:00,460
+Then, in the "Text" section, add the "Result" value that ChatGPT created earlier.
+
+343
+00:27:00,689 --> 00:27:04,940
+Click OK, and click Run Once again to test it.
+
+344
+00:27:05,360 --> 00:27:07,020
+Click "Run Anyway".
+
+345
+00:27:07,980 --> 00:27:14,220
+Then go back to the Google Sheet, and check the checkboxes next to the news that you want to write about.
+
+346
+00:27:15,040 --> 00:27:18,268
+When you come back here, you can see that Open AI has created the post,
+
+347
+00:27:18,686 --> 00:27:21,827
+and the text parser has separated the posts into two parts,
+
+348
+00:27:21,858 --> 00:27:26,007
+a LinkedIn post and a Twitter post.
+
+349
+00:27:26,180 --> 00:27:28,784
+Now, let's save these posts into the Google Sheet.
+
+350
+00:27:29,674 --> 00:27:35,700
+Click the plus button next to the Text parser, and select "Flow Control".
+
+351
+00:27:36,108 --> 00:27:41,018
+We will add a filter so that the LinkedIn post is saved in the upper path, and the Twitter post is saved in the bottom path.
+
+352
+00:27:41,580 --> 00:27:44,269
+If you look at the results from this text parser,
+
+353
+00:27:45,046 --> 00:27:51,880
+you can see that the first LinkedIn post says "i = 1", and the second Twitter post says "i = 2".
+
+354
+00:27:52,040 --> 00:27:54,240
+We will use this to set the filter.
+
+355
+00:27:54,360 --> 00:28:00,900
+Click the first line, turn on the filter, click "i" in the pop-up window, and type 1.
+
+356
+00:28:01,080 --> 00:28:02,360
+Click "OK".
+
+357
+00:28:02,460 --> 00:28:06,640
+This will make only the first post, which is the LinkedIn post, pass through this path.
+
+358
+00:28:06,772 --> 00:28:09,591
+Then, click the plus button, and this time select Google Sheets,
+
+359
+00:28:10,249 --> 00:28:16,185
+then "Update a row". For the "Spreadsheet ID", select the "News Scrap" sheet that we created earlier.
+
+360
+00:28:18,125 --> 00:28:20,359
+Select the "News Scrap" sheet.
+
+361
+00:28:22,131 --> 00:28:28,283
+"Sheet Name": Sheet1, and the "Row number" should be selected as "Row End".
+
+362
+00:28:28,377 --> 00:28:33,846
+In the "Values" section, since we're saving the LinkedIn post, add
+
+363
+00:28:34,253 --> 00:28:37,060
+this "fallback match" to the LinkedIn column.
+
+364
+00:28:37,522 --> 00:28:38,960
+Click "OK".
+
+365
+00:28:39,395 --> 00:28:46,740
+Similarly, for the second path, enter the "i" and put 2 for its value, and then click "OK".
+
+366
+00:28:47,640 --> 00:28:51,026
+Add "Google Sheets update a row" and
+
+367
+00:28:51,910 --> 00:28:55,382
+set the other options the same as above.
+
+368
+00:28:55,509 --> 00:29:01,120
+In the "Values" section, instead of the LinkedIn section, add the "fallback match" to the Twitter section.
+
+369
+00:29:02,180 --> 00:29:09,160
+To check if it's working correctly again, click "Run Once" and check the checkbox in the Google Sheet.
+
+370
+00:29:10,260 --> 00:29:16,880
+It’s detecting the change, ChatGPT is writing the post, and it says that the Google Sheet has been executed.
+
+371
+00:29:17,120 --> 00:29:23,032
+If you go to the sheet, you can see that the LinkedIn post and the Twitter post have been created successfully.
+
+372
+00:29:23,152 --> 00:29:27,460
+Now that we’ve finished the automatic post creation, let's create the automatic post publishing section.
+
+373
+00:29:28,140 --> 00:29:31,647
+Create a filter in the line section below the first Router.
+
+374
+00:29:31,860 --> 00:29:35,634
+This time, the path needs to be executed when the "Publish" checkbox is checked.
+
+375
+00:29:35,732 --> 00:29:41,085
+Set "Column start" to the 8th column, where the "Publish" checkbox is located.
+
+376
+00:29:41,992 --> 00:29:45,579
+Add an "and rule", and set the "Column end" to the 8th column as well.
+
+377
+00:29:46,252 --> 00:29:55,786
+Then, set the "Old value" to false and the "Value" to true.
+
+378
+00:29:56,000 --> 00:30:00,555
+Click the plus button, and add a "Router" from "Flow control".
+
+379
+00:30:00,695 --> 00:30:04,565
+Click the first plus button, search for "LinkedIn,"
+
+380
+00:30:04,993 --> 00:30:08,558
+and click "Create a user text post" to add it.
+
+381
+00:30:08,698 --> 00:30:14,900
+I’ve already connected it to my account, so it appears like this, but you can click the button to connect your account.
+
+382
+00:30:15,080 --> 00:30:19,060
+In the content section, add the LinkedIn post.
+
+383
+00:30:19,490 --> 00:30:25,422
+In the Google Sheet, the LinkedIn post is located in the F column,
+
+384
+00:30:25,720 --> 00:30:28,900
+so add the F column in "Row Value".
+
+385
+00:30:30,110 --> 00:30:32,720
+Click "OK," and the setting is finished.
+
+386
+00:30:33,055 --> 00:30:42,960
+Similarly, search for "X" or "Twitter" and click "Create a post" in X.
+
+387
+00:30:43,102 --> 00:30:45,938
+I’ve already connected it to my account, so it appears like this.
+
+388
+00:30:46,251 --> 00:30:52,712
+For Twitter, you need to get the API application approved before you can post on Make.
+
+389
+00:30:52,852 --> 00:30:59,197
+It’s a hassle, but applying for the API isn’t difficult. I'll leave a link for the application method.
+
+390
+00:30:59,662 --> 00:31:04,664
+Refer to that link and finish connecting your Twitter account. In this text content section,
+
+391
+00:31:05,089 --> 00:31:09,280
+add the G column, which contains the Twitter content.
+
+392
+00:31:09,780 --> 00:31:15,944
+Click the G column in "Row Values," add it and click "OK" to finish setting it up.
+
+393
+00:31:16,971 --> 00:31:19,174
+Now, let's test the automatic publishing.
+
+394
+00:31:19,420 --> 00:31:23,006
+Click "Run Once", then click "Way for New Data".
+
+395
+00:31:23,584 --> 00:31:27,388
+In the Google Sheet, click the "Publish" checkbox next to the post you want to publish.
+
+396
+00:31:27,726 --> 00:31:31,680
+If you go back to the Make scenario, you can see that it’s been executed.
+
+397
+00:31:31,930 --> 00:31:34,630
+Let’s go to LinkedIn and check.
+
+398
+00:31:38,260 --> 00:31:42,560
+You can see that the LinkedIn post has been successfully posted.
+
+399
+00:31:43,159 --> 00:31:47,240
+You can also see that the Twitter post has been created successfully.
+
+400
+00:31:47,553 --> 00:31:49,652
+Now, in the scheduling section below,
+
+401
+00:31:49,772 --> 00:31:56,967
+turn on "Immediately as Data Arrives" to have it always detect the Google Sheet. This will finish the system settings.
+
+402
+00:31:57,566 --> 00:32:03,896
+To delete the existing data, click "Delete Old Data" and then "Delete", then the settings are complete.
+
+403
+00:32:03,949 --> 00:32:06,052
+From now on, with just one click of a checkbox,
+
+404
+00:32:06,351 --> 00:32:12,820
+AI will write and publish the post for you, and you can make your dream of daily posting a reality.
+
+405
+00:32:13,140 --> 00:32:20,300
+I'm also using this system to automatically collect the latest news in my areas of interest and post them on social media.
+
+406
+00:32:20,767 --> 00:32:25,660
+I highly recommend this system, especially to those who want to build their personal brand through various social media channels.
+
+407
+00:32:26,139 --> 00:32:30,665
+Some of you may be worried if the posts written by AI will be good enough.
+
+408
+00:32:30,880 --> 00:32:37,140
+Since all posts in this system are saved in the Google Sheet first, you can check and modify them before publishing.
+
+409
+00:32:37,500 --> 00:32:40,532
+You can refine the prompts while looking at the results.
+
+410
+00:32:40,764 --> 00:32:45,880
+If you’re satisfied with the quality of the generated posts, you can also automate the publishing step.
+
+411
+00:32:46,185 --> 00:32:47,380
+The method is simple.
+
+412
+00:32:47,558 --> 00:32:55,720
+In the make scenario, just attach the LinkedIn and X modules to the lower part of the update module.
+
+413
+00:32:56,333 --> 00:33:03,320
+Then, you can upgrade to a one-step automation where the post creation and publishing are all handled at once.
+
+414
+00:33:03,761 --> 00:33:08,316
+And, for those of you who followed along till the end, I’m giving away this system for free
+
+415
+00:33:08,661 --> 00:33:13,080
+as a make.com scenario template and prompt examples, so that you can utilize it immediately.
+
+416
+00:33:13,455 --> 00:33:22,912
+If you need them, you can download them by joining my group chat or subscribing to my newsletter, through the pinned comment.
+
+417
+00:33:23,530 --> 00:33:27,868
+You can also ask questions and get answers on various AI usage tips in the group chat.
+
+418
+00:33:28,255 --> 00:33:33,560
+So, if you are struggling with building this type of automation system, please feel free to join.
+
+419
+00:33:33,940 --> 00:33:40,580
+Today, I explained how to build a system that automates social media posting using make.com.
+
+420
+00:33:40,880 --> 00:33:45,580
+If you want to see more AI usage tips, please subscribe and turn on notifications.
+
+421
+00:33:45,935 --> 00:33:49,633
+I'll be back with more helpful information in the next video.
+
+422
+00:33:49,693 --> 00:33:51,220
+Thank you for watching.
+
