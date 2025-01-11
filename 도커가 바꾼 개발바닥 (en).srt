@@ -1,0 +1,355 @@
+1
+00:00:00,179 --> 00:00:04,746
+Developers before Docker and containers were like cavemen.
+
+2
+00:00:04,940 --> 00:00:08,820
+When starting a new job, they'd spend the whole day setting up their development environment.
+
+3
+00:00:08,940 --> 00:00:14,060
+Updating the development environment always broke something, so we prayed it wouldn't.
+
+4
+00:00:14,180 --> 00:00:17,721
+And when I tried to run my code on the server,
+
+5
+00:00:17,912 --> 00:00:22,746
+the computer would crash or explode, so we even performed rituals before deploying.
+
+6
+00:00:23,040 --> 00:00:26,477
+But after Docker and containers came along, that's mostly gone.
+
+7
+00:00:26,501 --> 00:00:31,440
+That's probably why Docker has been the most used tool for developers for years.
+
+8
+00:00:31,540 --> 00:00:36,976
+And these days, whether you're looking at a coding book or downloading a deep learning model online,
+
+9
+00:00:37,167 --> 00:00:39,280
+you often see Docker commands first.
+
+10
+00:00:39,646 --> 00:00:44,471
+So, what is Docker? It's an OS-level virtualization technology based on Linux containers.
+
+11
+00:00:44,603 --> 00:00:47,773
+If I explain it like that, you'll all click the back button, so let's try to understand it easily.
+
+12
+00:00:48,750 --> 00:00:53,520
+Let's say you messed up while coding and opened a fried chicken restaurant in Seoul.
+
+13
+00:00:53,600 --> 00:00:56,480
+And it does well, so you want to open a branch in Busan.
+
+14
+00:00:56,620 --> 00:00:58,720
+How would you operate the Busan branch?
+
+15
+00:00:59,150 --> 00:01:03,387
+The easiest way is to just send your recipe and tell them to follow it exactly.
+
+16
+00:01:03,621 --> 00:01:06,200
+You could do that, but it would be a disaster.
+
+17
+00:01:06,380 --> 00:01:10,868
+The kitchen facilities, tools, and ingredients in Busan are all different from Seoul, which means
+
+18
+00:01:10,988 --> 00:01:12,920
+there will be a lot of problems in the cooking process.
+
+19
+00:01:13,040 --> 00:01:15,190
+And the taste will be slightly different.
+
+20
+00:01:15,460 --> 00:01:18,631
+So, to run a business properly, you'd prepare
+
+21
+00:01:18,810 --> 00:01:23,326
+all the ingredients and recipes you used in Seoul like a meal kit and send them to Busan.
+
+22
+00:01:23,460 --> 00:01:26,850
+Then in Busan, they can just heat it up and serve it.
+
+23
+00:01:27,040 --> 00:01:31,960
+Most big franchise chicken restaurants operate like this, and it's the same when developing software.
+
+24
+00:01:32,113 --> 00:01:36,202
+I often need to run the same code on different computers.
+
+25
+00:01:36,374 --> 00:01:41,301
+But if the code runs fine on my computer, and I just send it to another computer and try to run it,
+
+26
+00:01:41,513 --> 00:01:42,940
+it often results in a disaster.
+
+27
+00:01:43,160 --> 00:01:47,197
+Each computer has a different OS and different versions of the default programs installed.
+
+28
+00:01:47,357 --> 00:01:52,173
+If you don't want that, prepare the same OS and programs that you use,
+
+29
+00:01:52,278 --> 00:01:54,564
+and then put your code on it and run it there.
+
+30
+00:01:54,760 --> 00:01:56,940
+To do this, we used to use VMs.
+
+31
+00:01:57,146 --> 00:02:01,914
+It's about installing another OS on top of an existing OS, but it's very heavy and doesn't perform well.
+
+32
+00:02:02,093 --> 00:02:04,600
+So, these days we use Docker and containers instead.
+
+33
+00:02:05,725 --> 00:02:09,000
+With Docker, you can create a code meal kit.
+
+34
+00:02:09,433 --> 00:02:14,240
+You can put everything in it: the OS, SDK, required programs, libraries, and code.
+
+35
+00:02:14,380 --> 00:02:19,240
+And with Docker, you can easily run the meal kit with just a click.
+
+36
+00:02:19,380 --> 00:02:24,520
+So, Docker is basically just a simple program that creates and runs code meal kits.
+
+37
+00:02:24,620 --> 00:02:27,949
+And by the way, there is a virtual computer that runs the meal kit,
+
+38
+00:02:28,027 --> 00:02:30,860
+and cool developers call this a container.
+
+39
+00:02:31,040 --> 00:02:35,960
+But it's hard to understand just by talking, so let's take a quick look at how to use it.
+
+40
+00:02:37,120 --> 00:02:39,740
+To create a meal kit, you need a file.
+
+41
+00:02:40,040 --> 00:02:41,580
+It's called a Dockerfile.
+
+42
+00:02:41,720 --> 00:02:46,808
+You write down what OS to use, what programs, libraries, and SDKs to install,
+
+43
+00:02:47,026 --> 00:02:50,080
+and how to run the code in it.
+
+44
+00:02:50,380 --> 00:02:53,840
+Then, with just one command, it's packaged up.
+
+45
+00:02:53,980 --> 00:02:57,040
+And then you can run this meal kit with a single click.
+
+46
+00:02:57,240 --> 00:02:59,080
+Then the code inside will run.
+
+47
+00:02:59,144 --> 00:03:04,072
+And it will run your code stably on the OS and working environment that you set in the Dockerfile.
+
+48
+00:03:04,336 --> 00:03:06,446
+The OS and the working environment, the library,
+
+49
+00:03:06,560 --> 00:03:08,540
+That's it. That's how you use Docker and containers.
+
+50
+00:03:08,680 --> 00:03:09,680
+You've learned it all.
+
+51
+00:03:10,660 --> 00:03:16,187
+After Docker and containers were discovered, developers started doing all sorts of amazing things with them.
+
+52
+00:03:16,480 --> 00:03:21,551
+Because meal kits made deployment much easier, the way servers are developed these days is that
+
+53
+00:03:21,736 --> 00:03:25,095
+in the past, server functions were all crammed into one program,
+
+54
+00:03:25,208 --> 00:03:28,600
+but now it's split into multiple programs.
+
+55
+00:03:28,780 --> 00:03:31,980
+This is called MSA and it's the bread and butter of the backend these days.
+
+56
+00:03:32,100 --> 00:03:34,751
+And because building, testing, and deploying programs
+
+57
+00:03:34,970 --> 00:03:37,486
+has become easy enough for even elementary school kids to do, thanks to Docker,
+
+58
+00:03:37,685 --> 00:03:41,040
+more and more places are starting to adopt automatic deployment.
+
+59
+00:03:41,160 --> 00:03:43,182
+And with Docker, you can easily install
+
+60
+00:03:43,273 --> 00:03:48,533
+the program you want on the version and OS you want, and even cleanly remove it.
+
+61
+00:03:48,781 --> 00:03:53,466
+This has led to the emergence of developers with germophobia who don't want to install anything on their local computers.
+
+62
+00:03:54,740 --> 00:03:57,220
+If you're curious about what Docker really is, it's nothing special.
+
+63
+00:03:57,359 --> 00:04:00,218
+There was originally a lightweight virtualization technology in Linux itself.
+
+64
+00:04:00,424 --> 00:04:02,800
+Using that, you can create something called a container.
+
+65
+00:04:02,940 --> 00:04:05,240
+Just think of it as a virtual computer.
+
+66
+00:04:05,600 --> 00:04:09,380
+There are programs that help ordinary people create them easily.
+
+67
+00:04:09,580 --> 00:04:14,000
+Docker is just a tool that makes it easy for even a dog to use these things.
+
+68
+00:04:14,120 --> 00:04:17,600
+And by the way, there are some alternatives to Docker.
+
+69
+00:04:17,740 --> 00:04:21,420
+Or you can even run Linux containers directly without Docker.
+
+70
+00:04:22,580 --> 00:04:23,980
+Of course, there are downsides.
+
+71
+00:04:24,260 --> 00:04:26,200
+You have to take care of new security issues.
+
+72
+00:04:26,340 --> 00:04:28,855
+If you have a lot of containers, you need people to manage them.
+
+73
+00:04:29,000 --> 00:04:31,980
+And server costs can be higher than you think at the beginning.
+
+74
+00:04:32,100 --> 00:04:36,700
+Also, when you need to store data permanently and stably, containers might not be a good idea.
+
+75
+00:04:37,060 --> 00:04:41,020
+But the most important thing is that the learning curve for coding beginners has become steeper.
+
+76
+00:04:41,213 --> 00:04:46,092
+Because Docker is so popular, some lectures and books make you set up Docker from the start of your coding journey.
+
+77
+00:04:46,296 --> 00:04:48,659
+To give you an analogy of this,
+
+78
+00:04:48,834 --> 00:04:53,097
+it's like learning to cook by going to a pre-made kitchen set,
+
+79
+00:04:53,155 --> 00:04:58,210
+taking out a chicken meal kit, opening it, and frying it.
+
+80
+00:04:58,432 --> 00:05:01,104
+If you want to do only that until you die, then go ahead.
+
+81
+00:05:01,189 --> 00:05:07,834
+But if you want to create your own chicken recipe, make your own meal kit, and open your own branch,
+
+82
+00:05:07,974 --> 00:05:12,507
+it's also important to try cooking on your own without relying on someone else's meal kit.
+
+83
+00:05:12,647 --> 00:05:19,064
+So, when you're starting to code, you should fight with your own computer directly without Docker, like a UFC match.
+
+84
+00:05:19,416 --> 00:05:25,320
+That experience is necessary for you to confidently write Dockerfiles, build, and deploy later on.
+
+85
+00:05:25,460 --> 00:05:27,610
+But this isn't a time to learn coding,
+
+86
+00:05:27,708 --> 00:05:31,723
+so I'll stop with the nagging since we are here to learn Docker, a simple tool.
+
+87
+00:05:31,953 --> 00:05:36,188
+Now, I've mainly prepared how to use Docker well on your own,
+
+88
+00:05:36,353 --> 00:05:37,920
+so you can learn these things.
+
+89
+00:05:38,140 --> 00:05:42,740
+And later, let's also learn how to use Docker Compose and orchestration tools.
