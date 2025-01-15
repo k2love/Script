@@ -1,0 +1,788 @@
+1
+00:00:03,200 --> 00:00:03,866
+Previously,
+
+2
+00:00:04,072 --> 00:00:05,880
+we talked about how
+Source Map works
+
+3
+00:00:07,040 --> 00:00:07,534
+Now,
+
+4
+00:00:07,699 --> 00:00:10,265
+it's time to explore
+how browsers use them
+
+5
+00:00:10,289 --> 00:00:12,259
+to enhance your
+debugging experience
+
+6
+00:00:12,612 --> 00:00:13,612
+Let's go!
+
+7
+00:00:14,540 --> 00:00:15,980
+Source Maps are special
+
+8
+00:00:16,420 --> 00:00:18,760
+It only loads when
+you open DevTools
+
+9
+00:00:19,345 --> 00:00:20,582
+That makes a lot of sense,
+
+10
+00:00:21,061 --> 00:00:23,043
+because it's better
+for performance
+
+11
+00:00:23,095 --> 00:00:25,429
+and your users don't
+need Source Maps
+
+12
+00:00:26,095 --> 00:00:27,942
+To check which
+Source Maps are loaded,
+
+13
+00:00:28,380 --> 00:00:30,108
+use the command-shift-P shortcut
+
+14
+00:00:30,340 --> 00:00:32,343
+to open the
+Developer Resource tab
+
+15
+00:00:32,460 --> 00:00:33,760
+and refresh the page
+
+16
+00:00:34,280 --> 00:00:36,400
+The tab listed all
+the Source Maps
+
+17
+00:00:36,700 --> 00:00:39,362
+You can apply filters
+if the list goes too long
+
+18
+00:00:40,684 --> 00:00:41,684
+Great!
+
+19
+00:00:41,767 --> 00:00:43,969
+Our project is built with HTML,
+
+20
+00:00:44,120 --> 00:00:45,773
+TypeScript, and SCSS
+
+21
+00:00:46,240 --> 00:00:48,236
+Let's see how
+DevTools can help us
+
+22
+00:00:48,332 --> 00:00:50,237
+pinpoint issues in our code
+
+23
+00:00:51,071 --> 00:00:52,364
+Click on the greeting button
+
+24
+00:00:52,877 --> 00:00:53,877
+In the console,
+
+25
+00:00:53,937 --> 00:00:57,352
+you can see that DevTools
+actually maps it to TypeScript
+
+26
+00:00:57,722 --> 00:00:58,878
+thanks to Source Maps
+
+27
+00:00:59,580 --> 00:01:00,580
+Click on the link
+
+28
+00:01:00,660 --> 00:01:02,460
+to open it in the Sources panel
+
+29
+00:01:03,401 --> 00:01:05,687
+If you hover over
+the line at the bottom,
+
+30
+00:01:06,045 --> 00:01:08,623
+DevTools will reveal
+the exact location
+
+31
+00:01:08,884 --> 00:01:10,755
+from which this file was mapped
+
+32
+00:01:11,980 --> 00:01:12,922
+Clicking on it will
+
+33
+00:01:13,000 --> 00:01:15,400
+take you directly
+to the generated file
+
+34
+00:01:16,140 --> 00:01:18,333
+DevTools automatically detects
+
+35
+00:01:18,449 --> 00:01:20,243
+and formats your minified files
+
+36
+00:01:20,574 --> 00:01:22,053
+for better readability
+
+37
+00:01:23,278 --> 00:01:24,999
+You can undo the
+format by clicking
+
+38
+00:01:25,064 --> 00:01:26,584
+on the icon at the bottom
+
+39
+00:01:28,270 --> 00:01:28,824
+Now,
+
+40
+00:01:29,028 --> 00:01:31,104
+what happens for minified files
+
+41
+00:01:31,269 --> 00:01:32,300
+without Source Maps?
+
+42
+00:01:32,853 --> 00:01:33,974
+You can disable them
+
+43
+00:01:34,044 --> 00:01:35,479
+in DevTools to try it out.
+
+44
+00:01:36,725 --> 00:01:38,153
+Open the three-dot menu,
+
+45
+00:01:38,298 --> 00:01:39,479
+select Run command
+
+46
+00:01:39,583 --> 00:01:40,920
+and enter Source Maps.
+
+47
+00:01:41,420 --> 00:01:42,420
+You have options
+
+48
+00:01:42,467 --> 00:01:43,849
+to disable JavaScript
+
+49
+00:01:44,047 --> 00:01:45,533
+and CSS Source Maps.
+
+50
+00:01:46,180 --> 00:01:48,196
+Let's disable the
+JavaScript Source Map
+
+51
+00:01:48,532 --> 00:01:49,720
+to see what happens.
+
+52
+00:01:50,652 --> 00:01:51,652
+In the console,
+
+53
+00:01:51,939 --> 00:01:53,266
+the log location now
+
+54
+00:01:53,331 --> 00:01:55,578
+takes you to the
+compiled JavaScript file
+
+55
+00:01:55,932 --> 00:01:57,405
+instead of the source file.
+
+56
+00:01:58,020 --> 00:02:00,960
+Imagine you want to change
+the logic of the random number.
+
+57
+00:02:01,308 --> 00:02:03,343
+You will need to
+manually map the code
+
+58
+00:02:03,441 --> 00:02:05,167
+and variables in your mind.
+
+59
+00:02:05,980 --> 00:02:07,553
+Let's re-enable the Source Map.
+
+60
+00:02:08,220 --> 00:02:08,708
+Now,
+
+61
+00:02:09,060 --> 00:02:11,645
+try setting a breakpoint
+at the console.log.
+
+62
+00:02:12,513 --> 00:02:14,169
+DevTools will automatically
+
+63
+00:02:14,260 --> 00:02:15,624
+open the original file
+
+64
+00:02:15,688 --> 00:02:17,000
+and set the breakpoint there.
+
+65
+00:02:17,460 --> 00:02:18,460
+Pretty cool, right?
+
+66
+00:02:19,396 --> 00:02:21,262
+There are times where
+you have Source Maps,
+
+67
+00:02:21,494 --> 00:02:23,064
+but you want to keep it private,
+
+68
+00:02:23,400 --> 00:02:25,380
+especially for your
+production code.
+
+69
+00:02:26,141 --> 00:02:27,141
+In that case,
+
+70
+00:02:27,314 --> 00:02:28,703
+when you are debugging that,
+
+71
+00:02:29,005 --> 00:02:30,246
+you might want to attach
+
+72
+00:02:30,311 --> 00:02:31,780
+the private Source Map manually.
+
+73
+00:02:32,914 --> 00:02:34,042
+In this example,
+
+74
+00:02:34,241 --> 00:02:36,100
+we hide the Source
+Map by default.
+
+75
+00:02:36,687 --> 00:02:38,146
+There is no source URL
+
+76
+00:02:38,255 --> 00:02:39,900
+in the generator code as well.
+
+77
+00:02:40,607 --> 00:02:42,050
+Right-click on the page
+
+78
+00:02:42,074 --> 00:02:43,474
+and select Add Source Map.
+
+79
+00:02:44,167 --> 00:02:45,355
+Enter the URL
+
+80
+00:02:45,379 --> 00:02:46,720
+of your private Source Map.
+
+81
+00:02:47,476 --> 00:02:49,171
+If the URL is invalid,
+
+82
+00:02:49,630 --> 00:02:50,692
+there will be warnings
+
+83
+00:02:50,716 --> 00:02:52,468
+in the Developer Resources tab
+
+84
+00:02:52,853 --> 00:02:54,060
+as well as the console.
+
+85
+00:02:54,797 --> 00:02:56,660
+Try again with a valid URL.
+
+86
+00:02:57,303 --> 00:02:58,303
+And there you go.
+
+87
+00:02:58,678 --> 00:03:00,430
+The file is loaded successfully
+
+88
+00:03:00,491 --> 00:03:02,580
+and your source is
+once again mapped.
+
+89
+00:03:03,777 --> 00:03:05,106
+While Source Map is great,
+
+90
+00:03:05,510 --> 00:03:07,216
+there are some gotchas as well.
+
+91
+00:03:07,723 --> 00:03:08,506
+Sometimes,
+
+92
+00:03:08,744 --> 00:03:10,845
+the debugging might
+not work as expected
+
+93
+00:03:11,170 --> 00:03:12,492
+due to the limitations of
+
+94
+00:03:12,516 --> 00:03:14,183
+the Source Map specification.
+
+95
+00:03:15,171 --> 00:03:16,600
+Let's start a debugging session.
+
+96
+00:03:17,180 --> 00:03:19,254
+When you hover over
+to the num variable,
+
+97
+00:03:19,577 --> 00:03:21,120
+you can preview its value.
+
+98
+00:03:21,580 --> 00:03:22,580
+In fact,
+
+99
+00:03:22,654 --> 00:03:24,900
+DevTools also
+supports inline preview.
+
+100
+00:03:25,330 --> 00:03:26,747
+And you can edit the value
+
+101
+00:03:26,771 --> 00:03:28,240
+in the scope pane as well.
+
+102
+00:03:29,133 --> 00:03:29,654
+Now,
+
+103
+00:03:29,859 --> 00:03:30,965
+you might be wondering,
+
+104
+00:03:31,219 --> 00:03:33,000
+how about the variable grid?
+
+105
+00:03:33,558 --> 00:03:35,303
+Why is the line disabled
+
+106
+00:03:35,327 --> 00:03:37,560
+and doesn't show
+any previews at all?
+
+107
+00:03:38,380 --> 00:03:40,620
+It is because your
+build tools are smart.
+
+108
+00:03:41,315 --> 00:03:44,177
+It detects that the grid
+variable can be removed
+
+109
+00:03:44,342 --> 00:03:47,120
+and embedded value
+straight away in the message.
+
+110
+00:03:48,053 --> 00:03:50,902
+Since the grid variable isn't
+mapped in the Source Map,
+
+111
+00:03:51,334 --> 00:03:54,093
+DevTools won't be able
+to evaluate the value.
+
+112
+00:03:54,697 --> 00:03:57,125
+This usually happens
+for production code,
+
+113
+00:03:57,514 --> 00:03:59,420
+as the code is highly optimized.
+
+114
+00:04:00,213 --> 00:04:03,648
+Development builds tend to
+have a more relaxed configuration.
+
+115
+00:04:05,018 --> 00:04:07,469
+Another thing to keep
+in mind with Source Maps
+
+116
+00:04:07,493 --> 00:04:10,105
+is that build tools may
+have slight variation
+
+117
+00:04:10,129 --> 00:04:11,592
+in how they handle the build
+
+118
+00:04:11,865 --> 00:04:13,940
+due to the flexibility
+in the spec.
+
+119
+00:04:14,845 --> 00:04:17,278
+The flexibility
+allows customization
+
+120
+00:04:17,560 --> 00:04:19,472
+and could lead to a
+more efficient build.
+
+121
+00:04:20,180 --> 00:04:21,180
+However,
+
+122
+00:04:21,341 --> 00:04:23,597
+the flexibility of
+the spec can lead to
+
+123
+00:04:23,621 --> 00:04:25,339
+confusion at times as well.
+
+124
+00:04:26,257 --> 00:04:27,355
+For example,
+
+125
+00:04:27,379 --> 00:04:28,580
+inspect the header.
+
+126
+00:04:29,086 --> 00:04:33,469
+The CSS maps correctly
+to its original styles.scss.
+
+127
+00:04:33,940 --> 00:04:34,940
+However,
+
+128
+00:04:35,101 --> 00:04:37,632
+you might notice
+there are two CSS files
+
+129
+00:04:37,656 --> 00:04:40,120
+in the page tree
+instead of just one.
+
+130
+00:04:40,840 --> 00:04:42,100
+Look at your project folder.
+
+131
+00:04:42,549 --> 00:04:46,177
+You are pretty sure there is
+only one CSS file with that name
+
+132
+00:04:46,508 --> 00:04:48,742
+and the content is minified CSS.
+
+133
+00:04:49,490 --> 00:04:50,680
+What is happening here?
+
+134
+00:04:51,998 --> 00:04:52,998
+Hmm...
+
+135
+00:04:53,118 --> 00:04:54,900
+Is there a bug in DevTools?
+
+136
+00:04:55,417 --> 00:04:57,097
+Well, not really.
+
+137
+00:04:58,120 --> 00:04:59,888
+DevTools gets the information
+
+138
+00:04:59,978 --> 00:05:02,680
+from the Source Maps and
+displays them accordingly.
+
+139
+00:05:03,972 --> 00:05:05,032
+Open the Source Map.
+
+140
+00:05:05,360 --> 00:05:06,677
+It has two sources.
+
+141
+00:05:07,257 --> 00:05:10,400
+DevTools generates the
+map files based on the list.
+
+142
+00:05:11,494 --> 00:05:15,134
+Take note that those files mapped
+by DevTools have an italic name.
+
+143
+00:05:15,840 --> 00:05:17,305
+According to this line,
+
+144
+00:05:17,600 --> 00:05:20,919
+DevTools maps and
+displays the unminified CSS.
+
+145
+00:05:21,792 --> 00:05:24,212
+Another CSS file
+without italic name
+
+146
+00:05:24,421 --> 00:05:27,440
+is the actual minified
+CSS file on this.
+
+147
+00:05:28,316 --> 00:05:31,786
+Some build tools might just
+eliminate the intermediate level
+
+148
+00:05:32,071 --> 00:05:35,760
+and map it straight from
+the minified CSS to SCSS.
+
+149
+00:05:36,787 --> 00:05:37,892
+If that's the case,
+
+150
+00:05:38,260 --> 00:05:41,029
+DevTools will only
+show you one CSS file
+
+151
+00:05:41,255 --> 00:05:43,600
+which might be closer
+to your expectation.
+
+152
+00:05:44,648 --> 00:05:45,168
+Well,
+
+153
+00:05:45,340 --> 00:05:46,734
+the current Source Map spec
+
+154
+00:05:46,975 --> 00:05:49,759
+doesn't actually detect how
+mapping should be done.
+
+155
+00:05:50,425 --> 00:05:50,907
+So,
+
+156
+00:05:51,238 --> 00:05:52,379
+just take note of this
+
+157
+00:05:52,524 --> 00:05:54,844
+in case you have the
+same confusion next time.
+
+158
+00:05:56,225 --> 00:05:57,225
+Apart from that,
+
+159
+00:05:57,416 --> 00:05:59,514
+you can turn on a
+setting in DevTools
+
+160
+00:05:59,784 --> 00:06:02,050
+to view your
+original sources first
+
+161
+00:06:02,270 --> 00:06:03,270
+if they are mapped.
+
+162
+00:06:04,356 --> 00:06:05,119
+By default,
+
+163
+00:06:05,343 --> 00:06:08,422
+DevTools mixes and
+shows all files together.
+
+164
+00:06:09,042 --> 00:06:11,540
+You can group them
+by altered and deployed.
+
+165
+00:06:12,390 --> 00:06:13,394
+In this case,
+
+166
+00:06:13,656 --> 00:06:16,979
+the original files will show
+first in the altered section
+
+167
+00:06:17,405 --> 00:06:20,252
+and the compiled code
+shows in the deployed section.
+
+168
+00:06:21,733 --> 00:06:22,733
+By the way,
+
+169
+00:06:22,806 --> 00:06:25,073
+DevTools uses a
+Source Map extension
+
+170
+00:06:25,123 --> 00:06:26,967
+called x_google_ignoreList
+
+171
+00:06:27,185 --> 00:06:28,820
+to improve your stack trace.
+
+172
+00:06:29,506 --> 00:06:31,020
+Follow this link to learn more.
+
+173
+00:06:31,620 --> 00:06:34,234
+I have a video explaining
+how it works as well.
+
+174
+00:06:35,194 --> 00:06:35,701
+Alright,
+
+175
+00:06:36,267 --> 00:06:39,500
+now you know everything
+about Source Map and DevTools.
+
+176
+00:06:39,930 --> 00:06:41,222
+If you have more questions,
+
+177
+00:06:41,439 --> 00:06:43,480
+feel free to ask in
+the comments below.
+
+178
+00:06:44,200 --> 00:06:45,200
+That's all.
+
+179
+00:06:45,320 --> 00:06:47,135
+See you in the
+next TechTool Tips.
+
+180
+00:06:47,368 --> 00:06:48,641
+Ciao!
